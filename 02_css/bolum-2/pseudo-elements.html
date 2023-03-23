@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* bu paragragın herhangi bir parçasına pseudo elementler aracılığıyla müdehale edebiliyoruz */
+        /* pseudo element için :: kullanılır */
+        /* first line yani ilk satıra ulaşalım ve font-weighte bold dersek tüm p etiketlerinin ilk satırı koyu renk olmuş olur  word-spacing ile kelimeler arasında 2px lik bir genişlik olsun diyebiliriz letter-spacing ile harflar arasında 1 pxlik boşluk olsun diyebiliriz*/
+
+        p::first-line{font-weight: bold; color: brown; word-spacing: 2px; letter-spacing:1px;}
+        /* sayfadaki tüm paragrafları değilde bir kapsam belirtmek istiyorum .about ile class olarak about verilmişleri seç diyebiliriz */
+        /* p etiketinin yanına boşluk verirsek p etiketi altındaki classı tüm about olanları seç deriz ama boşluk bırakmazsak classı about olan p etiketini seç demiş oluyoruz # dersek id için çalışır */
+        p.about::first-line{color: violet;}
+       /* first letter ile paragrafın ilk harfi demiş oluyoruz */
+        p::first-letter{font-size: 48px;}
+       /*selectionun içinde seçilen yazının bg rengini sarı yapabiliriz sayfada bir yazı seçtiğimiz anda seçilen yazı sarı olur arka rengi başına p yazarak sadece p etiketi için yap diyebiliriz tabi burada tüm sayfa için geçerli   */
+        ::selection{background-color: yellow;}
+       /*paragrafların başına veya sonuna emoji vs eklemek başına ekleyelim before ile başa olur after ile sona */
+       p::before{content: '\261D'; font-size: 35px; padding: 10px;}
+
+        
+
+    </style>
+</head>
+<body>
+   <!-- pseudo elements-->
+   <p>
+
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti exercitationem tempora aperiam, porro facere ipsum maiores adipisci velit, vel quod maxime reiciendis. Excepturi nobis facilis, quibusdam doloremque dicta optio laudantium.
+
+   </p>
+
+   <p class="about">
+
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, corrupti. Doloribus doloremque id consequatur corrupti reprehenderit. Tempore a blanditiis sint, corrupti perspiciatis accusamus deserunt delectus dolorum, modi enim quia unde!
+
+   </p>
+    
+</body>
+</html>

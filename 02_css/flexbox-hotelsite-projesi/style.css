@@ -1,0 +1,292 @@
+/* yazılarda kullanmak için font kütüphanesini burada import edebiliriz */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+/* yıldız ile tüm projenin tmeelinde boxsizing borderbox yapalım ve margin padding bilgilerini sıfırlayalım bunları kendimiz eklicez */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* dahas sonra html etiketine 10px fontsize tanımlayalım ki orantısal olarak font değerlerini kolaaylıkla veriyor olalım */
+html{
+    font-size: 10px;
+    /* scroll behabior smooth ile linkler arası geçişi yumuşak hale getirirz */
+    scroll-behavior: smooth;
+}
+
+
+/* body etiketi için bu font büyüklüğünü tanımlamış olalım */
+body{
+    font-family: 'Open Sans', sans-serif;
+    /* html etiketine 10px verdiğimiz için rem kapsayıcı elemandaki değerle kendini çarpar burada 10x1.6 dan direkt düz hesap 16px lik bir büyüklük verilmiş olacak mesela */
+    font-size: 1.6rem;
+    background: #fff;
+    color: #333;
+    /* yazılar arasındaki satır yüksekliğini verelim */
+    line-height: 1.6;
+}
+/* daha sonra ul etiketini düzenleyelim */
+ul{
+    list-style: none;
+}
+/* daha sonra */
+a{
+    color: #333;
+    text-decoration: none;
+}
+/* daha sonra */
+h1,h2{
+    /* font kalınlığın bu şekilde olmuş olsun */
+    font-weight: 300;
+    line-height: 1.2;
+}
+/* daha sonra p etiketine margin verelim bunları kaldırdık çünkü başta 1 rem ile 16px alttan üstten bir margin değeri ve 0 ile sağdan soldan bir margin değeri olmasın  */
+p{
+    margin: 1rem 0;
+}
+/* daha sona img etiketlerine responisve olması için 100% bir widht verelim içinde bulundukları containerı kaplasınlar*/
+img{
+    width: 100%;
+}
+/* daha sonra text-center isminde bir class eklicem bu clastta text align i center olarak ayarlayacak gerektiğinde kullanıcaz*/
+.text-center{
+    text-align: center;
+
+}
+/* BU ZAMANA KADAR YAPILAN ŞEYLER ANLATILANLAR NERDEYSE HER PROJENİN BAŞINDA YAPILAN ÖZELLİKLERDİR */
+
+
+/* artık projenin yapımına geçelim öncelikle navbar kısmıdna çalışıcaz */
+/* 2 elemanımız var h1 ve altındaki nav elemanı bunları yan yana almak için dipslay:flex yaptık */
+/* align-items center ile önce dikeyde bunları ortalamış olalım */
+/* sonra yatayda justify-content:space-between ile aralarında bir boşluk bırakalım ki h1 ve nav etiketi tamamen birbirinden ayrılmış olsunlar */
+/* position fixed dediğimiz zaman içerik kadar yer kaplar dolayısıyla genişliğini kaybediyor widht 100% ile genişliğini tekrar geri kazandırmak gerekiyor ve fixed yaparak navbarı sabitlemiş olucam sayfayı aşağı alsak bile navbar her daim gözüküyor olacak */
+/* top ile konum bilgisi verelim üstten 0 şeklimde */
+/* padding bilgisi ile üstten alttan 0 sağdan soldan biraz ortalanmış olsun 30px ile hatta 30px değilde 3 rem diyelim ki mobil cihazlarda sorun çıkmasın*/
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--dark);
+    opacity: 0.8;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    padding: 0 3rem;
+}
+/* bu özellikler sadece h1 etiketini etkiledi a etiketlerini etkilemedi o yüzden gidip onlarada özellikler vermemiz lazım */
+.navbar a{
+    color: #fff;
+    padding: 1rem 2rem;
+    margin: .5rem;
+}
+/* bu a etiketi elemanlarının yan yana gelmiş olması lazım şuan alt alta sıralanıyorlar display flex ile flex container yaparak bunu hallederiz */
+.navbar ul{
+    display: flex;
+}
+/* a etiketi elemanlarının üzerine gelindiğinde bir hover olayı olmuş olsun üzerine gelindiğinde altında sarı bir çizgi çıksın */
+.navbar a:hover{
+    border-bottom: 2px solid var(--warning);
+}
+/* navbar altındaki .brand classını düzenleyelim yazı kalınlığını arttıralım */
+.navbar .brand{
+    font-weight: 400;
+}
+/* navbar altındaki h1 e ulaşmış olalım font büyüklüğünü arttıralım */
+.navbar h1{
+    font-size: 3rem;
+}
+/* bide span bilgisi var yani deluxe yazısına warning rengini vermiş olalım */
+.navbar span{
+    color: var(--warning);
+}
+
+/* navbarı tamamladık şimdi uygulamanın header kısmından devam ediyoruz */
+/* uygulamanın arka zemninine bir tane resim yerleştirelim */
+.main-header{
+    background-image: url(bg-1.jpeg);
+    /* daha sonra resmi ilgili container içerisine yerleştirelim */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /*100vh ile kullanıcının tarayıcısının yüksekliği ve genişliğine göre kendini tam uydurmuş olsun  */
+    height: 100vh;
+    color: #fff;
+    position: relative;
+}
+    /* content kısmını oluşturduk fakat tüm content içerikleri solda veya resmin arkasında kalmış oldu ben bu içeriği sayfanın ortasına flexbox kullanarak alıcam*/
+    .main-header .content{
+        display: flex;
+        /* flex-direction column ile content içerikleri alt alta gelmiş olsun */
+        flex-direction: column;
+        /* daha sonra bunları yatayda ve dikeyde ortayalım */
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        /* eğer yüksekliği vermezsek yazılar ortalanır ama üstte kalırlar sayfanın ortasına gelmeleri için yani içerisinde bulunuduğu conteinerın yani 100vh kadar yer kaplamış oldu 100% dediğimizde o kapladığı alan içerisinde de tam ortayı bulmuş oldu */
+        height: 100%;
+    }
+       /* resmimiz çok net oldu çok göz alıyor çok ön plana çıkıyor o yüzden resmi biraz arka plana alıcaz */
+       .main-header::before{
+        content: '';
+        /* bu absolute kapsayıcı eleman olarak main-headerı alsın o yüzden main headera position relative verdik */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+    }
+    /* bunu yaptıktan sonra resim biraz karardı ama sayfanın içeriğindeki yazılarda karardı bu durumu düzeltmeliyiz main-headerin altındaki her şeye zindex  0 dır biz ona 5vererek */
+    .main-header *{
+        z-index: 5;
+    }
+    /*main header içindeki contenct altındaki h1 başlığımızı büyütelim  */
+    .main-header .content h1{
+        font-size: 5.5rem;
+    }
+    /*main header içindeki content içindeki p etiketini düzenleyelim  */
+    .main-header .content p{
+        font-size: 2.3rem;
+        /* içerik uzun olabilir full satırı kaplarsa kötü durur ondan max genişlik verelim genişlik geçilince yazılar aşağı gitsin */
+        max-width: 60rem;
+        margin: 2rem 0 3rem;
+    }
+    /* iconlara ait özellikleri burada tanımlayalım */
+    .icons{
+        padding: 30px;
+    }
+    .icons h3{
+        font-weight: 400;
+        margin-bottom: 15px;
+    }
+    .icons i{
+        background-color: var(--primary);
+        color: #fff;
+        padding: 1rem;
+        border-radius: 50%;
+        margin-bottom: 1.5rem;
+    }
+/* about kısmının düzenlemsini yapıcaz */
+.about{
+    color: #fff;
+}
+.about h2{
+    font-size: 4rem;
+    font-weight: 400;
+}
+.about p{
+    margin: 2rem 0;
+}
+
+/* gallery kısmı için hover özelliği ekleyelim resimlerin üstüne gelindiğinde */
+.gallery img:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/* card kısmı için  */
+.card{
+    color: #fff;
+    font-weight: 700;
+}
+.card-body{
+    padding: 2rem;
+}
+
+/* teams yani çalışanlar kısmı için */
+.teams img{
+    border-radius: 50%;
+}
+.teams img:hover{
+    opacity: 0.7;
+}
+/* contact iletişim bölümü için */
+.contact-form{
+    width: 100%;
+    padding: 2rem 0;
+}
+.contact-form label{
+    display: block;
+    /* satırı kaplamış olsun diye böyle dedik block ve elemanlar alt alta gelsin*/
+    margin-bottom: .5rem;
+    /* her bir eleman arasında bir boşluk olsun marginbottom */
+}
+.contact-form .form-control{
+    margin-bottom: 1.5rem;
+}
+.contact-form input{
+    width: 100%;
+    padding: 5px;
+    height: 40px;
+    border: 1px solid #f5f5f5;
+}
+.contact-form .btn{
+    margin-top: 20px;
+}
+/* contact us başlığına düzenleme verelim */
+.contact h2{
+    font-size: 4rem;
+}
+
+/* footer bölümü için */
+.footer{
+    /* 200 px lik bir container içerisinde bu elemanları tam ortaya almış oluyoruz bu kodlar ile */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 200px;
+}
+
+.footer a{
+    color: var(--danger);
+}
+.footer a:hover{
+    opacity: 0.7;
+}
+.footer .social a{
+    /* aralarında bir boşluk oluşturmuş olduk */
+    margin-right: 10px;
+}
+
+/* sitemiz tamam şimdi onu responsive duruma getiricez sadece mobil cihazlar için yapıcaz burda */
+@media(max-width: 768px){
+    html{
+        /* bunu yapınca 768px altına indiğimizde yazı boyutlarımız küçülecek */
+        font-size: 8px;
+    }
+    /* sonrasında navbar kısmımız yan yana geliyordu menüler 768px aşağısında menüler alt alta gelsin diyelim */
+    .navbar{
+        flex-direction: column;
+        height: 120px;
+        padding: 20px;
+    }
+    /* a etiketlerinede farklı style değerleri verelim */
+    .navbar a{
+        padding: 10px;
+        margin: 0 3px;
+    }
+/* teams resimleri çok büyük oldu onları biraz küçültelim göze batmasın */
+    .teams img{
+        width: 70%;
+    }
+}
+
+/* blog kısmını yapalım */
+.main-header.blog{
+    background-image: url(bg-2.jpeg);
+    height: 50vh;
+}
+
+/* article */
+.articles{
+    padding: 3rem 5rem;
+}
+/*elemanlar arasında bir mesafe oluşturalım */
+.article{
+    margin-top: 1.5rem;
+    color: #fff;
+}

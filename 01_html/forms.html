@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- formlar <form> etiketi ile kullanılırlar -->
+    <!-- form etiketleri arasına bir bilgi tanımlıyoruz ve action içine tanımlanan bir adrese gönderiyoruz  -->
+    <!-- burada action kısmına bir dosya tanımlıcaz -->
+    <!-- bilgiler toplucaz ve topladığımız bilgileri servera göndericez server ise bu bilgileri herhangi bir yerde kullanacak -->
+    <!-- input tex ile girilecek bi metin yeri oluşur buton ile ise tıklanacak yer -->
+    <!-- labeldaki tırnaklara vereceğimiz isim ile inputtaki vereceğimiz id ilişkili olmalıdır -->
+
+        <form action="register.php">
+            <div>
+            <label for="name">Adınız</label>
+            <input type="text" id="name">
+        </div>
+
+        <div>
+            <label for="surname">Soyad</label>
+            <input type="text" id="surname">
+        </div>
+<!-- parola bilgisi alabiliriz -->
+        <div>
+            <label for="parola">Parola</label>
+            <input type="password" id="parola">
+
+        </div>
+
+        <div>
+            <label for="intro">Kenini Anlat</label>
+            <textarea id="intro" cols="30"></textarea>
+
+        </div>
+
+        <div>
+            <!-- sadece birisini seçmek için name verip hepsinde aynı nameyi kullanıyoruz -->
+            <!-- id ile label fori aynı isimde yaparsak labela tıkladığımızda da seçim yapılır -->
+            <p>En sevdiğin programlama dili nedir:</p>
+            <input type="radio" id="html1" name="programlama">
+            <label for="html1">html</label>
+
+            <input type="radio" id="css1" name="programlama">
+            <label for="cssl">css</label>
+
+            <input type="radio" id="javascript1" name="programlama">
+            <label for="javascript1">javascript</label>
+        </div>
+        <!-- buna altarnatif olarak checkboxlar kullanabiliriz -->
+        <!-- checkbox ile birden fazla seçim yapabiliriz -->
+        <div>
+            <p>En sevdiğin programlama dili nedir:</p>
+            <input type="checkbox" id="html2">
+            <label for="html2">html</label>
+
+            <input type="checkbox" id="css2">
+            <label for="css2">css</label>
+
+            <input type="checkbox" id="javascript2">
+            <label for="javascript2">javascript</label>
+        </div>
+<!-- seelct kutusu yapmak mümkün aşağı doğru açılan sadece 1 tanesi seçilir -->
+        <div>
+            <label for="cities">Şehir</label>
+            <select id="cities">
+            <option value="41">Kocaeli</option>
+            <option value="34">İstanbul</option>
+        </select>
+        </div>
+<!-- kullanıcının mail adresini alabiliriz  -->
+<div>
+    <label for="eposta"> Email</label>
+    <input type="email" id="eposta">
+
+</div>
+<!-- doğum tarihi bilgisi alabiliriz -->
+<div>
+    <label for="birthday"> Doğum Tarihiniz</label>
+    <input type="date" id="birthday">
+</div>
+        <button type="submit">Kaydet</button>
+ <!--bir reset butonu kullanabiliriz  -->
+        <button type="reset">Temizlw</button>
+
+        </form>
+    
+</body>
+</html>

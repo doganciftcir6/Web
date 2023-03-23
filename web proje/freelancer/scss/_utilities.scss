@@ -1,0 +1,122 @@
+//burada temel sınıflarımızı burada tanımlıcaz
+
+//container sınıfımız olacak
+.container{
+    max-width: $max-width;
+    padding: 0 1.4rem;
+    //margin auto ile sağdan soldan içeriğimizi ortalamış olalım
+    margin: auto;
+}
+
+//buton tanımlamaları yapıcaz
+//buton tanımlamalarında scss için temel bir tane sınıf tanımlayabiliriz btn-shared diyerek bütün butonlar için temel özellikler orada olacak
+%btn-shared{
+    display: inline-block;
+    padding: .7rem 2rem;
+    transition: all .5s;
+    border: none;
+    cursor: pointer;
+}
+//daha sonra .btn sınıfı tanımlıcaz ve içerisinde diğer tüm butonlarımızı tanımlıcaz burada &-primaryin anlarmı .btn-primary oluyor
+//@extend %btn-shared ile yukarıda %btn-shared ta tanımadığımız tüm özellikleri kalıtım yaparak buraya geçirmiş oluyoruz
+// yani ayrı ayrı yaptığımız buton tamımlama işlemlerini tek bir yerde daha düzenli yapmış olduk
+.btn{
+    &-primary{
+        @extend %btn-shared;
+    //ekstra olarak ekleyeceğimiz özellikler
+        color: #333;
+        background-color: $primary-color;   
+    }
+    &-light{
+        @extend %btn-shared;
+    //ekstra olarak ekleyeceğimiz özellikler
+        color: #333;
+        background-color: $light-color;   
+    }
+    &-dark{
+        @extend %btn-shared;
+    //ekstra olarak ekleyeceğimiz özellikler
+        color: #fff;
+        background-color: $dark-color;   
+    }
+}
+//hover efektlerini yapıyor olalım button tanımladığımızda sınıfı btn- ile başlıyorsa demiş olduk burada
+// button,a,input 3 etiketin hover olayınıda burada halletmiş olalım
+button[class^='btn-']:hover,
+a[class^='btn-']:hover,
+input[class^='btn-']:hover{
+    background-color: $primary-color;
+}
+
+//daha sonra background classlarını tanımlayalım
+.bg{
+    &-dark{
+        background-color: $dark-color;
+    }
+    &-primary{
+        background-color: $primary-color;
+    }
+    &-light{
+        background-color: $light-color;
+    }
+}
+
+//padding classlarını burada tanımyalım
+.py{
+    &-1{
+        padding: 1rem 0;
+    }
+    &-2{
+        padding: 2rem 0;
+    }
+    &-3{
+        padding: 3rem 0;
+    }
+    &-4{
+        padding: 4rem 0;
+    }
+}
+
+//margin classlarını burada tanımyalım
+.my{
+    &-1{
+        margin: 1rem 0;
+    }
+    &-2{
+        margin: 2rem 0;
+    }
+    &-3{
+        margin: 3rem 0;
+    }
+    &-4{
+        margin: 4rem 0;
+    }
+}
+
+// İÇERİKLERİ ORTALAMAK İÇİN BİR TEXTCENTER SINIFI
+.text-center{
+    text-align: center;
+}
+
+//BİR ÇOK YERDE KULLANACAK OLDUĞUMUZ SECİTON-TİTLE CLASSINI TANIMLYALIM
+.section-title{
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+//BİR ÇOK YERDE KULLANACAK OLDUĞUMUZ border-bottom CLASSINI TANIMLYALIM
+.border-bottom{
+    height: 3px;
+    //height ile çizgiye bir kalınlık tanımlamış oluruz
+    width: 3rem;
+    background-color: $primary-color;
+    margin: 0 auto 1rem auto;
+}
+// lead classını tanımlayalım bu sayede p etiketimizin daha okunabilir olmasını sağlayacaz
+.lead{
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    // kelimeler arasındaki boşluğu biraz arttıralım word-spacing ile
+    word-spacing: 2px;
+}

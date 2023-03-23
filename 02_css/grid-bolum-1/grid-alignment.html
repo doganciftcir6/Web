@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3, 20%);
+            grid-template-rows: repeat(2, 20%);
+            /* her satıra 3 tane eleman gelsin ve 1fr ile boş bir alan kalmasın */
+            gap: 10px;
+            height: 600px;
+            background-color: yellow;
+            /* FLEXBOXTA KULLANDIĞIMIZ MANTIK GRİD İÇİNDE GEÇERLİ BURADA */
+            /* bunu dersek yatayda bütün elemanlar sağ tarafa doğru yanaşır yatayda justify-content:End */
+            /* justify-content: end; */
+            /*start dediğimizde yatayda en sola doğru yanaşır  */
+            /* justify-content: start; */
+            /* elemanları yatayda tam orta noktaya almış oluruz */
+            justify-content: center;
+
+            /* dikeyde bunları hizalamak için flex-start dediğimizde sayfanın üstünde yerleşir */
+            /* align-content: flex-start; */
+            /* flex-end ile dikeyde en sol alt kısma gelecektir */
+            /* align-content: flex-end; */
+            /* dikeyde ortaya almak istediğimizde */
+            align-content: center;
+
+        }
+        .item{
+            background-color: #f7786b;
+        }
+         /* TEK BİR ELEMANI HİZALAMAK İSTERSEK */
+        .item:first-child{
+           align-self: flex-start;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- container divi oluşturalım -->
+    <div class="container">
+        <!-- içine eleman ekleyelim -->
+        <div class="item">box1</div>
+        <div class="item">box2</div>
+        <div class="item">box3</div>
+        <div class="item">box4</div>
+        <div class="item">box5</div>
+        <div class="item">box6</div>
+    </div>
+    
+    
+</body>
+</html>

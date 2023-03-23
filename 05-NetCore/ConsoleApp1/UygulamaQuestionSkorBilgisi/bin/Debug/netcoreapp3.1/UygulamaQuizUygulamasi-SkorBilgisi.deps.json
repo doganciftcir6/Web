@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "UygulamaQuizUygulamasi-SkorBilgisi/1.0.0": {
+        "runtime": {
+          "UygulamaQuizUygulamasi-SkorBilgisi.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "UygulamaQuizUygulamasi-SkorBilgisi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

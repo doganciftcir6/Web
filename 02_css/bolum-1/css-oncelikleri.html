@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- internal olarak bir style oluşturalım -->
+    <style>
+        /* id ile ulaşmış olduğumuz uygulanır sonrasında h1 h2 ile tekrar renk tanımalması yapmış olsak bile id ile ulaştığımız üstündür */
+        #page-title{color: chocolate;}
+        /* burada eğer 2 tane color tanımlarsak en son tanımlanan color uygulanır */
+        h1{color: red;}
+        h1{color: violet;}
+        /* class tanımlayalım bu durumda id ile ulaşmış olduğumuz en etkin olur en üstün daha sonra üstün olan class ve daha sonra ise h1 ile ulaşmış olduğumuz olur sıralama böyle 1id 2class 3etiketismi */
+        .text-yellow{color: yellow;}
+        /* bunların dışında gidip body kısmında inline bir css tanımlaması yaparsam en üstün o olur ve o etkin olur uygulanır */
+        /* İNLİNE CSS EN ÜSTÜNDÜR */
+        /* İD SEELCTOR */
+        /* CLASS SELECTOR */
+        /* TAG SELECTOR */
+        /*BROWSER DEFAULT */
+
+       
+    
+
+    </style>
+</head>
+<body>
+
+    <main>
+    <!--elemanlara etiketlere id yani isimler vererek bir id selectoru oluşturmuş olalım  -->
+    <section>
+        <h1 id="page-title" class="text-yellow">Welcome To MovieApp</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, accusantium?</p>
+    </section>
+
+    <section>
+        <h2 id="page-subtitle" class="text-white">How it works?</h2>
+    </section>
+
+    </main>
+    
+</body>
+</html>

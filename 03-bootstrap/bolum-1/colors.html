@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap kütüphanesini kurmak için link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        /* içerikleri biraz köşelerden uzaklaştıralım */
+        body{
+            padding: 100px;
+        }
+        /* ben bir sınıf oluşturayım box diye */
+        .box{
+            padding: 30px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<!-- temel olarak kullanilicebeğimiz bazı renkler var -->
+<!-- primary - mavi -->
+<!-- secondary - gri -->
+<!-- success - yeşil -->
+<!-- danger - kırmızı -->
+<!-- warning - sarı -->
+<!-- info - açık mavi -->
+<!-- light - açık bir renk -->
+<!-- dark - koyu bir renk -->
+<!-- muted - soluk bir renk -->
+<!-- white - beyaz bir renk -->
+<!-- black - siyah bir renk -->
+
+<!-- bunaları yazı için kullanmak istersek text- şeklinde kullanılır -->
+<!-- textlere text-opacity-75 gibi yüzde 75 oranında demiş oluruz bir opacity vermek mümkün -->
+<p class="text-primary text-opacity-75">Lorem, ipsum dolor.</p>
+<p class="text-danger">Lorem, ipsum dolor.</p>
+<p class="text-warning">Lorem, ipsum dolor.</p>
+<p class="text-dark">Lorem, ipsum dolor.</p>
+<br><br>
+
+<!-- aynı renkleri zemin için kullanmak istersek bg- şeklinde kullanılır  -->
+<div class="bg-success">Lorem, ipsum dolor.</div>
+<!-- zemin rengi yeşil yazı rengi beyaz olsun istersek veya başka renkler için-->
+<!-- daha önce oluşturduğumuz classıda buraya verebiliriz -->
+<!-- bg-gradient eklediğimizde gradyant bir renk gelmiş olur karşımıza yani geçişli bir renk elde etmiş oluruz -->
+<!-- bunların opactiy değerleriyle oynamakta mümkün bg-opacity-75 oran veriyoruz 75 dediğimizde mesela yüzde75 oranında bir opacity veriyor-->
+<div class="bg-success text-white box bg-gradient">Lorem, ipsum dolor.</div>
+<div class="bg-dark text-white bg-opacity-75">Lorem, ipsum dolor.</div>
+<div class="bg-secondary text-white">Lorem, ipsum dolor.</div>
+<div class="bg-black text-white">Lorem, ipsum dolor.</div>
+<br><br>
+
+
+<!--span gibi inline bir eleman tanımlayalım  -->
+<!--badge ekleyerek bu span etiketimizi direkt olarak güzel gözüken bir hale getirebiliyoruz  -->
+<span class="badge bg-primary">Lorem ipsum dolor sit.</span>
+<br><br>
+<!-- köşeleri daha fazla yuvarlatılmış bir badgeyi badge rounded-pill ile oluşturmak mümkün -->
+<span class="badge rounded-pill bg-danger">Lorem, ipsum dolor.</span>
+<span class="badge rounded-pill bg-dark">Lorem, ipsum dolor.</span>
+
+
+
+<!-- BAZI ÖZELLİKLER BOOTSRAPTE JAVASCRİPT KÜTÜPHANESİNE İHTİYAÇ DURUYOR ONDAN BUNUDA EKLEMEK LAZIM -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

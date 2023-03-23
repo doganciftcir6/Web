@@ -1,0 +1,27 @@
+@model Product
+@* bunun olması için _ViewStart.cshtml adında bir dosya oluşturup oraya layout bağlantısını yapıyoruz ve html sayfalarımız artık layout'u burda tanımlama yapmadan kullanabiliyor *@
+
+@* catgory bölümünüde seciton içine alalım ve artık Categories i nerde tanımlarsak orda kategorileri çağırmış olucaz *@
+@*@section Categories
+{
+    @await Component.InvokeAsync("Categories")
+}*@
+
+@* 3lük kolonu yuakrıda kullnıyor bize 9 luk kolon kalıyor bir detay içeriği oluşturalım *@
+<div class="card mb-3">
+    <div class="card-body">
+        <div class="row no-gutters">
+            <div class="col-md-3">
+                <img src="~/img/@Model.ImageUrl" class="card-img" />
+            </div>
+            <div class="col-md-9">
+                <h5 class="card-title">@Model.Name</h5>
+                <p class="card-text">@Model.Price</p>
+                <p class="card-text">@Model.Description</p>
+                <p class="card-text">
+                    <div class="small text-muted">3 days ago</div>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

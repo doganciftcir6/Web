@@ -1,0 +1,22 @@
+﻿@* buraya her sayfada ortak olarak kullanacğımız değişitirmeyeceğimiz html içeriklerini tanımlarız *@
+@* mesela artık her html sayfasına bootstrap linki ve html iskileti eklemek zorunda değilim *@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title></title>
+</head>
+<body style="background-color:yellow">
+    @* navbarı alalım bunlar ortak değişmeyecek *@
+    @await Html.PartialAsync("_navbar"),
+    @* headerı alalım buda ortak her sayfa için *@
+    <partial name="_header">
+        @* main kısmını alalım ve buraya @RenderBody() ekleyerek burasının sabit olmayıp değişebileceğini söylemiş oluyoruz *@
+        <main>
+            <div class="container">
+                @RenderBody()
+            </div>
+        </main>
+</body>
+</html>

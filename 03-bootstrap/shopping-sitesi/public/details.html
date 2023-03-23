@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome kütüphanesi -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <title>Document</title>
+</head>
+<!-- önce sayfanın zemin rengini değiştirelim body etiketine class vererek -->
+<body class="bg-light">
+    <!-- header bölümü oluşturalım öncelikle-->
+    <header>
+        <!-- top-bar kısmını yapıcaz -->
+        <section class="top-bar">
+            <div class="container">
+                <!-- bir container ekledik içerikler sağdan soldan ortalansın diye ve bir satır eklicez ve satırı 3 e bölücez -->
+                <!-- e-commarce yazımız biraz aşağıda kaldı onu dikeyde hizalıcaz kapsayıcı olan row elemanına class vererek -->
+                <!-- gy-3 diyerek y ekseninde yani bunlar kolonlar alt alta geldiğinde aralarında bir boşluk bırakalım -->
+                <div class="row gy-3 align-items-center">
+                    <!-- large cihazlarda 2 birim olsun -->
+                    <!-- ayrıca col-sm-4 ile sm cihaz altındaki görüntüyü ayarlıcaz icon kısmı 4 lük kaplıcak alttaki 8 lik kaplayacak 12 kolon dolduğu için bi alttaki kalan kısım ise kendini alta atacak tek kendisi kaplayacak -->
+                    <div class="col-lg-2 col-sm-4 col-4">
+                        <!-- navbardaki soldaki icon veya yazı -->
+                        <a href="index.html" class="navbar-brand">E-Commerce</a>
+                    </div>
+                    <!-- link gurubumuz sağ tarafa searchbar ise sol tarafa geldi lg cihaz altında istediğimiz görüntüyü aldık link gruplarımız serachbarın üstüne geldi eğer altına gelsin isteseydik bu 2 tane olan 5 lik kolonlarımızın yerini değiştirdik fakat bu sefer lg cihaz üstünde serachbar sağda buton grubumuz solda kaldı bu durumu düzelticez buton grubunu sağ tarafa alıcaz order-lg-last diyerek buton gurubunu sağa çekeriz ve lg cihaz altında da istediğimiz görüntüde kalmış olur-->
+                    <div class="order-lg-last col-lg-5 col-sm-8 col-8">
+                        <!-- son 5 lik kolona ise bir tane buton grubu oluşturucaz -->
+                        <!-- text-end bunları en sağa atar -->
+                        <div class="text-end">
+                            <!-- bunlar sm cihaz üzerinde görünsün istiyorum yazılar o yüzden d-none d-sm-inline-block koyduk -->
+                            <a href="" class="btn btn-light"><i class="fa fa-user"></i><span class="ms-1 d-none d-sm-inline-block">Hesabım</span></a>
+                            <a href="" class="btn btn-light"><i class="fa fa-heart"></i><span class="ms-1 d-none d-sm-inline-block">Listem</span></a>
+                            <a href="" class="btn btn-light"><i class="fa fa-shopping-cart"></i><span class="ms-1 d-none d-sm-inline-block">Sepetim</span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-12">
+                        <!-- 5lik kısımda burada ise bir form olacak -->
+                        <form>
+                            <!-- sol tarafta bir input ve sağ tarafta bir buton olacak ondan input-group -->
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Anahtar Kelime">
+                                <button class="btn btn-primary"><i class="fa fa-search"></i></button>
+                                <!-- bu sayada arama motoru barı gibi bi barımız olmuş oldu -->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="bg-primary p-3">
+            <div class="container">
+                <!-- burada breadcrumb yani dosya yolunu gösteren bir kısım yapıcaz -->
+                <nav class="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item">
+                            <a href="#">Anasayfa</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#">Elektronik</a>
+                        </li>
+                        <!-- son eleman bir link olmayacak tıklanabilir olmayacak -->
+                        <li class="breadcrumb-item active">
+                          Apple Watch Yıldız Işığı...
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+    </header>
+
+    <!-- lightbox kısmını yapıcaz -->
+    <section class="py-4">
+        <div class="container">
+            <div class="row">
+                <!-- sol taraf aside olacak menü diyebiliriz -->
+                <aside class="col-lg-5">
+                    <!-- kapsayıcı eleman gallery-wrap olacak -->
+                    <div class="gallery-wrap">
+                        <!-- büyük resmin tanımlanacağı yer -->
+                        <!-- img-thumbnail ile resmin etrafı çerçeveli gibi oluyor -->
+                        <div class="img-big-wrap img-thumbnail">
+                            <!-- buraya büyük resmi eklicez -->
+                            <!-- data-type ile başlayan kodlarlada lightbox eklicez -->
+                            <!-- burası sitede direkt büyük gözüken resime tıklandığında lightbox açılması için -->
+                            <a href="img/5-big.jpeg" data-type="image" data-fslightbox="mygallery">
+                                <!-- altında görünecek olan küçük resmi buraya eklicez -->
+                                <!-- burası sitede direkt büyük olarak gözüken resimin olması için -->
+                                <img src="img/5.jpeg" alt="">
+                            </a>
+                        </div>
+                        <!-- burada da alttaki küçük resimler gelecek -->
+                        <div class="thumbs-wrap">
+                            <!-- küçük resmi buraya eklicez -->
+                             <!-- data-type ile başlayan kodlarlada lightbox eklicez -->
+                             <a href="img/1-big.jpeg" data-type="image" data-fslightbox="mygallery">
+                                <!-- altında görünecek olan küçük resmi buraya eklicez -->
+                                <img width="60" height="60" src="img/1.jpeg" alt="">
+                            </a>
+                            <a href="img/2-big.jpeg" data-type="image" data-fslightbox="mygallery">
+                                <!-- altında görünecek olan küçük resmi buraya eklicez -->
+                                <img width="60" height="60" src="img/2.jpeg" alt="">
+                            </a>
+                            <a href="img/3-big.jpeg" data-type="image" data-fslightbox="mygallery">
+                                <!-- altında görünecek olan küçük resmi buraya eklicez -->
+                                <img width="60" height="60" src="img/3.jpeg" alt="">
+                            </a>
+                            <a href="img/4-big.jpeg" data-type="image" data-fslightbox="mygallery">
+                                <!-- altında görünecek olan küçük resmi buraya eklicez -->
+                                <img width="60" height="60" src="img/4.jpeg" alt="">
+                            </a>
+                            <a href="img/5-big.jpeg" data-type="image" data-fslightbox="mygallery">
+                                <!-- altında görünecek olan küçük resmi buraya eklicez -->
+                                <img width="60" height="60" src="img/5.jpeg" alt="">
+                            </a>
+
+                        </div>
+                    </div>
+
+                </aside>
+                <!-- sağ taraf ürün detay bilgileri-->
+                <main class="col-lg-7">
+                    <!-- ürün bilgisi için article -->
+                    <article>
+                        <h4 class="title text-dark">
+                            Apple Watch Yıldız Işığı Alümünyüm Kasa ve Spor Kordon
+                        </h4>
+                        <!-- değerlendirme bölümü -->
+                        <div class="rating-wrap">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <!-- sondaki yıldız seçili olmasın 4 yıldız almış olsun -->
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <p class="text-success">Stokta</p>
+                        <div class="mb-3">
+                            <b class="price h5">6.599 TL</b>
+                        </div>
+                        <div class="product-desc">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, dolor neque fugiat, consectetur blanditiis commodi libero quos aperiam reiciendis sint eos assumenda praesentium magni quisquam culpa a! Sunt, eos doloribus.</p>
+                        </div>
+                        <!-- datalist -->
+                        <dl class="row bottom-bottom">
+                            <!-- başlık ve açıklama tarzında oluyor dt-dd ile özellik bilgileri bu şekilde yapılıyor -->
+                            <dt class="col-3">Renk:</dt>
+                            <dd class="col-9">Yıldız Işığı</dd>
+                            <dt class="col-3">Bağlantı Özellikleri:</dt>
+                            <dd class="col-9">GPS</dd>
+                            
+                        </dl>
+                        <div class="row mb-4">
+                            <div class="col-md-4 col-6 mb-2">
+                                <label for="" class="form-label">Kasa Boyutu</label>
+                                <select class="form-select">
+                                    <option value="">41 mm</option>
+                                    <option value="">45 mm</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <a href="#" class="btn btn-warning">
+                                <i class="fa fa-shopping-basket me-1"></i>Sepete Ekle
+                            </a>
+                            <a href="#" class="btn btn-light">
+                                <i class="fa fa-heart me-1"></i>Listeye Ekle
+                            </a>
+                        </div>
+                    </article>
+
+                </main>
+            </div>
+        </div>
+    </section>
+    <!-- alt kısımda bu ürünlere bakanalr kısmı olacak -->
+    <section class="py-4">
+        <div class="container">
+            <header class="section-heading">
+                <h4 class="mb-3">Bu ürüne bakanlar bu ürünlere de baktılar</h4>
+            </header>
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 col-12">
+                    <!-- bir kart -->
+                    <figure class="card shadow">
+                        <!-- kartın resim bölümü -->
+                        <div class="img-wrap">
+                            <a href="#">
+                                <!-- bir icon eklicez kalp -->
+                                <span class="topbar">
+                                    <!-- flfoat-end ile iconu sağ tarafa alalım -->
+                                    <a href="#" class="float-end">
+                                        <i class="fa fa-regular fa-heart fa-lg"></i>
+                                    </a>
+                                </span>
+                                <img src="img/1.jpeg" alt="">
+                            </a>
+                        </div>
+                         <!--ekstra bilgiler ekleyceğimiz için info-wrap  -->
+                        <figcaption class="info-wrap border-top">
+                            <a href="" class="title">
+                                Apple Watch Yıldız Işığı
+                                <!-- fiyat kısmı -->
+                                <div class="price-wrap mb-3">
+                                    <strong class="price">6.599 TL</strong>
+                                    <!-- eski fiyat -->
+                                    <del class="price-old">9.999 TL</del>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary-w-100">Sepete Ekle</a>
+                            </a>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-12">
+                    <!-- bir kart -->
+                    <figure class="card shadow">
+                        <!-- kartın resim bölümü -->
+                        <div class="img-wrap">
+                            <a href="#">
+                                <!-- bir icon eklicez kalp -->
+                                <span class="topbar">
+                                    <!-- flfoat-end ile iconu sağ tarafa alalım -->
+                                    <a href="#" class="float-end">
+                                        <i class="fa fa-regular fa-heart fa-lg"></i>
+                                    </a>
+                                </span>
+                                <!-- resmi ekleyelim -->
+                                <img src="img/2.jpeg" alt="">
+                            </a>
+                        </div>
+                        <!--ekstra bilgiler ekleyceğimiz için info-wrap  -->
+                        <figcaption class="info-wrap  border-top">
+                            <a href="" class="title">
+                                Apple Watch Yıldız Işığı
+                                <!-- fiyat kısmı -->
+                                <div class="price-wrap mb-3">
+                                    <strong class="price">6.599 TL</strong>
+                                    <!-- eski fiyat -->
+                                    <del class="price-old">9.999 TL</del>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary-w-100">Sepete Ekle</a>
+                            </a>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-12">
+                    <!-- bir kart -->
+                    <figure class="card shadow">
+                        <!-- kartın resim bölümü -->
+                        <div class="img-wrap">
+                            <a href="#">
+                                <!-- bir icon eklicez kalp -->
+                                <span class="topbar">
+                                    <!-- flfoat-end ile iconu sağ tarafa alalım -->
+                                    <a href="#" class="float-end">
+                                        <i class="fa fa-regular fa-heart fa-lg"></i>
+                                    </a>
+                                </span>
+                                <img src="img/3.jpeg" alt="">
+                            </a>
+                        </div>
+                        <figcaption class="info-wrap border-top">
+                            <a href="" class="title">
+                                Apple Watch Yıldız Işığı
+                                <!-- fiyat kısmı -->
+                                <div class="price-wrap mb-3">
+                                    <strong class="price">6.599 TL</strong>
+                                    <!-- eski fiyat -->
+                                    <del class="price-old">9.999 TL</del>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary-w-100">Sepete Ekle</a>
+                            </a>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-12">
+                    <!-- bir kart -->
+                    <figure class="card shadow">
+                        <!-- kartın resim bölümü -->
+                        <div class="img-wrap">
+                            <a href="#">
+                                <!-- bir icon eklicez kalp -->
+                                <span class="topbar">
+                                    <!-- flfoat-end ile iconu sağ tarafa alalım -->
+                                    <a href="#" class="float-end">
+                                        <i class="fa fa-regular fa-heart fa-lg"></i>
+                                    </a>
+                                </span>
+                                <img src="img/4.jpeg" alt="">
+                            </a>
+                        </div>
+                        <figcaption class="info-wrap border-top">
+                            <a href="" class="title">
+                                Apple Watch Yıldız Işığı
+                                <!-- fiyat kısmı -->
+                                <div class="price-wrap mb-3">
+                                    <strong class="price">6.599 TL</strong>
+                                    <!-- eski fiyat -->
+                                    <del class="price-old">9.999 TL</del>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary-w-100">Sepete Ekle</a>
+                            </a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- footer bölümünü yapıcaz -->
+        <footer class="py-4 bg-primary">
+            <div class="container">
+                <!-- kolonlar yani elemanlar arasında bir boşluk kapsayıcı olan elema rowa verilir gy-3 dikeyde bunlar arasında bir mesafe bırakılır-->
+                <div class="row gy-3">
+                    <div class="col-md-4">
+                        <!-- buarda formumuz olacak -->
+                        <!-- search bar tarzı solda bir email inputu sağında ise bir abone ol butonu olur -->
+                        <form>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Email">
+                                <button class="btn btn-outline-warning">Abone Ol</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-8">
+                        <!-- text-center ile bunlar ortalanmış olsunlar -->
+                        <!-- fakat medium cihaz üzerine geldiğimizde sağ tarafa gelmiş olsunlar text-md-end -->
+                        <nav class="text-center text-md-end">
+                            <!-- iconlarımız burda olsun tıklanabilir buton gibi gözüken ikonlu linklerimiz oldu-->
+                            <a href="#" class="btn btn-icon btn-outline-warning">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="btn btn-icon btn-outline-warning">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="btn btn-icon btn-outline-warning">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="btn btn-icon btn-outline-warning">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </nav>
+                    </div>
+                    <div class="col-md-12">
+                        <p class="text-center text-white">
+                            @2025 Tüm Hakları Saklıdır.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+   
+   
+
+
+    <!-- collapse çalışması için scriptleri ekliyor olmalıyız -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <!-- lightboxun çalışması için -->
+    <script src="../node_modules/fslightbox/index.js"></script>
+</body>
+</html>

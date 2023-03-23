@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card-header">
+        <h3 class="cart-title h1" id="title">Todo App 2</h3>
+    </div>
+
+    <ul id="task-list">
+        <li class="task">Görev 1</li>
+        <li class="task">Görev 2</li>
+        <li class="task">Görev 3</li>
+    </ul>
+
+    
+    <ul id="task-list2">
+        <li class="task">Görev 1</li>
+        <li class="task">Görev 2</li>
+        <li class="task">Görev 3</li>
+    </ul>
+    
+    <!-- script kodlarımız burada olacak -->
+    <script> 
+    let sonuc;
+
+    // getElemenetsByClassName ile . eklemeden class bilgisini direkt olarak yazabiliriz bu şekilde classı task olan bütün elemanlara ulaşabiliyoruz ancak [0] dediğimizde sıfırıncı elemanı getirir sadece ilk eleman yani
+    sonuc = document.getElementsByClassName("task")[0];
+    // bu durumda 1 numaralı eleman yani görev2 ye ulaşırız
+    sonuc = document.getElementsByClassName("task")[1];
+    // tüm elemanları alalım ve tüm elemanlara bir döngü aracılığıyla ulaşalım yani sonuç içersiinde şuanda tüm elemanlar var ve ben bu bütün elemanlar üzerinde bir for döngüsü kullanabilirim
+    // bu şekilde 3 tane elemanıda yazdırmış olduk
+    taskList = document.getElementsByClassName("task");
+    for(let i = 0; i<taskList.length; i++){
+        console.log(taskList[i]);
+    }
+    // alternatif bir yöntem indeks numaralıyla uğraşmadan yine aynı işi yaparız
+    for(let task of taskList){
+        console.log(task);
+    }
+    // alternatif bir yöntem indeks numaralarına ulaşabiliyoruz bu şekilde aynı işi yapmıyor
+    for(let task in taskList){
+        console.log(task);
+    }
+    // for döngüsü sayesinde bütün elemanların css bilgileri değiştirilebilir mesela tüm liste elemanlarının yazı rengini red yapalım ve font size bilgilerini değiştirmiş olalım ve bütün liste elemanlarının yazı içeriğini değiştirelim item olarak 
+    for(let task of taskList){
+        task.style.color="red";
+        task.style.fontSize = "20px";
+        task.innerText = "Item"
+    }
+
+    // tüm elemanları almanın getElementsByClassName dışında altetnatifleride var tabi
+    // burada etiket isimleriyle ulaşalaım değişen bir şey olmaz işlemde sadece etiket bilgisiyle hepsine erişmiş oluruz
+    taskList = document.getElementsByTagName("li");
+    // yalnız bu şekilde tüm sayfadaki li etiketlerine ulaşır bu saçma bir durum bir kapsam belirtmeliyiz
+    // bu şekilde yaparak ıd si task-list olan elemanın li etiketlerini sadece etkileyecektir
+    ul = document.getElementById("task-list");
+    taskList = ul.getElementsByTagName("li");
+
+    // ****************************************************************************************
+    // yada bunalara hiç gerek yok böyle yaptığımıDa sayfadaki bütün li etiketleri etkilenecektir
+    taskList = document.querySelectorAll("li");
+    // ancak ben burada kapsam belirtebiliyorum css selector aracılığıyla id si task-list olan etiketin li elemanlarına ulaş diyebiliyoruz
+    taskList = document.querySelectorAll("#task-list li");
+
+
+
+    console.log(sonuc);
+    </script>
+</body>
+</html>

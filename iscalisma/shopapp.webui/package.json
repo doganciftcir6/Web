@@ -1,0 +1,17 @@
+//bu dosya sayesinde projeye daha önce hangi kütüphaneler eklenmiþ çýkarýlmýþ þeklinde bigli sahibi olabiliyoruz mesela node_modules dosyasý proje taþýrken silinir bu projeyi yeni alan adam projede daha önce node_modele kullanýldýðýný bu dosya sayesinde bilir
+{
+  "name": "shopapp.webui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

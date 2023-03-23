@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div class="container my-5">
+        
+        <!-- ilk olarak açılacak olan içeriği şekillendiriyor olmalıyız -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Open Dialog</button>
+
+        <!-- boş bir alana tıklanıncada dialog kutusu kapanıyor bunu engellemek isteyebiliriz data-bs-backdrop="static"-->
+        <div class="modal" id="myModal" data-bs-backdrop="static">
+    <!-- bunu modal diye bir kapsayıcı elemana alırsak görünmez ve bir buton tanımlayark bunu istediğimiz zaman butona tıklayıp göstertebiliriz -->
+<!--  modal-dialog-scrollable ile içeriğimiz eğer çok uzunsa sayfada scrollbar çıakcağına direkt dialog kutusunun içinde çıkar daha iyi olur-->
+<!-- modal-xl ile veya sm lg gibi farklı boyutlandırmalar ile dialog kutusuna boyut verebiliyoruz eğer buraya modal-fullscreen-sm-down eklersek sm cihazın altında tam ekranı kaplayack dialog kutusu -->
+        <div class="modal-dialog modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Lorem, ipsum.</h4>
+                    <!-- kapatma butonu olacak btn-close ile yani bu yukarıdaki çarpı işareti burada tanımlanıyor-->
+                    <!-- kapatma çarpı tuşunun işe yaraması için data-bs-dismiss  -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- mdal kutusunun bodye gelelim -->
+                <!-- buraya mesela bir form tanımlanabilir -->
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero autem sed cumque esse eius facere expedita repudiandae voluptatem quibusdam nam.
+                    <!-- biraz içeriğimizi uzatalaım yani daha fazla içerik varmış yazı varmış varsayalım div ile -->
+                    <div style="height: 600px;"></div>
+                </div>
+                <!-- footer kısmı -->
+                <div class="modal-footer">
+                    <!-- bir kapatma tuşumuz daha var ona tıklayıncada kapatma fonksyoni çalışsın data-bs-dismiss="modal" -->
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                    <button class="btn btn-primary">Kaydet</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

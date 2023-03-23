@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- yazı fontu eklemiş olalım -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Open+Sans:ital,wght@0,300;0,400;1,300&family=Roboto:ital@1&display=swap" rel="stylesheet">  
+    <style>
+        /* h1 etiketinin yazı fontunu değiştirelim */
+        h1{
+            font-family: 'Lato', sans-serif;
+            font-family: 'Open Sans', sans-serif;
+            font-family: 'Roboto', sans-serif;
+            font-size: 3rem;
+            text-align: center;
+        }
+        .gallery{
+            /* bu galleryi flex container olarak oluşturmuş olalım dolayısıyla resimler alt alta değilde yan yana gelirler */
+            /* wrap yaparak sığmayan elemanların alta geçmelerini sağlayalım */
+            display: flex;
+            flex-wrap: wrap;
+        }
+        /* divler içerisinde bulunduğu satırı tamamen kaplasın boşluk kalmasın istiyorum grow ile dive etiketleri artık satırı kaplar ama yine boşluklar oluşur resimler 300width olduğu için */
+        .gallery div{
+            flex-grow: 1;
+            /* resimler arasında mesafeler oluşsun yapışık olmasınlar */
+            margin: 3px;
+            /* sclae özelliği ile resmin üzerine geldiğimzde resim yüzde20 büyüdü fakat divden bir taşma var resim divin içinden yüzde 20 oranında taşıyor bunu kapatmak isteyebiliriz overflow sayesinde */
+            overflow: hidden;
+
+
+        }
+        /* artık bunu dediğimizde genişliğini içerisinde bulunduğun containera göre ayarla deriz divi tamamen kaplayan bir resim haline çevirlir  */
+        img{
+            width: 100%;
+            /* resimlerin boyutları farklı olabilir o yüzden genişlikleri dive sığdırıldı ama yükseklikleride sığdırılsın garip görüntüler ortaya çıkmasın biri küçük biri büyük boşlukta durmasın felan diye */
+            height: 100%;
+            /* sclae ve overflowdan sonra resmin üzerinde gelindiğinde anında bir büyüme oluyor bu belli bir zamanda gerçekleşse daha güzel bir görüntü olacaktır transition transform ile 3 saniyede gerçekleşsin dedik ve ease-out gibi bir efekt verebiliriz sonda */
+            transition: transform .3s ease-out;
+        }
+        /* her resmin üzerine geldiğimizde bir efekt olsun translate ile elemanı belli bir konumdan belli bir konuma gönderebiliyorduk yani haraket ettiebiliyorduk scale özelliğ ise bunun boyutlandırılmasıyla alakalı örneğin 1.2 dediğimde yüzde 20 oranında resmi burada büyütmüş oluruz */
+        img:hover{
+            transform:scale(1.2) ;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Image Gallery</h1>
+    <div class="gallery">
+        <div><img src="https://picsum.photos/300/300?random=1"></div>
+        <div><img src="https://picsum.photos/400/200?random=2"></div>
+        <div><img src="https://picsum.photos/300/300?random=3"></div>
+        <div><img src="https://picsum.photos/300/500?random=4"></div>
+        <div><img src="https://picsum.photos/500/300?random=5"></div>
+        <div><img src="https://picsum.photos/300/400?random=6"></div>
+        <div><img src="https://picsum.photos/300/300?random=7"></div>
+    </div>
+    
+</body>
+</html>

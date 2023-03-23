@@ -1,0 +1,98 @@
+// burada anasayfayla alakalı olan section bölümlerini burada tanımlıcaz bu sadece anasayfayı ilgilendiriyor 
+#home{
+    // home section a
+    // yani burada section altındaki home__a kısmına gelmiş oluyoruz
+    &__a{
+        // skills altındaki elemanlara ulaşıcaz
+        .skills{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            // bu şkeilde grid sayesinde elemanları yan yana almış olup aralaında bir boşluk bırakalım
+            // ilgili div altındaki i etiketlerine ulaşalım yani iconlara
+            i{
+                color: $primary-color;
+                padding-bottom: .5rem;
+
+            }
+        }
+
+    }
+    // home section b
+    // yani burada section altındaki home__b kısmına gelmiş oluyoruz 
+    &__b{
+        .profile{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            // profile classının altındaki li elemanlarına ulaşalım
+            li{
+                &.title{
+                    font-size: 1.5rem;
+                }
+                &.number{
+                    font-size: 2rem;
+                    font-weight: bold;
+                }
+            }
+            // altındaki divlere gelelim
+            div{
+                padding: 3rem 0;
+                // bunlardan tek sırada olanlar için farklı bir color olsun
+                &:nth-child(odd){
+                    background-color: $light-color;
+                }
+                // bunlardan çift sırada olanlar için farklı bir color olsun
+                &:nth-child(odd){
+                    background-color: $medium-color;
+                }
+            }
+        }
+    }
+    // home section c
+    // yani burada section altındaki home__c kısmına gelmiş oluyoruz 
+    &__c{
+        .process{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            text-align: center;
+            // process iconları yan yana almış olduk bu sayede
+
+            &__step{
+                position:absolute;
+                top: 0;
+                right: 0;
+                //adım sayılarımız iconlarımızın sağ üst köşesinde konumlandı
+                font-size: 25px;
+                background: $primary-color;
+                border-radius: 50%;
+                line-height: 15px;
+                padding: 1rem;
+                transition: all 1s;
+            }
+
+            &__icon{
+                position: relative;
+                // bunu relative yaptık ve step adımlar kendini iconlara göre konumlandırdı kapsayıcı elemanları bu oldu
+                width: 125px;
+                height: 125px;
+                border-radius: 50%;
+                background: $dark-color;
+                color: #fff;
+                padding: 2rem;
+                text-align: center;
+
+                //hover kısmını yapalım
+                &:hover{
+                    background: $primary-color;
+
+                    .process__step{
+                        background: $dark-color;
+                    }
+                }
+            }
+        }
+    }
+}

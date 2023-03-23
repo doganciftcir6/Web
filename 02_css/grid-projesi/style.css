@@ -1,0 +1,326 @@
+/* temel renklerimizi tanımayalım */
+:root {
+    --primary-color: #e76f51;
+    --secondary-color: #2a9d8f;
+    --light-color: #f8f9fa;
+    --dark-color: #6c757d;
+    --max-width: 1100px;
+}
+/* daha sonra *selector aracılığıyla sayfadaki margin 0 padding 0*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* daha sonra html etiketi için bir font-size tanınlayalım */
+html {
+    font-size: 10px;
+}
+/* daha sonra body etiket için font değişimi yapalım */
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background-color: var(--light-color);
+}
+/* daha sonra sayfa üzerindeki bütün linklere ulaşalım */
+a {
+    color: var(--dark-color);
+    text-decoration: none;
+}
+/* daha sonra bütün ul etiketlerine ulaşalım */
+ul {
+    list-style: none;
+}
+/* daha sonra bütün resimlerimiz içerisinde bulunduğu containera sığdırılsın yani dolayısıyla responsive olsun */
+img {
+    width: 100%;
+}
+/* daha sonrasında bütün h etiketlerine ulaşalım bütün hepsi için ortak olan özellikleri yazmış olalım */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Varela Round', sans-serif;
+    margin: .7rem;
+    line-height: 1.3;
+}
+/* daha sonra p etiketleri için düzenleme yapalım */
+p {
+    margin: .5rem 0;
+}
+
+/* daha sonra utils ekleyerek genel geçer kullanacağımız classlarla ilgili çalışmaları eklyelim UTİLS */
+.container {
+    max-width: var(--max-width);
+    /* containerımızın alabileceği maksimum genişlik 1100 px olmuş oldu */
+    margin: 0 auto;
+    /* margin ile üstten alttan bir boşluk olmasın ancak sağdan soldan içeriği tarayıca boyutuna göre ayarlasın */
+    padding: 0 2rem;
+}
+/* daha sonra butonlar için bir class yazalım */
+.btn {
+    display: inline-block;
+    border: none;
+    background-color: var(--dark-color);
+    color: #fff;
+    padding: .4rem 1.6rem;
+    text-align: center;
+}
+/* daha sonra farklı buton renkleri tanımlayalım */
+.btn-light { background-color: var(--light-color);}
+.btn-dark { background-color: var(--dark-color);}
+.btn-primary { background-color: var(--primary-color);}
+/* ortak bir buton hoveri yapalım */
+.btn:hover {opacity: 0.8;}
+/* daha sonra bir buton oluşturucaz bu buton satırı kaplayacak */
+.btn-block {
+    display: block;
+    /* içerisinde bulunduğu containerı full kaplıcak ondan width 100% diyelim */
+    width: 100%;
+    text-align: center;
+}
+/* daha sonra zemin oluşturmak istediğimiz zaman zemin renkleri yapalım */
+.bg-primary {background-color: var(--primary-color); color: #fff;}
+.bg-secondary {background-color: var(--secondary-color) !important; color: #fff;}
+.bg-light {background-color: var(--light-color); color: var(--dark-color);}
+.bg-dark {background-color: var(--dark-color); color: #fff; }
+/* daha sonra bir padding oluşturmak istediğimiz zamanlar için class yapalım */
+.p-1 {padding: 0.5rem;}
+.p-2 {padding: 0.6rem;}
+.p-3 {padding: 0.8rem;}
+.p-4 {padding: 1rem;}
+/* 4 köşeden değilde top kısımdan padding uygulamak istediğimizde */
+.pt-1 {padding-top: 0.5rem;}
+.pt-2 {padding-top: 0.6rem;}
+.pt-3 {padding-top: 0.8rem;}
+.pt-4 {padding-top: 1rem;}
+/* yada bir alternatif olarak üstten alttan aynı anda padding değerleri vermek isteyebiliriz */
+.py-1 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-2 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+/* veya soldan ve sağdan isteyebiliriz */
+.px-1 { padding-right: 0.5rem; padding-left: 0.5rem; }
+.px-2 { padding-right: 0.6rem; padding-left: 0.6rem; }
+/* aynı şekilde bunların margin halinide oluşturabiliriz hazır margin değerleri bulunduran sanıflarımız olsun */
+.m-1 {margin: 0.5rem;}
+.m-2 {margin: 0.6rem;}
+.m-3 {margin: 0.8rem;}
+.m-4 {margin: 1rem;}
+/* margin botttomalr için */
+.mb-1 {margin-bottom: 0.5rem;}
+.mb-2 {margin-bottom: 0.6rem;}
+.mb-3 {margin-bottom: 0.8rem;}
+.mb-4 {margin-bottom: 1.6rem;}
+/* daha sonra her bir article yani makaleyi veya bir card oluşturduğumuz zaman carda zemin verebiliriz  */
+.card {
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.card-primary {
+    background-color: var(--primary-color);
+    padding: 1rem;
+}
+/* category claasını düzenliyor olalım bunu bir çok yerde kullanıcaz ortak özellikleri verelim */
+.category {
+    display: inline-block;
+    color: #fff;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    padding: .4rem .6rem;
+    border-radius: 15px;
+    margin-bottom: .5rem;
+}
+
+
+/* NAVBAR BÖLÜMÜ */
+#main-nav {
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+#main-nav .container {
+    display: grid;
+    /* containeri grid olarak tanımladık ve navbar kısmımızda 3 adet bölmemiz var bunların her bir tanesi kolon olarak tanımlanamsı gerekecek */
+    grid-template-columns: 0.6fr 3fr 2fr;
+     /* 3 ayrı kolonumuz bu genişlik bilgilerine göre oluştu */
+    padding: 1rem;
+    align-items: center;
+    /* dikeyde ortalanmış oldu bu sayede elemanlarımız */
+}
+/* navbar elemanlarına tek tek ulaşalım */
+#main-nav .logo {
+    width: 65px;
+}
+
+#main-nav ul {
+    display: flex;
+    /* bu sayede bunlar yan yana gelmiş olsunlar */
+    /* ve kendisinide justify-self aracılığıyla start diyerek ilgili grid elemanının soluna alabiliriz yani kendi kolonunun içerisinde solda oluyor */
+    justify-self: start;
+}
+/* her bir a elemanıa ulaşalım */
+#main-nav ul li a {
+    padding: 0.6rem;
+    /* bunu dediğimizde a etikerleri birbirinden ayrılacaktır */
+    font-weight: bold;
+}
+/* daha sonra seçmiş olduğumuz eleman active classı vermiştik o a elemaına */
+#main-nav ul li a.active {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 5px;
+}
+/* a etiketlerinin hover olayını gerçekleştirmiş olalım */
+#main-nav ul li a:hover {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+#main-nav .social-icons {
+    justify-self: end;
+    /* bu sayede iconlarımız kendi kolonu içerisinde en sağa gideceklerdir */
+}
+
+/* HEADER BÖLÜMÜ */
+/* ilk olarak header arkasına bir zemin eklemeliyiz */
+#header {
+    color: #fff;
+    background: #333;
+    padding: 2rem;
+     /* içerisinde elemanı konumlandırıcam absoulite olarak  o yüzden relative yapalım */
+    position: relative;
+}
+/* before diyerek header elemanının öncesine bir eleman eklicez bu elemana resim eklicez dolayısıyla bu elemanda relative olan headera göre konumlanacak */
+#header::before {
+    content: '';
+    background: url('rowing.jpeg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+#header .header-container {
+    display: grid;
+    /* bunu grid yapalım ve 2 ye bölmüş olalım */
+    grid-template-columns: repeat(2, 1fr);
+    height: 50vh;
+    align-items: center;
+}
+
+#header .header-content {
+    z-index: 2;
+    /* zindex bilgisine 2 dediğimizde yazılarımız soluk renkten etkilenmez */
+}
+
+/* ARTİCLE BÖLÜMÜ */
+#main-articles .articles-container{
+    display: grid;
+    /* bunu dediğimizde her bir elemanı grid item haline getiriyoruz */
+    grid-template-columns: repeat(3, 1fr);
+    /* her satırda 3 kolon ve her bir tanesi 1fr olacak */
+    gap: 1rem;
+    /* 1rem kadar birbirilerinden ayrılmış olsunlar */
+}
+
+/* FOOTER BÖLÜMÜ */
+/* hemen bir zemin eklemiş olalım */
+#main-footer{
+    background-color: var(--dark-color);
+    color: #fff;
+}
+/* daha sonra altındaki resime bakalım */
+#main-footer img{
+    width: 150px;
+}
+/* sonra a etiketlerine bakalım */
+#main-footer a{
+    color: #fff;
+}
+/* daha sonra footer containera ulaşalım ve onu grid container yapalım */
+#main-footer .footer-container{
+    display: grid;
+    /* ve her bir elemanı yan yana alıcaz ve tamplate tanımlıcaz */
+    /* repeat diyerek direkt 4 e bölebiliriz 4 bölüm vardı ve her birine eşit alan verelim 1fr diye*/
+    grid-template-columns: repeat(4, 1fr);
+    /* aralarında biraz boşluk olmuş olsun gap ile */
+    gap: 1.3rem;
+}
+/* şimdi input ve butona ulaşarak */
+/* mainfooter altındaki footer containerın içindeki input etiketlerine gel ve typeı email olanı seç */
+#main-footer .footer-container input[type='email']{
+    width: 90%;
+    padding: .5rem;
+    margin-bottom: .5rem;
+}
+#main-footer .footer-container input[type='submit']{
+    width: 90%;
+}
+/* sonra footer altındaki linklerimizi düzenlemiş olalım */
+#main-footer .footer-container ul li {
+    padding: .5rem 0;
+    border-bottom: 1px dotted #555;
+    width: 90½;
+}
+/* linklere hover efekti verelim */
+#main-footer .footer-container ul li a:hover{
+color: var(--primary-color);
+
+}
+/* en alta bir copyright bölümü ekleyelim 2. satırda 4 kolonuda kaplayan bir içerik  */
+/*.footer-container altında bulunan elemanlardan en sondaki elemanı seçicez * diyerek alt elemanlardan last childı alabilirz yani her bir div elemanından en sonkini seçebiliriz bu şekilde  */
+#main-footer .footer-container > *:last-child{
+    background-color: #444;
+    /* birinci kolondan başla 4 tane kolonu içine al diyebiliriz */
+    /* grid column diyerek kolonları birleştirebiliyorduk */
+    grid-column: 1 / span 4;
+    padding: .5rem;
+    text-align: center;
+}
+
+/* ARTİCLE HTML KISMI YENİ SAYFA KISMI İÇİN OLUŞTURDUĞUMUZ İÇERİKLERİ GRİD CONTAİNER İÇERİSİNE YERLEŞTİRİCEZ */
+/* article details kısmı */
+/* kapsayıcı eleman bu sonuçta ve altında 3 tane eleman var ve bunları konumladırıcaz */
+.page-container{
+    display: grid;
+    /*page containerın altındaki bütün elemanları grid eleman olarak oluştur ve her bir  tanesini bir kolona yerleştir */
+    grid-template-columns: 5fr 2fr;
+    /* yani 5 e 2 oranında bölelim */
+    margin: 2.5rem 0;
+    /* elemanalr arasında 1.5rem lik bir boşluk olsun */
+    gap: 1.5rem;
+    
+}
+/* önce > * ile page-containerın altındaki bütün elemanlara ulaşıcam sonra ilk elemanı seçicem */
+/* yani 3 kapsam 3 bölümümüz vardı birinciye ulaş demiş oluyoruz */
+.page-container > *:first-child{
+    /* grid row diyerek satırları birleştirirz 1 den başla 3 tane satırıda kapla deriz dolayısıyla geri kalan 2 bölümümüz bu eleman 3 satırıda kapladığından dolayı 2. kolonun satırlarında alt alta sıralanacaklar ve istediğimiz şekil oluşacak */
+    grid-row: 1 / span 3 ;
+
+
+}
+/* GRİD SAYFANIN GENEL HATLARININ TASARIMINI YAPARKEN KULLANILIR İÇERİKLERİN KENDİ İÇERİSİNDE KONUMLANDIRILMASINDA KULLANILMAZ */
+/* ELAMANIN SAYFA TASARIMI İÇERİSİNDE HERHANGİ BİR BÖLÜM İÇİN HEMEN KOLAYLIKLA FLEXBOX KULLANMALIYIZ */
+/* ŞİMDİ article ın altındaki meta etiketine ulaşalım kim tarafından yazıldığı ve kategori bilgisinin yer değişimini yapıcaz */
+/* small ve div etiketine bir flex elemanı olarak tanımlıcaz */
+#article .meta{
+    display: flex;
+    /* ve juftify-contecnt space-between sayesinde elemanlar arasında bir boşluk olaack ve sport sağ tarafta olacak */
+    justify-content: space-between;
+    /* flex container içinde elemanları dikeyde hizalayalım tam ortaya gelmiş olsunlar*/
+    align-items: center;
+    padding: 1rem;
+    background-color: #eee;
+}
+/* sitenin sağındaki categories elemanını düzenleyelim */
+.page-container #categories ul li{
+    padding: .5rem 0;
+    border-bottom: 1px dotted #555;
+    width: 90½;
+}
+/* categoies kısmının hover olayı olsun */
+.page-container #categories ul li a:hover{
+color: var(--primary-color);
+}

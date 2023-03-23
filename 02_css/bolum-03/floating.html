@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /*id bilgisi container olan dive ulaşalım ve containerin içindeki elemanlara textalign üzelliği vermeye çalışalım  */
+    #container{float: right;}
+    /* oluşturmuş olduğumuz box sınıfına ulaşalım ve bunlara genişlik ve yükseklik verelim bunun etkisi olması için oluşturduğumuz box sınıfında display özelliğini inline veya inline-block olarak yaptığımda ben text align özelliğini kullanabiliyorum fakat ben display özelliğini block yaparsam özelliği kullanamam bunu kullanmak için container idsine gidip float:right dersem kutu olduğu gibi sağ tarafa yanaşacaktır alt alta olacak şekilde ve container block özelliğini kaybetti diyebiliriz eğer bunu container id sine değilde direk olarak box içine float:right olarak verilsem kutular sağda yan yana sıralanacaktır bu durumda display özelliğinin ne olduğu önemli değil inline da olsa inlineblockta olsa aynı manzarayla karşılaşırız  */
+    .box{width: 150px; height:150px;background-color: brown; display: block;}
+        
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- box sınıfına sahip olan üç div ve tüm bunları kapsayan idsi container olan bir div -->
+    <div id="container">
+    <div class="box">kutu1</div>
+    <div class="box">kutu2</div>
+    <div class="box">kutu3</div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+// FLEXBOX ARACILĞYLA FOOTER KISMINI KONUMLADNIRICAZ
+#main-footer{
+    background: $dark-color;
+    color: #fff;
+    height: 5rem;
+
+    .footer-content{
+        display: flex;
+        justify-content: space-between;
+        // elemanlar yan yana geldi ve aralarına boşluk vererek biri sola biri sağa gitti
+        align-items: center;
+        // kapsayıcı elemanın yüksekliğini alttaki elemanada vermek gerekiyor sorna ortalanma işlemi gerçekleşiyor
+        height: 5rem;
+
+        // iconlara ulaşalım
+        .social .fab{
+            margin-right: 1rem;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            text-align: center;
+            padding: 0.6rem;
+            transition: all .6s;
+
+            // iconlara hover yapalım bide
+            &:hover{
+                background-color: $primary-color;
+            }
+        }
+    }
+}

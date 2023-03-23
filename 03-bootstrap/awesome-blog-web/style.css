@@ -1,0 +1,35 @@
+/* navbara ulaşıp bir arkaplan rengi verelim */
+.navbar{
+    background-color: #085e7d !important;
+}
+/* VARSAYILAN OLARAK KULLANILAN DARK CALLSININ RENGİNİ DEĞİŞTİRİP ÖYLE KULLANALIM */
+.bg-dark{
+    background-color: #085e7d !important;
+}
+
+/* cardlar resim boyutu farkı yüzünden farklı gözüküyorlar birbirinden bunu düzelticez */
+.card-img-top{
+    width: 100%;
+    /* görünü alalnın yüzde25 sini kullan */
+    height: 25vh;
+    /* backgorund cover ile aynı işi yapıyor bu */
+    object-fit: cover;
+}
+
+
+
+/* CONTACT BÖLÜMÜNDE RESPONSİVE TASARIM İÇİN MAPE YÜSEKLİK VERİCEZ 768PX LİN ALTINDA BU BOYUTLANDIRMA ÇALIŞACAK */
+#map{
+    height: 450px;
+}
+
+@media(min-width: 768px){
+    /* MAİN SAYFADAKİ CARDLARIN RESİMLERİ İÇİN YÜKSEKLİKLERİNİ AYARLIYOR OLALIM */
+    .card-img-top{
+     height: 32vh;
+}
+/* CONTACT BÖLÜMÜNDE RESPONSİVE TASARIM İÇİN MAPE YÜSEKLİK VERİCEZ 768PXİN ÜSTÜNDE BU BOYUTLANDIRMA ÇALIŞACAK VE MAPIN HEPSİNİ GÖRÜCEZ TAM BOYUTUNU DAHA DOĞRUSU */
+#map{height: 100%;}
+
+}
+

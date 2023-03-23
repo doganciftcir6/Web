@@ -1,0 +1,14 @@
+C:\Users\dogan\OneDrive\Masaüstü\sadık\05-NetCore\ConsoleApp1\HataVeHataYonetimi\bin\Debug\netcoreapp3.1\HataVeHataYonetimi.exe
+C:\Users\dogan\OneDrive\Masaüstü\sadık\05-NetCore\ConsoleApp1\HataVeHataYonetimi\bin\Debug\netcoreapp3.1\HataVeHataYonetimi.deps.json
+C:\Users\dogan\OneDrive\Masaüstü\sadık\05-NetCore\ConsoleApp1\HataVeHataYonetimi\bin\Debug\netcoreapp3.1\HataVeHataYonetimi.runtimeconfig.json
+C:\Users\dogan\OneDrive\Masaüstü\sadık\05-NetCore\ConsoleApp1\HataVeHataYonetimi\bin\Debug\netcoreapp3.1\HataVeHataYonetimi.runtimeconfig.dev.json
+C:\Users\dogan\OneDrive\Masaüstü\sadık\05-NetCore\ConsoleApp1\HataVeHataYonetimi\bin\Debug\netcoreapp3.1\HataVeHataYonetimi.dll
+C:\Users\dogan\OneDrive\Masaüstü\sadık\05-NetCore\ConsoleApp1\HataVeHataYonetimi\bin\Debug\netcoreapp3.1\HataVeHataYonetimi.pdb
+C:\Users\dogan\OneDrive\Masaüstü\sadık\05-NetCore\ConsoleApp1\HataVeHataYonetimi\obj\Debug\netcoreapp3.1\HataVeHataYonetimi.csproj.AssemblyReference.cache
+C:\Users\dogan\OneDrive\Masaüstü\sadık\05-NetCore\ConsoleApp1\HataVeHataYonetimi\obj\Debug\netcoreapp3.1\HataVeHataYonetimi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dogan\OneDrive\Masaüstü\sadık\05-NetCore\ConsoleApp1\HataVeHataYonetimi\obj\Debug\netcoreapp3.1\HataVeHataYonetimi.AssemblyInfoInputs.cache
+C:\Users\dogan\OneDrive\Masaüstü\sadık\05-NetCore\ConsoleApp1\HataVeHataYonetimi\obj\Debug\netcoreapp3.1\HataVeHataYonetimi.AssemblyInfo.cs
+C:\Users\dogan\OneDrive\Masaüstü\sadık\05-NetCore\ConsoleApp1\HataVeHataYonetimi\obj\Debug\netcoreapp3.1\HataVeHataYonetimi.csproj.CoreCompileInputs.cache
+C:\Users\dogan\OneDrive\Masaüstü\sadık\05-NetCore\ConsoleApp1\HataVeHataYonetimi\obj\Debug\netcoreapp3.1\HataVeHataYonetimi.dll
+C:\Users\dogan\OneDrive\Masaüstü\sadık\05-NetCore\ConsoleApp1\HataVeHataYonetimi\obj\Debug\netcoreapp3.1\HataVeHataYonetimi.pdb
+C:\Users\dogan\OneDrive\Masaüstü\sadık\05-NetCore\ConsoleApp1\HataVeHataYonetimi\obj\Debug\netcoreapp3.1\HataVeHataYonetimi.genruntimeconfig.cache

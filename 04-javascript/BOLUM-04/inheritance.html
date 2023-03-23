@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        class Kisi {
+            // konstraktır
+            constructor(ad,dogumYili){
+                this.ad = ad;
+                this.dogumYili = dogumYili;
+            }
+            // metot
+            yasHesapla(){
+                let tarih = new Date().getFullYear();
+                return tarih - this.dogumYili;
+            }
+            // bir metot olsun ancak ben bu metotu diğerlerinde ezmek istersem temelde olan metotu kullanmak istmeezsem oralarda
+            kendiniTanit(){
+                return `benim adım ${this.ad}`;
+            }
+        }
+
+        // KİŞİ SINIFIM VAR VE BEN BİR ÖĞRENCİ SINIFI DA TANIMLAMAK İSTİYORUM AMA ÖĞRENCİ SINIFI KİŞİ SINIFYLA AYNI ÖZELLİKLERE SAHİP OLACAK TEMELDE VE EKSTRA OZELLİKLERİ OLACAK KENDİNE AİT
+        class Ogrenci extends Kisi{
+            // konstraktır
+            constructor(ad, dogumYili, okulNumarasi){
+                // super ile ad ve dogumYili bilgisini temel sınıf olan Kişi sınıfının konstraktırına gönderiyorum
+                super(ad , dogumYili);
+                this.okulNumarasi = okulNumarasi;
+
+            }
+            // kendine özgü metotu
+            dersCalis(){
+                return `${this.ad} ders çalışıyor.`
+            }
+            // temel sınıfta olan metotu tekrar burda tanımlayarak bu metotun sadece bu sınıfta çalışmasını sağlarız gidip bu metotu temelden almaz ezmiş oluruz öğrenci sınıfı metotu buradaki tanımlamada kullanır
+            kendiniTanit(){
+                return `benim adım ${this.ad} ve okul numaram ${this.okulNumarasi}`;
+            }
+        }
+
+        // kişi sınıfından bir nesne üretelim
+        let kisi = new Kisi("ali", 1990);
+        // öğrenci sınıfından bir nesne üretelim
+        let ogrenci = new Ogrenci("ahmet", 2000, 123);
+
+        // metotları kullanalım extend olduğu için metot parent sınıftada child sınıftada çalışır
+        console.log(kisi.yasHesapla());
+        console.log(ogrenci.yasHesapla());
+        // yalnız dersCalis metotu child sınıfta olduğu için parent sınıf bu metotu kullanamaz
+        console.log(ogrenci.dersCalis());
+
+        // kendini tanıt metotu
+        console.log(kisi.kendiniTanit());
+        console.log(ogrenci.kendiniTanit());
+
+    </script>
+    
+</body>
+</html>

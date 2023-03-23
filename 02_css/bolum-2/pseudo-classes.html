@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* a etiketine genişlik verebilmek için display özelliğini inline-block yapalım */
+        /* a tetiketi içeriklere göre genişlik alırlar bunları width ile sabit bir genişlikte alalım */
+        a{border: 1px solid violet; padding: 5px 8px; display: inline-block; text-decoration: none; width: 60px; text-align: center;}
+        /*buradaki a etiketlerine belli durunları verebiliyoruz mesela etiket üzerine daha önceden bu etiket sayfasını ziayet ettiğim mi etmedim mi şeklinde farklı durumlar atayabiliyoruz bu durumlara pseudo classes sayesinde aracılığıyla yapırız */
+        /* link diyelim yani ziyaret edilmemiş olan bir link için verilecek olan css aslında burası */
+        a:link{color: red;}
+        /* peki ziyaret ettiysek bu durumda visited diyebiliyoruz linkin daha önce tıklandığını söylüyor */
+        a:visited{color: green;}
+        /* a etiketinin üzerine geldiğimiz zaman fare ile tıklamadan beklediğimiz zaman hover yani durumu gerçekleşiyor */
+        a:hover{color: white; background-color: violet;}
+        /* yada a ya fare ile üzerine gelip tıklayıp tıklamaya basılı tutup beklediğimiz anda aktive çalışır  */
+        a:active{color: white; background-color: yellow;}
+        /* div etiketi içeirsindeki click here yazısı üzerine geldiğimiz anda alttaki içerik yani p etiketi gösterilsin istiyorum  */
+        div:hover p{display: inline-block; background-color: tomato;}
+        p{display: none;}
+
+    </style>
+</head>
+<body>
+    <!-- pseudo classes  -->
+    <a href="borders.html">Home</a>
+    <a href="box-mode-marginl.html">About</a>
+    <a href="combinators.html">Products</a>
+
+    <br><br>
+
+    <div>
+        Click Here!
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quae distinctio dolorum earum, quo quisquam aspernatur voluptatum molestiae magnam, in sunt quidem iusto laudantium repudiandae doloribus nam eos minus commodi!</p>
+
+    </div>
+    <!-- pseudo elements -->
+    
+</body>
+</html>

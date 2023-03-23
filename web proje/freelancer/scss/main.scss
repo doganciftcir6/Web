@@ -1,0 +1,11 @@
+// her bölüm için ayrı ayrı tanımlama yaptığımımız scss sınıflarımızı main.scss içerisinde bileştiriyor olmalıyız
+@import 'veriables';
+@import 'utilities';
+@import 'base';
+@import 'header';
+@import 'home';
+@import 'about';
+@import 'footer';
+@import 'projects';
+@import 'contact';
+@import 'mobile';

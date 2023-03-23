@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- sayfaları bölümlendirmek istediğimizde <div> etiketi kullanılır -->
+    <!-- <div> etkiketi içerisine eklediklerimiz ayrı bir grup olurlar ve sayfanın diğer elemanlarından ayrı bölümde olurlar  -->
+    <!--görüntü açısından bir fark olmuyor ama div etiketleri içindeki etiketlerin ana toplanma yeri gibi oluyor yani dive vereceğimiz bir özellik içindeki tüm elemanları etkiler  -->
+    <!-- divelere id ile isim verebiliriz verdiğimiz idler sadece 1 elemana verilmelidir -->
+    <!-- divleri benzer elemanları gruplamak için kullanırız aslında -->
+        <div id="header">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam totam dolore enim beatae adipisci, ab quasi cum error fugit, illo non aspernatur ducimus! Fugit expedita aliquam praesentium. Ea, facilis error!</p>
+        </div>
+    
+    <!--iç içe <div> etiketi kullanmak mümkündür  -->
+    <div id="blogs">
+        <div>
+            <h2>Blog 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos veritatis enim commodi eligendi ab nam ea vitae, ex fuga quae exercitationem deleniti rem non recusandae fugit eius explicabo. Atque, aliquam.</p>
+        </div>
+
+    <div>
+        <h2>Blog 2</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil culpa at tempore laboriosam ab, mollitia nostrum nesciunt asperiores aliquid obcaecati recusandae. Voluptatum voluptates non voluptate, beatae nobis magni accusamus dolorem?</p>
+    </div>
+
+    </div>   
+<!-- <span> etiketi ise mesela biz bir <p> etiketi içinde bir kelimenin özelliğini değiştirmek istiyoruz bu durumda kullanabiliriz -->
+<!-- <span> etiketi kapsadığı elemanlar kadar yer kaplar -->
+<!-- mesela burada ipsum elemanının arka plan rengini ve yazı rengini değiştirmek istedik  -->
+
+    <div> 
+        Lorem <span style="background-color: yellow; color: brown;"> ipsum </span> dolor sit amet consectetur adipisicing elit. Velit, incidunt.
+    </div>
+    
+</body>
+</html>

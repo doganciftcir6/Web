@@ -1,0 +1,13 @@
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\UygulumaWhileDongusu\bin\Debug\netcoreapp3.1\UygulumaWhileDongusu.exe
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\UygulumaWhileDongusu\bin\Debug\netcoreapp3.1\UygulumaWhileDongusu.deps.json
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\UygulumaWhileDongusu\bin\Debug\netcoreapp3.1\UygulumaWhileDongusu.runtimeconfig.json
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\UygulumaWhileDongusu\bin\Debug\netcoreapp3.1\UygulumaWhileDongusu.runtimeconfig.dev.json
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\UygulumaWhileDongusu\bin\Debug\netcoreapp3.1\UygulumaWhileDongusu.dll
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\UygulumaWhileDongusu\bin\Debug\netcoreapp3.1\UygulumaWhileDongusu.pdb
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\UygulumaWhileDongusu\obj\Debug\netcoreapp3.1\UygulumaWhileDongusu.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\UygulumaWhileDongusu\obj\Debug\netcoreapp3.1\UygulumaWhileDongusu.AssemblyInfoInputs.cache
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\UygulumaWhileDongusu\obj\Debug\netcoreapp3.1\UygulumaWhileDongusu.AssemblyInfo.cs
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\UygulumaWhileDongusu\obj\Debug\netcoreapp3.1\UygulumaWhileDongusu.csproj.CoreCompileInputs.cache
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\UygulumaWhileDongusu\obj\Debug\netcoreapp3.1\UygulumaWhileDongusu.dll
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\UygulumaWhileDongusu\obj\Debug\netcoreapp3.1\UygulumaWhileDongusu.pdb
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\UygulumaWhileDongusu\obj\Debug\netcoreapp3.1\UygulumaWhileDongusu.genruntimeconfig.cache

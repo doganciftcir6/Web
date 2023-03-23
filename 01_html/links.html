@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- linki dosyalar arasında bir bağlantı sağlamak için kullanırız -->
+<!-- bunun için <a> etiketini kullanmamız gerekiyor -->
+<!-- href bilgisi nereye bağlanacağımızı soruyor  -->
+<!-- açılış kapanış etiketleri arasınada bir text yazmamız gerekir -->
+<!-- mesela burada sayfayı açtığımda Resimler diye bir yazı olacak üstüne tıkladığımızda images.html sayfasına gidecek -->
+<!-- title ile text linkinin üstüne mouseyi götürdüğümüzde yazdığımız şey çıkar mesela burada resimleri görüntüler çıkar -->
+    <a href="images.html" title="Resimleri Görüntüle"> 
+        Resimler
+    </a>
+<!--linke tıkladığımızda sayfa değilde direkt olarak resim açılsın istiyorsak  -->
+<br>
+<a href="images/r6.jpg"> 
+    R6 Resmi
+</a>
+<!-- Resmi indirtmek zip dosyasını açamayacağı için texte tıkladğında indirecektir -->
+<br>
+<a href="image.zip"> 
+    Resmi İndir
+</a>
+<!-- harici bir kaynağada link verebiliriz -->
+<!-- target dediğimiz zaman biz bu sayfayı nerde açmak istiyoruz bu varsayılan olarak _self'tir ve aynı sayfa içinde açılır _blank ile yeni sekmede açtırabiliyoruz   -->
+<br>
+<a href="https://google.com" target="_blank"> 
+    Google'ı Aç
+</a>
+<!-- bir resmide link olarak kullanabiliriz kullanıcı resme tıklayarak yeni linke gidecek yani-->
+<br>
+<a href="images/r6.jpg" target="_blank"> 
+    <img src="images/r6.jpg" alt="" width="200">
+</a>
+<!-- kullanıcıya mail gönderme linki de sunabiliriz -->
+<br>
+<a href="mailto:info@gmail.com" target="_blank"> 
+    Mail Gönder
+</a>
+<!-- sayfa içi linkleri nasıl veriyoruz -->
+<!-- burda h2 ye bolum1 diye id verdik ve href kısmına #bolum1 verirsek h2nin id si bolum1 olduğu için h2 ye gidilecek -->
+<!-- bu sayede eğer bölüm 2 sayfanın aşağısında kalırsa biz bölüm2 textine tıkladığımız anda sayfanın ekranı bölüm2 h2 kısmına gidecek -->
+<br> <br>
+<a href="#bolum1">Bölüm 1</a>
+<a href="#bolum2">Bölüm 2</a>
+
+<h2 id="bolum1">Bölüm 1</h2>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A quaerat alias voluptatem sint qui, maxime amet dicta odit reiciendis voluptatum rem unde placeat. Beatae, qui magnam sit amet excepturi animi.</p>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A quaerat alias voluptatem sint qui, maxime amet dicta odit reiciendis voluptatum rem unde placeat. Beatae, qui magnam sit amet excepturi animi.</p>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A quaerat alias voluptatem sint qui, maxime amet dicta odit reiciendis voluptatum rem unde placeat. Beatae, qui magnam sit amet excepturi animi.</p>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A quaerat alias voluptatem sint qui, maxime amet dicta odit reiciendis voluptatum rem unde placeat. Beatae, qui magnam sit amet excepturi animi.</p>
+
+<h2 id="bolum2"> Bölüm 2</h2>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A quaerat alias voluptatem sint qui, maxime amet dicta odit reiciendis voluptatum rem unde placeat. Beatae, qui magnam sit amet excepturi animi.</p>
+</body>
+</html>

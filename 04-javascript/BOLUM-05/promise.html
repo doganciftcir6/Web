@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // kullanıcı bir uygulamaya login oluyor => username
+        // posts
+        // create post
+
+        // sipariş
+        // siparişin hazırlanma süreci
+
+        // BURADAKİLER GİBİ BİR SÜRECİN BAŞLAMASI İÇİN ÖNCESİNDE BİR SÜRECİN BİTMESİ GEREKİYOR TABİ BUNUN İÇİN BİR UYARI GÖNDERİYOR OLMALIYIZ
+
+        // // login işlemi gerçekleştirelim
+        // console.log("start");
+        // const serverStatus = false;
+
+        // const login = (username, password, successFn, errorFn) => {
+        //     setTimeout(() => {
+        //         if(serverStatus){
+        //             successFn( {username: username, email: "info@sadikturan.com"} )
+        //         }else{
+        //             errorFn("server kapalı");
+        //         }
+                
+        //     }, 1000);
+        // }
+        // // tüm bilgiler geldikten ekstra 2 saniye sonra da bu bilgiler gelir
+        // const getPostsByUsername = (username, successFn) => {
+        //     setTimeout(() => {
+        //         successFn(["post 1", "post 2", "post 3"]);
+        //     }, 2000);
+        // }
+        // // tüm tüm tüm bilgiler geldikten sonra post details kısmı gelir
+        // const getPostDetails = (post, successFn) => {
+        //     setTimeout(() => {
+        //         successFn("post details");
+        //     }, 1000)
+        // } 
+
+        
+        // // önce ekrana start ve end yazdılırır daha sonra login kısmı çalışıp login bilgileri ekrana yazdrılır
+        // login("sadikturan", "12345", user => { 
+        //     // burada işlemler birbirini takip ediyor önce login sonra getpostbyusername sonra getpostdetails kısmı
+        //     console.log(user.username);
+        //     console.log(user.email);
+        //     getPostsByUsername(user.username, (posts) => {
+        //         console.log(posts);
+                
+        //         getPostDetails(posts[0], (details) => {
+        //             console.log(details);
+        //         })
+        //     });
+        // }, error);
+        // function error(msg){
+        //     console.log(msg);
+        // };
+       
+        // console.log("end");
+
+// bir promise yapısı oluşturucaz
+// resolve başarılı reject başarısız
+const serverStatus = true;
+const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        if(serverStatus){
+            resolve({username: "sadikturan"});
+        }else{
+            reject("login error");
+        }
+    }, 2000)
+});
+// then ile resolve edilecek değeri alabiliyorum then ile kullanıcı adını bize vermiş olur
+// catch ise bize rejactten gelen değeri veriyor
+promise.then(user => {
+    console.log(user);
+}).catch(err =>{
+    console.log(err);
+})
+        
+    </script>
+</body>
+</html>

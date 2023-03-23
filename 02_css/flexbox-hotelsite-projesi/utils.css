@@ -1,0 +1,178 @@
+/* burada projenin genel css kodları olacak buton stilleri veya zemin renkleri gibi */
+/* uygulama boyunca standart olacak olan renklere değişken isimleri vericem */
+:root {
+    --white: #fff;
+    --primary:#007bff;
+    --secondary:#6c757d;
+    --success:#28a745;
+    --danger:#dc3545;
+    --warning:#ffc107;
+    --info:#17a2b8;
+    --dark:#343a40;
+    --light:#f8f9fa;
+}
+/* şimdi gelelim bu renkleri kullanalım */
+/* text color yapalım yani yazılara verecek olduğumuz yazı renkleri istediğimiz zaman bu renkleri kullanabilicez */
+.text-primary{color:var(--primary);}
+.text-secondary{color:var(--secondary);}
+.text-success{color:var(--success);}
+.text-danger{color:var(--danger);}
+.text-warning{color:var(--warning);}
+.text-info{color:var(--info);}
+.text-dark{color:var(--dark);}
+.text-light{color:var(--light);}
+
+/* daha sonra bg-colors ile zemin renkleri için class tanımlama yapalım */
+.bg-primary{background-color: var(--primary);}
+.bg-secondary{background-color: var(--secondary);}
+.bg-success{background-color: var(--success);}
+.bg-danger{background-color: var(--danger);}
+.bg-warning{background-color: var(--warning);}
+.bg-info{background-color: var(--info);}
+.bg-dark{background-color: var(--dark);}
+.bg-light{background-color: var(--light);}
+
+/* daha sonrada buton renkleri oluşturalım */
+/* önce temel bir tane buton classı oluşturucam btn ile her butonda olacak özellikleri tanımlayalım */
+/* display inline block yapalım ki genişlik yükseklik padding margin 4 köşeden uygulansın diye */
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+}
+/* btn classının hover olayınıda yapmış olalım üzerine gelinince daha soğuk bir buton olmuş olsun*/
+.btn:hover{
+    opacity: 0.9;
+}
+/* mavi bir buton tanımlamak istersek diye buton classı yapalım ve diğer renklerden oluşan butonlarıda devamında class olarak tanımlamış olalım*/
+.btn-primary{color: var(--white); background-color: var(--primary);}
+.btn-secondary{color: var(--white); background-color: var(--secondary);}
+.btn-success{color: var(--white); background-color: var(--success);}
+.btn-danger{color: var(--white); background-color: var(--danger);}
+.btn-warning{color: var(--white); background-color: var(--warning);}
+.btn-info{color: var(--white); background-color: var(--info);}
+.btn-dark{color: var(--white); background-color: var(--dark);}
+.btn-light{color: var(--white); background-color: var(--light);}
+
+/* bir outline butonu oluşturmuş olalım background transparent diyelim bir zemin olmamış olsun */
+.btn-outline-primary{background: transparent; border: 1px solid var(--primary); color: var(--dark);}
+.btn-outline{background: transparent; border: 1px solid var(--white); color: var(--white);}
+
+/* outline butonunda hover bilgisini ayarlamış olalım */
+.btn-outline-primary:hover{background-color: var(--primary); border: 1px solid var(--primary); color: var(--white);}
+
+/* her bir elemanı flex elemanı olacak olan bir container oluşturucaz flex items */
+.flex-items{
+    display: flex;
+    /* bu durumda elemanalar direkt yan yana gelecektir */
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+/* flex-items içindeki divler için */
+.flex-items > div{
+    padding: 20px;
+    flex-basis: 100%;
+}
+
+/* about kısmındaki içerikleri sağa sola almak için flex columns*/
+
+.flex-columns .row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.flex-columns .column{
+    flex: 1;
+    /* resim yüksekliği tamamen kapladı ama içerik kaplamadı */
+}
+.flex-columns .column .column-1,
+.flex-columns .column .column-2{
+    height: 100%;
+}
+/* bunu yaptıktan sonra artık resimde içerikte yan yana şekilde sayfayı yarıya böldüler ve yükseklikleri kadar alanı kapladılar yarı yarıya */
+.flex-columns .column-2{
+    display: flex;
+    flex-direction: column;
+    /* column2 nin içindeki elemanlar alt alta gelmiş olmasını sağladık yukarıdakiler ile */
+    align-items: flex-start;
+    justify-content: center;
+    padding: 3rem;
+    /* bunları yaptıktan sonra yazılarımız kendi containeri içerisinde tam ortaya geldiler ve alt alta şekilde sıralandırlar */
+}
+    .flex-columns img{
+        width: 100%;
+        height: 100%;
+        /* bunu yaptıktan sonra resimde tam hizalanmış oldu containerı tam kapladı */
+    }
+
+ /* ikinci about kısmındaki içeriklerin yerini tam tersi şekilde değiştirmek için yeni bir flex-reverse oluşturalım */
+.flex-columns.flex-reverse .row{
+    flex-direction: row-reverse;
+}   
+
+   
+/* flex grid oluşturucaz yani örenğin bir tablo şeklinde 3 e 4 lük bir elamanı nasıl oluşturucaz gibi bunu galery bölümü için yapıcaz */
+.flex-grid .row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 .4rem;
+    /* yani sağdan soldan 4pixellik bir rem bilgisi */
+}
+.flex-grid .column{
+    flex: 25%;
+    /* her bir kolona bir flex özelliği yani 4 kolon varsa her kolonu %25 şeklinde sayfaya sığdırıcaz */
+    padding: 0 .4rem;
+}
+/* bu yukardakileri yapınca resimlermizi yan yana 4 kolon her kolon 2 resim barındıracak şekilde sıralandı */
+
+/* section kısmı tabi bu classı bir çok yerde kullanabiliriz */
+.section-header{
+    display: flex;
+    /* flex driection column ile elemanlar alt alta gelmiş olsun */
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem;
+}
+.section-header h2{
+    font-size: 4rem;
+    margin: 2rem 0;
+}
+.section-padding{
+    padding: 2rem 2rem 4rem;
+}
+
+/* responsive tasarım içni mobiel cihazlara uygun yapalım siteyi */
+@media(max-width: 768px){
+    .flex-items{
+        flex-direction: column;
+        /* bunu yapınca sitemizdeki iconlar gibi flex elemanlar yan yana değil alt alta gelecektir */
+    }
+    .flex-columns .column{
+        flex: 100% !important;
+        /* bunu yapınca resimler satırı full kaplar içerikleri resmin altında olur daha güzel göze gözükür about bölümleri için */
+    }
+    .flex-items > div{
+        padding: 10px;
+    }
+    /*grid için resimle4 uzak gözükmesin 2 li kolon olsunlar her kolon 4 resim göstersin yaptık  */
+    .flex-grid .column{
+        flex: 50%;
+    }
+}
+
+/* sayfanın blog kısmını düzenleyelim */
+/* nth child dediğimizde tek olan elemanları seçer 1 3 gibi */
+.flex-columns.article .column:nth-child(odd){
+    flex: 2;
+}
+/*even ise bunların altında kalanlar örneğin 2. 4. eleman gibi  */
+.flex-columns.article .column:nth-child(even){
+    flex: 3;
+}
+/* bu şekilde elemanları ayırabiliyorum teklere farklı özellik ver çiflere farklı özellik ver gibi */

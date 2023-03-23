@@ -1,0 +1,44 @@
+/* body etiketine google fontumuzu koyalım */
+body{
+    font-family: 'Open Sans', sans-serif;
+
+}
+/* product card */
+@media(max-width: 768px){
+    .product-card .img-wrap{
+        border-bottom: 1px solid #dee2e6
+    }
+}
+
+.product-card .img-warp{
+    height: 250px;
+    padding: .5rem;
+    display: block;
+    text-align: center;
+}
+
+.product-card  img{
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+/* yıldızları orange yapalım */
+.product-card .checked{
+    color: orange;
+}
+
+/* başlık */
+.product-card .title{
+    text-decoration: none;
+    color: #212529;
+}
+/* fiyat için */
+.product-card .price{
+    color: orange;
+    font-size: 22px;
+}
+/* rating */
+.product-card .rating{
+    font-size: 13px;
+}

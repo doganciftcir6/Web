@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+       }
+       /* html ye verdiğimiz özellik sayesinde butonlara tıkladığımızda geçişler daha yumuşak olur */
+        body{
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+        #page-1{
+            background-color: #313552;
+        }
+        #page-2{
+            background-color: #b8405e;
+        }
+        #page-3{
+            background-color: #2eb086;
+        }
+
+        .page{
+            display: flex;
+            /*her bir eleman flex container olsun */
+            /*kendi sectionları içerisindeki elemanlar satır içinde sıralanır  */
+            flex-direction:column ;
+            /*bunu yapınca tüm elemeanalar kendi sectionları içerisinde alt alta gelecektir */
+            height: 100vh;
+            /* bunu dediğimizde her bir seciton o anda tarayıcının yüksekliği neyse onun hepsini kaplayacak 3 bölüm 3 ayrı sayfa gibi olmuş olur*/
+            align-items: center;
+            /* alignt-items center ile bunları dikeyde ortalarız */
+            justify-content: center;
+            /* justify-content center ile bunları yatayda ortalarız */
+            text-align: center;
+            /* daha sonra yazılarıda kendi sectionları içlerinde ortalarız */
+        }
+        .page h1{
+            font-size: 5rem;
+            margin: 2rem;
+        }
+        .page p{
+            font-size: 1.5rem;
+        }
+
+        .btn{
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #f4f4f4;
+            color: #333;
+            text-decoration: none;
+            border: none;
+            font-size: 1.2rem;
+            transition: all .3s ease-in;
+        }
+        .btn:hover{
+            background-color: #333;
+            color: #fff;
+
+        }
+
+        #page-1 h1{
+            transform: translateY(-800px);
+            animation: h1_a 1s forwards ease-in;
+        }
+
+        @keyframes h1_a{
+            to{
+                transform: translateY(0);
+            }
+        }
+
+        #page-1 p{
+            transform: translateX(-2000px);
+            animation: p_a 1s forwards 1s ease-in;
+        }
+        @keyframes p_a{
+            to{
+                transform: translateX(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+<!-- sayfaya 3 tane bölüm eklicez -->
+<!-- bir bölüm -->
+<section id="page-1" class="page">
+    <h1>Page 1</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos nulla laboriosam magnam aspernatur. Repellat veritatis natus dolores similique aliquam suscipit odit debitis optio nam cum culpa perspiciatis, ratione expedita delectus.</p>
+    <div>
+        <a href="#page-2" class="btn">Next Page</a>
+    </div>
+</section>
+<!-- bir bölüm -->
+<section id="page-2" class="page">
+    <h1>Page 2</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos nulla laboriosam magnam aspernatur. Repellat veritatis natus dolores similique aliquam suscipit odit debitis optio nam cum culpa perspiciatis, ratione expedita delectus.</p>
+    <div>
+        <a href="#page-1" class="btn">Previous Page</a>
+        <a href="#page-3" class="btn">Next Page</a>
+    </div>
+</section>
+<!-- bir bölüm -->
+<section id="page-3" class="page">
+    <h1>Page 3</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos nulla laboriosam magnam aspernatur. Repellat veritatis natus dolores similique aliquam suscipit odit debitis optio nam cum culpa perspiciatis, ratione expedita delectus.</p>
+    <div>
+        <a href="#page-2" class="btn">Previous Page</a>
+    </div>
+</section>
+
+    
+</body>
+</html>

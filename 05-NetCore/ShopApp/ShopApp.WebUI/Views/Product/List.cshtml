@@ -1,0 +1,115 @@
+﻿@* liste göndermek için bu html sayfasına Bir model tanımlamamız gerekiyor listenin *@
+@*@model List<Product>*@
+@* Paketleme işini yaptıktan sorna ViewModels*@
+@model ProductViewModel
+@* server tagi açalım ve product sayısı 2 den büyükse popular claassı eklensin değilse eklenmesin *@
+@{
+    var popularClass = Model.Products.Count > 2 ? "popular" : "";
+    var categories = Model.Categories;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Product</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .popular {
+            color: green;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+    @* _navbar.cshtml'deki navbarı burada kullanmak için *@
+    @* PartialAsync metotu asecron bir metot olduğu için @await kullandık *@
+    @await Html.PartialAsync("_navbar")
+    @* _navbar.cshtml'deki header'ı' burada kullanmak için *@
+    @*@await Html.PartialAsync("_header")*@
+    @* bunun aynısının bir alternatifi var partial tag'leri bunu aktif etmek için _ViewImporst'a gidelim' *@
+    <partial name="_header">
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        @*Kategoriler gelecek*@
+                        <div class="list-group">
+                            @foreach (var category in categories)
+                            {
+                                <a class="list-group-item list-group-item-action" href="#">@category.Name</a>
+                            }
+                        </div>
+
+                    </div>
+                    <div class="col-md-9">
+                        @*Ürünler gelecek*@
+
+                        @* birinci ürün bilgisini yazdırmak listenin *@
+                        @* liste olduğu için hangi ürün olduğunu belirtmemiz lazım index numarası ile *@
+                        @*<div>
+                                <p>@Model[0].Name</p>
+                                <p>@Model[0].Price</p>
+                                <p>@Model[0].Description</p>
+                            </div>*@
+                        @* MODEL PAKETLEMEDEN SONRA *@
+                        @*<div>
+                                <p>@Model.Products[0].Name</p>
+                                <p>@Model.Products[0].Price</p>
+                                <p>@Model.Products[0].Description</p>
+                            </div>*@
+
+                        @* EĞER ÇOK FAZLA LİSTE ELEMANIMIZ OLURSA BU ŞEKİLDE ONLARA TEK TEK İNDEX NUMARALARI İLE ULAŞMAK ZOR OLUR DOLAYISIYLA BİZİM HTML SAYFALARIMIZ CSHTML YANİ DİNAMİK BİR HTML SAYFASI OLDUĞU İÇİN RAZOR ARACILĞIYLA BİR DÖNGÜ OLUŞTURABİLİYORUZ *@
+                        @if (Model.Products.Count == 0)
+                        {
+                            @await Html.PartialAsync("_noproduct")
+                        }
+                        else
+                        {
+                            <div class="row">
+                                @foreach (var product in Model.Products)
+                                {
+                                    <div class="col-md-3">
+                                        @await Html.PartialAsync("_product", product)
+                                    </div>
+                                }
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+
+
+            @* listenin ikinci ürün bilgisini yazdırmak *@
+            @*<div>
+                    <p>@Model[1].Name</p>
+                    <p>@Model[1].Price</p>
+                    <p>@Model[1].Description</p>
+                </div>*@
+            @* MODEL PAKETLEMEDEN SONRA *@
+            <div>
+                <p>@Model.Products[1].Name</p>
+                <p>@Model.Products[1].Price</p>
+                <p>@Model.Products[1].Description</p>
+            </div>
+
+        </main>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

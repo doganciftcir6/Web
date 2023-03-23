@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: #333;
+        }
+        /* oluşturduğumuz boxa ulaşalım */
+        .box{
+            background-color: yellow;
+            width: 150px;
+            height: 150px;
+            /* kutunun yerini değiştirebilmek için relative tanımlarız */
+            position: relative;
+            /* başlangıç konumunu burdada verebiliriz */
+            top: 100px;
+            left: 100px;
+            /* bu sayede gri zemin üzerinde sarı kutumuz oluşmuş oldu */
+            /* şimdi animasyon oluşturucaz */
+            animation: a1 5s forwards ease-in;
+
+
+        }
+        /* bir keyframes oluşturucaz ve buna isim vericez animasyon 1 anlamında */
+        @keyframes a1{
+            /* başlangıç konumunu from ile belirtebilriz */
+            /* from{
+                    top: 100px;
+                    left: 100px;
+                } */
+            /* VEYA ANİMASYONU YÜZDELERE BÖLEREK ÖRNEĞİN YÜZDE 25İNDE NAPSIN 50 SİNDE NAPSIN 75İNDE NAPSIN GİBİ AYRI KOMUTLAR VEREBİLİRİZ */
+            25%{
+                top: 100px;
+                left: 0;
+                background-color:aqua ;
+            }
+            50%{
+                top: 100px;
+                left: 100px;
+                background-color: goldenrod;
+            }
+            75%{
+                top: 200px;
+                left: 100px;
+                background-color: brown;
+            }
+            100%{
+                top: 300px;
+                left: 200px;
+                background-color: blueviolet;
+            }
+        }
+
+        /* h1 etikeyinede animasyon uygulucaz */
+        h1{
+            position: relative;
+            animation: text_animation 2s forwards ease-in;
+
+        }
+
+        @keyframes text_animation{
+            from{
+                top: -200px;
+            }
+            /* ekranın dışında başlattık h1 yazısını */
+            to {
+                top: 0;
+            }
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lorem, ipsum dolor.</h1>
+    <!-- css animate ile bir animasyon oluşturabiliyoruz -->ş
+    <!-- koyu bir zemnimizi var body etiketine verdiğimiz bg ile bunun üzerinde bir boxımız olsun -->
+    <div class="box"></div>
+
+
+
+    
+</body>
+</html>

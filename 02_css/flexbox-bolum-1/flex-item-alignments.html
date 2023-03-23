@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* flex container yaptık */
+        .container{
+            display: flex;
+            /* ben bu itemleri daha önce hepsini aynı anda haraket ettiriyordum ama sadece bir tanesini hareket ettirmek istersem bunun için body etiketinde her bir elemana ikinci bir class bilgisi verilmeli*/
+            /* önce tüm elemanları aşağıda konumlandıralım */
+            align-items: flex-end;
+            /* tabi ben bunu vermezsek elemanlar strech olacak yani bulduğu yükseklik kadar dikeyde yer kaplayacaklar */
+
+
+            background-color:#034f84;
+            height:500px ;
+        }
+        .item{
+            background-color: #f7786b;
+            padding: 30px;
+            margin:20px;
+            color:#fff ;
+            font-size: 25px;
+        }
+        /* tüm elemanlarımız aşağıda konumlanmıştı ancak sadece tek bir elemanı hareket ettimek için ayrı classlar verip o elemana ulaşmamız lazım ve align-self ile flex start kullanıp o elemanı yukarıya alabiliriz */
+        .item-1{
+            align-self: flex-start;
+
+        }
+/* item 2 yi de ortalamış olalım mesela*/
+        .item-2{
+            align-self: center;
+
+        }
+
+    </style>
+</head>
+<body>
+<!-- div ile bir container oluşturalım ve içine item classına sahip olan 4 adet div ekleyelim -->
+    <div class="container">
+        <div class="item item-1">item1</div>
+        <div class="item item-2">item2</div>
+        <div class="item item-3">item3</div>
+        <div class="item item-4">item4</div>
+
+    </div>
+    
+</body>
+</html>

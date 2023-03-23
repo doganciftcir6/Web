@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #333;
+            /* body içerisine gelen bütün elamanları sayfanın ortasına alıcam o yüzden displayflex diyebilirz */
+            display: flex;
+            /* bütün elemanları alignitem ile dikeyde ortalarız */
+            align-items: center;
+            /* bütün elemanları justfiy-content ile de yatayda ortalarız */
+            justify-content: center;
+            /* yükseklik olarakta sayfanın kendisini kaplamış olsun */
+            height: 100vh;
+        }
+        /* box divi içinde bir düzenleme yapalım */
+        .box{
+            background-color: yellow;
+            /* bir yer kazandıralım*/
+            width: 150px;
+            height: 150px;
+            /* hover özelliğinin anında değilde belli bir sürede gerçekleşmesini istiyorum */
+            /* transition-property: background-color; */
+            /* buarda hangi özelliği değiştirmek istediğimizi tanımlıyoruz arkaplan rengi burada */
+            /* transition-duration: 2s; */
+            /* burada da ne kadar sürede olmasını istediğimizi tanımlıyoruz 2saniye diyebilirz */
+            /* tabi bu her seferinde böyle oluyor biz başlangıçta hızlı olsun sonra yavaşlasın isteyebiliriz */
+            /* ease-in out ile ilk başta yavaş ve sonda ise yavaş olduğunu görüyoruz */
+            /* transition-timing-function: ease-in-out; */
+            /*ease*in dediğimizde ise ilk başta yavaş sonradan hızlanır  */
+            /* transition-timing-function: ease-in; */
+            /* bu 3 satırda verdiğimiz özelliği tek bir satır içerisinde verebiliriz */
+            /* ilk başta hangi özellik için bir tanımlama yapıcaz sonra kaç saniye olduğu üçüncü olarakta funciton türünü yazabiliriz */
+            /* birden fazla özellik tanımlayabiliriz ilk özellik tanımlamasını ve saniyeyi yazdıktan sonra virgül atıp ikinci özelliği yazarız ve o özellik için istediğimiz saniyeyi de gireriz ardından */
+            /* transition: background-color 2s, border-radius 4s ease; */
+            /* 2 saniyede renk değişimi 4 saniyede de şekil değişimi yapmış olduk */
+            /* bu şekilde bütün özellikleri ayrı ayrı tanımlamak yerine all diyerek aynı anda da yapabiliriz tabi ortak olarak aynı saniyeyi kullanıyorsak bunu yapabilirz */
+            transition: all 2s ease-in;
+
+        }
+        .box:hover{
+            /* değiştirmek istediğimiz özellikleri burada yazarız */
+            background-color: red;
+            border-radius: 50%;
+            border: 5px solid white;
+            width: 300px;
+            height: 300px;
+            /* transition all dediğimiz için bu özelliklerin hepsi transtion aracılığıyla yapılacaktır */
+
+        }
+    </style>
+</head>
+<body>
+    <!-- sayfanın tam ortasına gelecek olan içeriği oluşturalım -->
+    <div class="box"></div>
+    
+    
+</body>
+</html>

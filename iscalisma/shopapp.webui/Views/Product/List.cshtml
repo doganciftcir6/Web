@@ -1,0 +1,39 @@
+@model ProductListViewModel
+
+@{
+    var popularClass = Model.Products.Count > 2 ? "popular" : "";
+    var products = Model.Products;
+}
+@* bunun olması için _ViewStart.cshtml adında bir dosya oluşturup oraya layout bağlantısını yapıyoruz ve html sayfalarımız artık layout'u burda tanımlama yapmadan kullanabiliyor *@
+@* eğer layout'u iptal etmek kullamak istemezsek ise bu html sayfası içerisinde *@
+@* bu sayade mesela yönetici sayfalarının başka bir layout kullanamsını sağlayabilirim *@
+@*@{ 
+    Layout = null;
+}*@
+@{ 
+    Layout = "_Layout2";
+}
+
+@* layout oluşturduktan sonra tekrar html iskeleti oluşturmanın anlamı yok *@
+<div class="row">
+    <div class="col-md-3">
+        @await Component.InvokeAsync("Categories")
+    </div>
+    <div class="col-md-9">
+        @if (products.Count == 0)
+        {
+            @await Html.PartialAsync("_noproduct")
+        }
+        else
+        {
+            <div class="row">
+                @foreach (var product in products)
+                {
+                    <div class="col-md-4">
+                        @await Html.PartialAsync("_product", product)
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</div>

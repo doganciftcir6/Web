@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* flex container yaptık */
+        .container{
+            display: flex;
+            /* yatayda ve dikeyde bunları hizalamak yerine her ulaşmış olduğum elemana bir margin değeri verebilriim  */
+            /* align-items: center ;
+            justify-content: center; */
+          
+          
+            background-color: #034f84;
+            height: 500px ;
+        }
+        .item{
+            background-color: #f7786b;
+            padding: 30px;
+            margin:20px;
+            color:#fff ;
+            font-size: 25px;
+            /* bunu dersek yine ortalanmış olur */
+            /* margin: auto; */
+            /* margin top ile eleman üst taraftan kendini aşağıya doğru iter */
+            /* margin-top: auto; */
+            /* bu sefer eleman alt taraftan yukarıya doğru kendini iter */
+            /* margin-bottom: auto; */
+            /* margin right auto bu sefer eleman sağ taraftan doğru kendini iter */
+            /* margin-right: auto; */
+            /*elamn sağ tarafa doğru gitmiş olur left ile  */
+            /* margin-left: auto; */
+            /* iki özelliği aynı anda kullanabiliriz bunu yaptığımızda eleman hem kendini soldan hemde aşağıdan iter konum sağ üst köşeye gider*/
+            /* margin-left: auto;
+            margin-bottom: auto; */
+
+
+        }
+/* her ikisinede margin auto verirsek sayfayı ortadan ikiye böldüğünü düşün ve elemanlar kendi bölümleri içerisinde ortalanırlar */
+/* elemanları birbirlerine göre hizalamak için margin kullanılabilir */
+/* item1 e margin right verildiğinde item1 diğer elemanı sağ tarafa doğru iter */
+ /* buara item1 e sağ ve üstten kendine bir boşluk bırak diyebiliriz */
+ /* item 2 ye ise soldan kendini it sağda ol diyebiliriz */
+        .item-1{
+            margin-right: auto;
+            margin-top: auto;
+
+        }
+        
+        .item-2{
+            margin-left: auto;
+            
+        }
+
+        
+    
+
+    </style>
+</head>
+<body>
+<!-- div ile bir container oluşturalım ve içine item classına sahip olan 1 adet div ekleyelim -->
+    <div class="container">
+        <div class="item item-1">item1</div>
+        <div class="item item-2">item2</div>
+    </div>
+    
+</body>
+</html>

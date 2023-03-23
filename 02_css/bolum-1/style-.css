@@ -1,0 +1,4 @@
+/* önemli olarak sadece sayfalarımızda ortak olan özellikleri bu şekilde yapabiliyoruz */
+section{background-color: red; text-align: center;}
+    h1{color: white;}
+    h2{color: blue;}

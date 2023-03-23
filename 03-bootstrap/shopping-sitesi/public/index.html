@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome kütüphanesi -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <title>Document</title>
+</head>
+<!-- önce sayfanın zemin rengini değiştirelim body etiketine class vererek -->
+<body class="bg-light">
+    <!-- header bölümü oluşturalım öncelikle-->
+    <header>
+        <!-- top-bar kısmını yapıcaz -->
+        <section class="top-bar">
+            <div class="container">
+                <!-- bir container ekledik içerikler sağdan soldan ortalansın diye ve bir satır eklicez ve satırı 3 e bölücez -->
+                <!-- e-commarce yazımız biraz aşağıda kaldı onu dikeyde hizalıcaz kapsayıcı olan row elemanına class vererek -->
+                <!-- gy-3 diyerek y ekseninde yani bunlar kolonlar alt alta geldiğinde aralarında bir boşluk bırakalım -->
+                <div class="row gy-3 align-items-center">
+                    <!-- large cihazlarda 2 birim olsun -->
+                    <!-- ayrıca col-sm-4 ile sm cihaz altındaki görüntüyü ayarlıcaz icon kısmı 4 lük kaplıcak alttaki 8 lik kaplayacak 12 kolon dolduğu için bi alttaki kalan kısım ise kendini alta atacak tek kendisi kaplayacak -->
+                    <div class="col-lg-2 col-sm-4 col-4">
+                        <!-- navbardaki soldaki icon veya yazı -->
+                        <a href="index.html" class="navbar-brand">E-Commerce</a>
+                    </div>
+                    <!-- link gurubumuz sağ tarafa searchbar ise sol tarafa geldi lg cihaz altında istediğimiz görüntüyü aldık link gruplarımız serachbarın üstüne geldi eğer altına gelsin isteseydik bu 2 tane olan 5 lik kolonlarımızın yerini değiştirdik fakat bu sefer lg cihaz üstünde serachbar sağda buton grubumuz solda kaldı bu durumu düzelticez buton grubunu sağ tarafa alıcaz order-lg-last diyerek buton gurubunu sağa çekeriz ve lg cihaz altında da istediğimiz görüntüde kalmış olur-->
+                    <div class="order-lg-last col-lg-5 col-sm-8 col-8">
+                        <!-- son 5 lik kolona ise bir tane buton grubu oluşturucaz -->
+                        <!-- text-end bunları en sağa atar -->
+                        <div class="text-end">
+                            <!-- bunlar sm cihaz üzerinde görünsün istiyorum yazılar o yüzden d-none d-sm-inline-block koyduk -->
+                            <a href="" class="btn btn-light"><i class="fa fa-user"></i><span class="ms-1 d-none d-sm-inline-block">Hesabım</span></a>
+                            <a href="" class="btn btn-light"><i class="fa fa-heart"></i><span class="ms-1 d-none d-sm-inline-block">Listem</span></a>
+                            <a href="" class="btn btn-light"><i class="fa fa-shopping-cart"></i><span class="ms-1 d-none d-sm-inline-block">Sepetim</span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-12">
+                        <!-- 5lik kısımda burada ise bir form olacak -->
+                        <form>
+                            <!-- sol tarafta bir input ve sağ tarafta bir buton olacak ondan input-group -->
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Anahtar Kelime">
+                                <button class="btn btn-primary"><i class="fa fa-search"></i></button>
+                                <!-- bu sayada arama motoru barı gibi bi barımız olmuş oldu -->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- navbar kısmını yapıcaz -->
+        <!-- navbar-expand-lg demezsek içerikler lg cihaz üzerinde gözükmez hep o basma menü iconu gözükür -->
+        <nav class="navbar navbar-dark bg-primary navbar-expand-lg">
+            <div class="container">
+                <!-- içeriği butonla ilişkilendirme işlemini burada yapıcaz -->
+                <button type="button" class="navbar-toggler border" data-bs-toggle="collapse" data-bs-target="#navbar_main">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- mobil cihazlarda navbar menüleri gözükmeyecek onun yerine button kısmını yani tıklanıldığında açılacak olan simgeyi yaptık şimdi onun içeriğini yapıcaz -->
+                <!-- bu içeriği collapse içeriğini yukarıdaki butonla ilişkilendirmek için bir id veririz -->
+                <div class="collapse navbar-collapse" id="navbar_main">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="" class="nav-link ps-0">Elektronik</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Moda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Kozmetik</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Spor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Market</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Kitap</a>
+                        </li>
+                        <!-- diğer kategorilere tıkladığımız zaman aşağı doğru açılan bir kısım olmasını istiyoruz yani dropdown -->
+                        <li class="nav-item dropdown">
+                            <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">Diğer Kategoriler</a>
+                            <!-- buradaki içerik ile link kısmını ilişkilendiriyor olmalıyız  data-bs-toggle=dropdown -->
+                            <!-- tıklandığında açılacak olan dropdown içeriği -->
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#" class="dropdown-item">Category 1</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-item">Category 2</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-item">Category 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+        <!-- menü ve slider bölümünü yapıcaz -->
+        <section class="pt-3 slider">
+            <div class="container">
+                <!-- bir card classı oluşturalım -->
+                <main class="card">
+                    <!-- card clası içine bir satır oluşturalım -->
+                    <!-- large cihaz ve üstünde ekstra bir padding uygulansın istiyorum p-lg-3-->
+                    <div class="row p-lg-2 p-1">
+                        <!-- satır kısmının sol tarafına aside diyelim menüler genelde aside ile verilir -->
+                        <!-- large cihazın altına indiğimiz anda bunu kaybedelim -->
+                        <!-- bu ilk aside kısmı soldaki kısım her zaman gösterilmesin lg cihaz altında gözükmesin üstünde gözüksün d-none d-lg-block-->
+                        <aside class="d-none d-lg-block col-lg-3">
+                            <!-- nav elemanlarını alt alta almak istiyorum ondan flex-column -->
+                            <!-- biz buraya ne kadar eleman eklersek ekleyelim card eklediğimiz eleeman kadar aşağıya doğru uzayacak bunun yerine car uzamasın card uzamasın card içinde bir scrollbar çıksın istiyorum overflow-auto dicez ve belli bir card yüksekliği vericez slider__nav classını vererek _style.scss de bir yükseklik vericez ayrıca scroll bar çıkması için wrap özelliğini kapatmak lazım flex-nowrap-->
+                            <!-- ayrıca nav-pills özelliği vererek active olan class arka zemin rengini boyatabiliriz -->
+                            <nav class="nav nav-pills flex-column flex-nowrap overflow-auto slider__nav">
+                                <a href="#" class="nav-link active">Elektronik</a>
+                                <a href="#" class="nav-link">Moda</a>
+                                <a href="#" class="nav-link">Kozmetik</a>
+                                <a href="#" class="nav-link">Spor</a>
+                                <a href="#" class="nav-link">Market</a>
+                                <a href="#" class="nav-link">Kitap</a>
+                                <a href="#" class="nav-link">Anne Bebek</a>
+                                <a href="#" class="nav-link">Oyuncak</a>
+                            </nav>
+                        </aside>
+                        <div class="col-lg-9">
+                            <!-- buarda slider carouselimiz olacak -->
+                            <div id="slider" class="carousel slide" data-bs-ride="carousel">
+                                <!--indicators resmin altında bir indicators olsun altında -->
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#slider" data-bs-slide-to="0" class="active"></button>
+                                    <button type="button" data-bs-target="#slider" data-bs-slide-to="1" class="active" aria-current="true"></button>
+                                    <button type="button" data-bs-target="#slider" data-bs-slide-to="2" class="active" aria-current="true"></button>
+                                </div>
+                                <!-- inner içine içeriklerimizi eklicez -->
+                                <div class="carousel-inner">
+                                    <!-- inner içine elemanları ekleyelim -->
+                                    <!-- active vermezsek slider çalışmaz başta görünmesini istedipimize active everelim -->
+                                    <div class="carousel-item active">
+                                        <img src="img/slider-1.jpeg" alt="" class="d-block w-100">
+                                    </div>
+                                    <!-- başka eleman -->
+                                    <div class="carousel-item">
+                                        <img src="img/slider-2.jpeg" alt="" class="d-block w-100">
+                                    </div>
+                                    <!-- başka eleman -->
+                                    <div class="carousel-item">
+                                        <img src="img/slider-3.jpeg" alt="" class="d-block w-100">
+                                    </div>
+                                </div>
+                                <!-- slider yani resimlerin üzerinde ileri geri şeklinde resimleri değiştiren oklar ekleyelim -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </section>
+
+        <!-- ürün kartları bölümünü yapıcaz -->
+        <section class="pt-3">
+            <div class="container">
+                <!-- bir başlık kısmımız olsun -->
+                <header>
+                    <h3 class="mb-md-3 mb-0">Son Eklenenler</h3>
+                </header>
+                <!-- satır oluşturalım -->
+                <div class="row">
+                    <!-- her bir card için div oluşturalım -->
+                        <!-- lg cihaz ve üzerinde bir satırda 4 card olacak -->
+                        <!-- md cihazda 3 tane yan yana card olacak -->
+                        <!-- sm cihazda 2 tane yan yana card olacak -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <!-- cardları tanımlayalım -->
+                        <!-- figure mantıskal etiketi cardlar için kullanılabilir -->
+                        <figure class="card shadow">
+                             <!-- a etiketi altında birden fazla eleman olacağı için img-wrap kullanırız -->
+                            <a href="details.html" class="img-wrap">
+                                <b class="badge bg-success"> İndirim </b>
+                                <img src="img/1.jpeg" alt="">
+                            </a>
+                             <!-- açıklama kısmı burada olacak -->
+                            <figcaption class="info-wrap border-top">
+                                 <!-- kalp yani favorilere ekleme kısmı -->
+                                <a href="#" class="float-end btn btn-light btn-icon">
+                                    <i class="fa fa-heart"></i>
+                                </a>
+                                 <!-- truncate açıklama kısmında yazan yazılar fazla olursa ... şeklinde gösterilmesini sağlıyor -->
+                                <a href="" class="title text-truncate">
+                                    Apple Watch Yıldız Işığı Alüminyum Kasa ve Spor Kordon
+                                </a>
+                                <!-- fiyat kısmı -->
+                                <div class="price-wrap">
+                                    <span class="price">6.599 TL</span>
+                                     <!-- önceki fiyatı -->
+                                    <del class="price-old">6.999 TL</del>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!-- burdan sonra tekrara düşüyor aynı şeyleri yapıyoruz yeni card yapıyoruz -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <figure class="card shadow">
+                            <a href="" class="img-wrap">
+                                <b class="badge bg-success"> İndirim </b>
+                                <img src="img/2.jpeg" alt="">
+                            </a>
+                            <figcaption class="info-wrap border-top">
+                                <a href="#" class="float-end btn btn-light btn-icon">
+                                    <i class="fa fa-heart"></i>
+                                </a>
+                                <a href="" class="title text-truncate">
+                                    Apple Watch Yıldız Işığı Alüminyum Kasa ve Spor Kordon
+                                </a>
+                                <div class="price-wrap">
+                                    <span class="price">6.599 TL</span>
+                                    <del class="price-old">6.999 TL</del>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!-- burdan sonra tekrara düşüyor aynı şeyleri yapıyoruz yeni card yapıyoruz -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <figure class="card shadow">
+                            <a href="" class="img-wrap">
+                                <b class="badge bg-success"> İndirim </b>
+                                <img src="img/3.jpeg" alt="">
+                            </a>
+                            <figcaption class="info-wrap border-top">
+                                <a href="#" class="float-end btn btn-light btn-icon">
+                                    <i class="fa fa-heart"></i>
+                                </a>
+                                <a href="" class="title text-truncate">
+                                    Apple Watch Yıldız Işığı Alüminyum Kasa ve Spor Kordon
+                                </a>
+                                <div class="price-wrap">
+                                    <span class="price">6.599 TL</span>
+                                    <del class="price-old">6.999 TL</del>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!-- burdan sonra tekrara düşüyor aynı şeyleri yapıyoruz yeni card yapıyoruz -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <figure class="card shadow">
+                            <a href="" class="img-wrap">
+                                <!-- farklı olarak burda rengi danger yapıp indirim yazısını değiştiriyoruz -->
+                                <b class="badge bg-danger"> Fırsat Ürün </b>
+                                <img src="img/4.jpeg" alt="">
+                            </a>
+                            <figcaption class="info-wrap border-top">
+                                <a href="#" class="float-end btn btn-light btn-icon">
+                                    <i class="fa fa-heart"></i>
+                                </a>
+                                <a href="" class="title text-truncate">
+                                    Apple Watch Yıldız Işığı Alüminyum Kasa ve Spor Kordon
+                                </a>
+                                <div class="price-wrap">
+                                    <span class="price">6.599 TL</span>
+                                    <del class="price-old">6.999 TL</del>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!-- burdan sonra tekrara düşüyor aynı şeyleri yapıyoruz yeni card yapıyoruz -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <figure class="card shadow">
+                            <a href="" class="img-wrap">
+                                <b class="badge bg-success"> İndirim </b>
+                                <img src="img/5.jpeg" alt="">
+                            </a>
+                            <figcaption class="info-wrap border-top">
+                                <a href="#" class="float-end btn btn-light btn-icon">
+                                    <i class="fa fa-heart"></i>
+                                </a>
+                                <a href="" class="title text-truncate">
+                                    Apple Watch Yıldız Işığı Alüminyum Kasa ve Spor Kordon
+                                </a>
+                                <div class="price-wrap">
+                                    <span class="price">6.599 TL</span>
+                                    <del class="price-old">6.999 TL</del>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!-- burdan sonra tekrara düşüyor aynı şeyleri yapıyoruz yeni card yapıyoruz -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <figure class="card shadow">
+                            <a href="" class="img-wrap">
+                                <b class="badge bg-success"> İndirim </b>
+                                <img src="img/6.jpeg" alt="">
+                            </a>
+                            <figcaption class="info-wrap border-top">
+                                <a href="#" class="float-end btn btn-light btn-icon">
+                                    <i class="fa fa-heart"></i>
+                                </a>
+                                <a href="" class="title text-truncate">
+                                    Apple Watch Yıldız Işığı Alüminyum Kasa ve Spor Kordon
+                                </a>
+                                <div class="price-wrap">
+                                    <span class="price">6.599 TL</span>
+                                    <del class="price-old">6.999 TL</del>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!-- burdan sonra tekrara düşüyor aynı şeyleri yapıyoruz yeni card yapıyoruz -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <figure class="card shadow">
+                            <a href="" class="img-wrap">
+                                <b class="badge bg-success"> İndirim </b>
+                                <img src="img/7.jpeg" alt="">
+                            </a>
+                            <figcaption class="info-wrap border-top">
+                                <a href="#" class="float-end btn btn-light btn-icon">
+                                    <i class="fa fa-heart"></i>
+                                </a>
+                                <a href="" class="title text-truncate">
+                                    Apple Watch Yıldız Işığı Alüminyum Kasa ve Spor Kordon
+                                </a>
+                                <div class="price-wrap">
+                                    <span class="price">6.599 TL</span>
+                                    <del class="price-old">6.999 TL</del>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!-- burdan sonra tekrara düşüyor aynı şeyleri yapıyoruz yeni card yapıyoruz -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <figure class="card shadow">
+                            <a href="" class="img-wrap">
+                                <b class="badge bg-success"> İndirim </b>
+                                <img src="img/8.jpeg" alt="">
+                            </a>
+                            <figcaption class="info-wrap border-top">
+                                <a href="#" class="float-end btn btn-light btn-icon">
+                                    <i class="fa fa-heart"></i>
+                                </a>
+                                <a href="" class="title text-truncate">
+                                    Apple Watch Yıldız Işığı Alüminyum Kasa ve Spor Kordon
+                                </a>
+                                <div class="price-wrap">
+                                    <span class="price">6.599 TL</span>
+                                    <del class="price-old">6.999 TL</del>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer bölümünü yapıcaz -->
+        <footer class="py-4 bg-primary">
+            <div class="container">
+                <!-- kolonlar yani elemanlar arasında bir boşluk kapsayıcı olan elema rowa verilir gy-3 dikeyde bunlar arasında bir mesafe bırakılır-->
+                <div class="row gy-3">
+                    <div class="col-md-4">
+                        <!-- buarda formumuz olacak -->
+                        <!-- search bar tarzı solda bir email inputu sağında ise bir abone ol butonu olur -->
+                        <form>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Email">
+                                <button class="btn btn-outline-warning">Abone Ol</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-8">
+                        <!-- text-center ile bunlar ortalanmış olsunlar -->
+                        <!-- fakat medium cihaz üzerine geldiğimizde sağ tarafa gelmiş olsunlar text-md-end -->
+                        <nav class="text-center text-md-end">
+                            <!-- iconlarımız burda olsun tıklanabilir buton gibi gözüken ikonlu linklerimiz oldu-->
+                            <a href="#" class="btn btn-icon btn-outline-warning">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="btn btn-icon btn-outline-warning">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="btn btn-icon btn-outline-warning">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="btn btn-icon btn-outline-warning">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </nav>
+                    </div>
+                    <div class="col-md-12">
+                        <p class="text-center text-white">
+                            @2025 Tüm Hakları Saklıdır.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+   
+   
+
+
+    <!-- collapse çalışması için scriptleri ekliyor olmalıyız -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ /* varsayılan olarak contenctboxtur biz bunu borderbox yaparsak içeriklerimiz iç içe sığabilirler dolayısıyla içerikleride border ve paddingi hesaba katarak hesaplayacak */
+        *{
+            box-sizing:border-box ;
+        }
+
+        body{margin: 0;}
+        /* showcase de sitemizin arka planına resim ekleyebiliriz */
+        #showcase{background: url('home-bg2.jpg');background-position:right; width: 100%; height:500px; padding: 10px;}
+        #how-it-works{background-color: white; padding: 10px; width: 100%;height: 500px; }
+        #how-it-works h2{text-align: center; color: #2E4C6D;font-size: 30px; font-weight: 600; }
+        .how-it-works__p{text-align: center; font-size: 17px; font-weight: bold;}
+        .kutu div{width: 25%;height: 55%;border: 2px solid white;margin: 30px; margin-top: 100px; border-radius: 15px; display: inline-block; box-sizing: border-box; }
+        .kutu-icon h3{color:#2E4C6D ;font-size: 26px}
+
+        /*şimdi navbara özellik verelim  */
+        .main-header{background-color: #FC997C; padding: 8px 16px;}
+        /* aşağıdaki display özelliğini kullanarak blok eleman olan navi inline özelliğine kavuşturduk ve a etiketi ile nav etiketi yan yana gelmiş oldu */
+        .main-nav{display: inline-block; width: calc(100%-99px); text-align: right;}
+        .main_nav__items{margin: 0; padding: 0; list-style: none;}
+        .main_nav__item{display: inline-block;margin: 0 10px;} 
+        /* styling links */
+        .main_header__logo{color: white; text-decoration: none; font-weight: bold; font-size: 21px;}
+        .main_nav__item a{text-decoration: none; color: white;}
+
+
+        .main_nav__item a:hover , .main_nav__item:hover::before{color: #2E4C6D;}
+        .main_nav__item a:active::before,.main_nav__item a:active{color: white;}
+        .main_nav__item::before{content: '\2022'; font-size: 17px; padding: 10px;}
+
+        /* sağ üst köşedeki linke bir buton görüntüsü kazandırmış olalım yani login butonuna diğerlerinden biraz farklı bir görüntü kazandırmamız gerekiyor dolayısıyla bu butonun tanımlandığı yere bir isimlendirme yapmalıyız */
+        .main-nav__item--login a{color: #fff; background-color:#2E4C6D ; padding: 4px 16px; border-radius: 8px; border: 2px solid #fff; }
+
+        .main-nav__item--login a:hover{color: #2E4C6D; border: 2px solid #2E4C6D; background-color: white;}
+
+        .main-nav__item--login::before{content: none;}
+
+       
+        
+    </style>
+</head>
+<body>
+
+<header class="main-header">
+    <a href="#" class="main_header__logo">Movie App</a>
+<!-- styling list yapalım -->
+
+    <nav class="main-nav">
+        <ul class="main-nav__items">
+            <li class="main_nav__item"> <a href="#">Filmler</a> </li>
+            <li class="main_nav__item"> <a href="#">Diziler</a> </li>  
+            <li class="main_nav__item main-nav__item--login"> <a href="#">Login</a> </li> 
+        
+        </ul>
+    </nav>
+
+
+</header>
+
+    
+    <main>
+        <section id="showcase">
+
+            <h1>Welcome to MovieApp</h1>
+        
+
+        </section>
+
+
+
+
+        <section id="how-it-works">
+
+            <h2>How it works?</h2>
+            <p class="how-it-works__p">We will show you step by how to start watching your favorite movies & tv shows starting now!</p>
+
+
+            <div class="kutu">
+            <div class="kutu-icon">
+                <h3>Register</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, esse fuga culpa soluta quam, itaque rerum, ratione officia maxime aut eveniet temporibus eos sunt harum illum unde iusto quasi corrupti?</p>
+            </div>
+
+            <div class="kutu-icon">
+                <h3>Choose a Plan</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, esse fuga culpa soluta quam, itaque rerum, ratione officia maxime aut eveniet temporibus eos sunt harum illum unde iusto quasi corrupti?</p>
+            </div>
+
+            <div class="kutu-icon">
+                <h3>Enjoy Movify</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, esse fuga culpa soluta quam, itaque rerum, ratione officia maxime aut eveniet temporibus eos sunt harum illum unde iusto quasi corrupti?</p>
+            </div>
+            </div>
+
+        </section>
+
+    
+
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,14 @@
+C:\Users\dogan\OneDrive\Masaüstü\consoleapp\bin\Debug\netcoreapp3.1\consoleapp.exe
+C:\Users\dogan\OneDrive\Masaüstü\consoleapp\bin\Debug\netcoreapp3.1\consoleapp.deps.json
+C:\Users\dogan\OneDrive\Masaüstü\consoleapp\bin\Debug\netcoreapp3.1\consoleapp.runtimeconfig.json
+C:\Users\dogan\OneDrive\Masaüstü\consoleapp\bin\Debug\netcoreapp3.1\consoleapp.runtimeconfig.dev.json
+C:\Users\dogan\OneDrive\Masaüstü\consoleapp\bin\Debug\netcoreapp3.1\consoleapp.dll
+C:\Users\dogan\OneDrive\Masaüstü\consoleapp\bin\Debug\netcoreapp3.1\consoleapp.pdb
+C:\Users\dogan\OneDrive\Masaüstü\consoleapp\obj\Debug\netcoreapp3.1\consoleapp.csproj.AssemblyReference.cache
+C:\Users\dogan\OneDrive\Masaüstü\consoleapp\obj\Debug\netcoreapp3.1\consoleapp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dogan\OneDrive\Masaüstü\consoleapp\obj\Debug\netcoreapp3.1\consoleapp.AssemblyInfoInputs.cache
+C:\Users\dogan\OneDrive\Masaüstü\consoleapp\obj\Debug\netcoreapp3.1\consoleapp.AssemblyInfo.cs
+C:\Users\dogan\OneDrive\Masaüstü\consoleapp\obj\Debug\netcoreapp3.1\consoleapp.csproj.CoreCompileInputs.cache
+C:\Users\dogan\OneDrive\Masaüstü\consoleapp\obj\Debug\netcoreapp3.1\consoleapp.dll
+C:\Users\dogan\OneDrive\Masaüstü\consoleapp\obj\Debug\netcoreapp3.1\consoleapp.pdb
+C:\Users\dogan\OneDrive\Masaüstü\consoleapp\obj\Debug\netcoreapp3.1\consoleapp.genruntimeconfig.cache

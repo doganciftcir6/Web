@@ -1,0 +1,18 @@
+﻿@* dinamik bir html sayfası olduğu için cshtml *@  
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Home</title>
+</head>
+<body>
+    @* _navbar.cshtml'deki navbarı burada kullanmak için *@
+    @* PartialAsync metotu asecron bir metot olduğu için @await kullandık *@
+    @await Html.PartialAsync("_navbar")
+    @* buradaki isim kısmını tek bir isim yazmak yerine dinamik hale getirmek istiyorum mesela veya sadece tek bir günaydın yazması yerine günün belli saatlerine göre iyi akşamlar vs yazmasını isteyebilirim bu şekilde dinamik hale getirebilirim bunun için HomeController' da ilgili olan Index action metotuna gidelim *@
+    @* Controller içinde ilgili action metotunun içerisine yaptığımız tanımlamaları şimdi burada kullanalım @ViewBag.verilenisim şeklinde *@
+    <p>@ViewBag.Greeting @ViewBag.UserName, Nasılsınız?</p>
+    <p>Umarım sitemizden memnunsunuzdur?</p>
+</body>
+</html>

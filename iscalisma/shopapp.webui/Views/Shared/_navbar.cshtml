@@ -1,0 +1,61 @@
+  <div class="navbar bg-danger navbar-dark navbar-expand-sm">
+      <div class="container">
+          <a class="navbar-brand" href="/">Shopapp</a>
+          @* sol tarafta liklerimiz olsun navbarda *@
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+              <a href="/products" class="nav-link">Products</a>
+          </li>
+          @if (User.Identity.IsAuthenticated)
+          {
+
+
+              <li class="nav-item">
+                  <a href="/cart" class="nav-link">Cart</a>
+              </li>
+              <li class="nav-item">
+                  <a href="/orders" class="nav-link">Orders</a>
+              </li>
+              if (User.IsInRole("admin"))
+              {
+                  <li class="nav-item">
+                      <a href="/admin/products" class="nav-link">Admin Products</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="/admin/categories" class="nav-link">Admin Categories</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="/admin/role/list" class="nav-link">Roles</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="/admin/user/list" class="nav-link">Users</a>
+                  </li>
+              }
+          }
+      </ul>
+
+          @* ml-auto dediðimiz için bunlar navbarýn en saðýna gidecek *@
+      <ul class="navbar-nav ml-auto">
+          @if (User.Identity.IsAuthenticated)
+          {
+              <li class="nav-item">
+                  <a href="/account/manage" class="nav-link">@User.Identity.Name.ToUpper()</a>
+              </li>
+              <li class="nav-item">
+                  <a href="/account/logout" class="nav-link">Logout</a>
+              </li>
+          }
+          else
+          {
+              <li class="nav-item">
+                  <a href="/account/login" class="nav-link">Login</a>
+              </li>
+              <li class="nav-item">
+                  <a href="/account/register" class="nav-link">Register</a>
+              </li>
+          }
+      </ul>
+          @* sað tarafta ise search kýsmý *@
+
+      </div>
+    </div>

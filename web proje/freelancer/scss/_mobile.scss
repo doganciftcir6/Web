@@ -1,0 +1,141 @@
+// belli berakponit aralıkları yazalım
+// tablet and smaller
+@media(max-width: 768px){
+    //anasayfamızı ele alalım önce header
+    #header {
+        &__home{
+            height: 30rem;
+
+            .header-content{
+                padding-top: 7rem;
+
+                h1{
+                    font-size: 2.6rem;
+                }
+            }
+        }
+    }
+    // anasayfadaki bölümlerimizi 2 şer şekikde yan yana gözükecek şekilde düzenleyelim
+    #home__a .skills,
+    #home__b .profile,
+    #home__c .process,
+    // ayrıca burada projects sayfamızın içeriklerinide düzenlemiş olalım orta kısmını yani
+    .items{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+// başkra breakpoint
+// mobile
+@media(max-width: 576px){
+    // main sayfasındaki iconların olduğu yani skills kısmın her bir elemanın arasına çizgi koyabiliriz
+    #home{
+        &__a{
+            .skills div{
+                border-bottom: 1px $light-color solid;
+                padding-bottom: 1rem;
+                // tabi son elemanda bu özelliklerin olması saçma olur ondan bu özellikleri alalım
+                &:last-child{
+                    border: none;
+                    padding-bottom: 0;
+                }
+
+            }
+        }
+    }
+    // lead classı bizim yazı büyüklüklerimizi felan belirliyordu bunu düzenelerek küçültme yapalım
+    .lead{
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+        word-spacing: 1px;
+    }
+    //anasayfamızı ele alalım önce header
+    #header {
+        &__home{
+            height: 10rem;
+            border-bottom: 2px solid $primary-color;
+            background-position: 20% 30%; 
+
+            .header-content{
+               display: none;
+        }
+    }
+    //aboutun headrı ele alalım önce header
+    &__inner{
+        height: 10rem;
+    }
+}
+// navbarı düzenleyelim tüm hepsi için sayfalarımız için ortak zaten bu
+.main-nav{
+    flex-direction: column;
+    align-items: center;
+    
+    li{
+        padding: 1rem;
+    }
+}
+// anasayfadaki bölümlerimizi tek bir şekikde alt alta gözükecek şekilde düzenleyelim
+#home__a .skills,
+#home__b .profile,
+#home__c .process,
+// ayrıca burada projects sayfamızın içeriklerinide düzenlemiş olalım orta kısmını yani
+.items,
+// Contatac sayfasının en alt pembe yerin bubrada düzenleyebiliriz her içeriği 1 tane gelir alt alta
+#contact-b .contact-info{
+    grid-template-columns: 1fr;
+}
+// footer bölümünü düzenlicez bu her sayfa için aynı zaten
+#main-footer{
+    height: 7rem;
+
+    .footer-content{
+        flex-direction: column;
+        padding: 1rem;
+        height: 5rem;
+
+        .social{
+            padding-top: 1rem;
+        }
+    }
+}
+// about sayfasının main kısmını yani ortadaki içerikleri düzenleyelim
+#about{
+    &-a{
+        .info{
+            grid-template-columns: 1fr;
+        }
+    }
+    &-c{
+        display: none;
+    }
+}
+// contatc sayfasının orta tarafını bilgilerin girildiği yeri düzenleyelim
+#contact{
+    &-a{
+        .form-fields{
+            grid-template-areas: 
+                        'name'
+                        'email'
+                        'subject'
+                        'phone'
+                        'message'
+                        'button';
+        }
+    }
+    // contactın en alt pembe ksımını alt alta almıştık fakat o elemanların arasına bir çizgi ekleyelim birbirine girmesinler
+    &-b{
+        div{
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px dashed #fff;
+
+            // tabi en son elemanda bu çizgilerin değerlerin olmaması gerekiyor en son elemana ulaşalım
+            &:last-child{
+                border: none;
+                padding-bottom: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+}
+// bu breakpointler diğer cihazlar içinde yapılmalı

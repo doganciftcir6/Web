@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* resim sağdan soldan biraz boşluk bırakılmasın diye */
+        body{margin: 0;}
+
+/* ortak olan özellikleri .bgde ayarlıcaz burada attachment dediğimiz anda arka plan sabitleniyor aşağı insek çıksak bile */
+        .bg{
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+
+        }
+
+        .bg-image1{
+            height: 100vh;
+            background-image: url(bg-2.jpeg);
+        }
+
+        .bg-image2{
+            height: 50vh;
+            background-image: url(bg-3.jpeg);
+        }
+
+/* satırı olduğu gibi kaplaması için width100% verebiliriz */
+/* artık satırı olduğu gibi kapaldğına göre text-align özelliğini verip ortalayabiliriz */
+        .caption{
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+        }
+/* text transform ile büyük harfe çevirebiliyoruz yazıyı */
+/* padding ile yazıyı arka planına ortaladık */
+/* her bir yazı arasındaki aralığı arttırabiliriz letter-spacing ile */
+        .caption .border{
+            background-color: #111;
+            color: white;
+            padding: 20px;
+            font-size: 35px;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+        }
+
+        .box{
+            color: #777;
+            background-color: white;
+            text-align: center;
+            padding: 50px 80px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg bg-image1">
+        <div class="caption">
+            <span class="border">Lorem, ipsum.</span>
+        </div>
+    </div>
+
+
+    <div class="box">
+        <h3>Lorem, ipsum dolor.</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, ratione. Animi voluptas odio magnam debitis quibusdam facere! Ullam facilis similique ab tenetur magnam, magni, porro et aliquid odit cupiditate asperiores.
+            Provident officiis sint natus aut sapiente facilis iusto porro! At vitae est voluptatem quaerat facere, iure ipsum suscipit similique recusandae ducimus nobis dolore. Facilis tempora sit aut consequuntur accusantium esse!
+            Vel repellendus, sed fugit a optio delectus voluptatum esse eius deserunt? Tempora nulla impedit id expedita dignissimos, doloremque porro mollitia deleniti earum, temporibus ea quod animi est iusto enim alias?
+        </p>
+    </div>
+
+<!-- aynı içeriği kopyaladık yani 2 yerde background olacak her şeyi aynı olacak sadece classa vereceğimiz bg-image1 özellikleri farklı olacak -->
+
+    <div class="bg bg-image2">
+        <div class="caption">
+            <span class="border">Lorem, ipsum.</span>
+        </div>
+    </div>
+
+
+    <div class="box">
+        <h3>Lorem, ipsum dolor.</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, ratione. Animi voluptas odio magnam debitis quibusdam facere! Ullam facilis similique ab tenetur magnam, magni, porro et aliquid odit cupiditate asperiores.
+            Provident officiis sint natus aut sapiente facilis iusto porro! At vitae est voluptatem quaerat facere, iure ipsum suscipit similique recusandae ducimus nobis dolore. Facilis tempora sit aut consequuntur accusantium esse!
+            Vel repellendus, sed fugit a optio delectus voluptatum esse eius deserunt? Tempora nulla impedit id expedita dignissimos, doloremque porro mollitia deleniti earum, temporibus ea quod animi est iusto enim alias?
+        </p>
+    </div>
+    
+</body>
+</html>

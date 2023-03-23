@@ -1,0 +1,31 @@
+//buraya temel cssleri yazıcaz mesela bodyin arkaplan zemini ne olsun gibi temel etiket özelliklerimiz
+
+//bütün margin padding bilgilerini 0layalım
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+//body etiketini düzenleyelim
+body{
+    background-color: #fff;
+    //font tipimizi burada eklicez
+    font-family: 'Prompt', sans-serif;
+    //satır yüksekliği belirtmiş olalım
+    line-height: 1.5;
+}
+//sayfadaki bütün a etiketlerini düzenleyelim
+a{
+    text-decoration: none;
+    color: $dark-color;
+}
+//sayfadaki bütün ul etiketlerini düzenleyelim
+ul{
+    list-style: none;
+}
+//sayfadaki bütün img etiketlerini düzenleyelim ve resimler responsive olmuş olsun o yüzden witdh 100%
+img{
+    width: 100%;
+}
+
+

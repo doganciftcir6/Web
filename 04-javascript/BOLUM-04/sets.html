@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // set yapısı array yapısına benzer fakat farklı olarak burada tekrarlayan elemanlar işin içerisine dahil edilmez böyle bir istek varsa set kullanılır
+        // yeni bir set tanımlaması yapmış olalım
+        // iki türlü eleman ekleme yolu var
+        // const sayilar = new Set([1,2,3,4]);
+        // veya
+        const sayilar = new Set();
+        // eğer değer tekrarlaması olursa sadece bir tane yazdırılır
+        sayilar.add(1);
+        sayilar.add(2);
+        sayilar.add(3);
+        sayilar.add(3);
+        sayilar.add("4");
+
+        // set bilgisini diziye çevirebiliriz
+        const dizi = [...sayilar];
+        // bir elemanı silebiliriz key bekleemz value bekler
+        sayilar.delete(1);
+        // herhangi bir elemanın set içerisinde yer alıp almadığına bakabiliriz
+        // 2 bilgisi var mı diye sorarız ve olduğu için true der
+        console.log(sayilar.has(2));
+        // tüm seti tüm elemanları silmek istersem
+        sayilar.clear();
+        // bütün set elemanlarına ulaşmak istersek
+        for(let x of sayilar.values()){
+            console.log(x);
+        }
+
+
+
+
+    </script>
+</body>
+</html>

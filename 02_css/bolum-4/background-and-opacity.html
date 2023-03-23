@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* bu aşağıdakini demezsek arkaya koyduğumuz backgroundlar gözükmeyecektir ayrıca gözükmeleri için o background koyulan yere height bilgiside vermiş olmamız gerekiyor */
+        html,body{
+            height: 100%;
+        }
+ /*yada buna alternatif olarak vport var gidip child elemana backgroundun olduğu yere height verirken atıyorum 50vh diye verebiliriz bu sayede html,body e height vermemiz gerekmez alanın yüzde 50 sini al demiş oluyoruz  */
+
+        body{
+            margin: 0;
+            
+        }
+
+/* bahsettiğimiz vport olayı burada child eleman da header */
+/* vport view özelliğimizde var mesela ben genişlik olarak hepsini kullanmak istemeyebilirim 80 diyerek görünür alanın yüzde 80ini kullanabilrim */
+        #header{
+            position: relative;
+            background-color: red;
+            /* arka planı saydamlaştırma işine farklı bir yol var linear-gradient ile istediğimiz renkleri vererek arka plana bir filtre uygulamış gibi olabiliyoruz tabi saydamlık vermek için rgba kullanmak lazım konumlarını değiştirebiliriz bottom left vs diyerek*/
+            background-image: linear-gradient(to bottom right,rgba(230,255,230,0.7),rgba(102,255,102,0.7)) ,url(home-bg.jpg);
+            height: 50vh;
+            width: 50vw;
+            
+        }
+/* h1 eklediğimizde sayfanın üst kısmında beyaz bir boşluk oldu ve resmi aşağıya çekti bunu düzeltmek için h1 e margin0 veriyoruz veya margin 0 vermek istemiyorsak ve aynı işi yapmak için h1 için bir absolute pozsiyon verelim bu sayede h1 akış dışarısına çıkacaktır ve htmlye göre konumlandırmayı yapar bu sebeple gidip headera positon relative vermeliyiz ki kapsayıcı eleman o olsun ve konumunu headera göre ayarlasın ve bu yazıyı ortalamak istiyoruz zaten pozisyon vermiştik top ve left yüzde 50 dedik ama yine ortalanmaz bizim bu yazıyı içerik kadar sol tarafa almamız gerekiyor transform özelliği ile translate yaparak bunu yapabiliriz */
+        #header h1{
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 80px;
+            color: red;
+
+        }
+        /* resmi biraz daha saydam yaparak kullanıcların ilgisini yazıalra çekmemiz gerekiyor resim ön planda olammalı bunu opacity ile yapabiliriz bunu yapınca bir filtre atmış gibi oluruz resim daha arka planda olur */
+        .cover{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #00ff99;
+            opacity: 0.2;
+        }
+        /* koyduğumuz logoyu kullanalım ve logoyu sol üst köşeye konumlandıralım */
+        .logo{
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            width: 70px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- div ekleyek ve içine h1 koyak -->
+    <div id="header">
+        <h1>Background Text</h1>
+     <!--  resmi biraz daha saydam yaparak kullanıcların ilgisini yazıalra çekmemiz gerekiyor resim ön planda olammalı bunu opacity ile yapabiliriz burada bir div ekleyelim  -->
+     <div class="cover"></div>
+     <!-- logomuuzda burada eklemiş olalım -->
+     <img class="logo" src="logo.png" alt="">
+            
+        
+
+    </div>
+    
+</body>
+</html>

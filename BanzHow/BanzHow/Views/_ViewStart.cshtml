@@ -1,0 +1,12 @@
+﻿@* varsayılan Layout ayarlaması burda yapılıyor eğer cshtml sayfalarında hiç bir şey yazmazsak default olarak burdaki tanımlı layoutu kullanırlar *@
+@* cshtml dosyalarının layout kullanmalarını istmezsek @{Layout = null} yapabiliriz *@
+@* cshtml dosyalarının başka bir layout kullanmasını istersek ise
+    @{
+       ViewBag.Title = "cshtml ismi";
+       Layout = "layout yolu";
+    }
+    yapabiliriz
+*@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <!-- önemli olan bu viewport meta etiketinin burada oluyor olması -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+/*başlangıçta bütün h1leri kapatmış olalım */
+        h1 {
+            display: none;
+        }
+/* ben belli aralıklarla bu h1leri göstermek istiyorum o yüzden @media altına h1 display block yaptım */
+/* bodu varsayılan olarak gri renge sahip ama ben media querie aracılığıyla eğer sayfanın genişliği en az 576 px ve üstü ise arka plan rengini yeşil yap diyebiliyoruz if mantığı var */
+/* landscape mobil cihazdan girdiğini varsayıyoruz fakat cihazı yan kullandığını farzediyoruz bu değer ile */
+
+          /* landscape */
+        @media (max-width: 575px) {
+            #phone h1 {
+                display: block;
+            }          
+        }
+
+        /* ben belli aralıklarla bu h1leri göstermek istiyorum o yüzden @media altına h1 display block yaptım */
+        /* bodu varsayılan olarak gri renge sahip ama ben media querie aracılığıyla eğer sayfanın genişliği en az 576 px ve üstü ise arka plan rengini yeşil yap diyebiliyoruz if mantığı var */
+        /* landscape mobil cihazdan girdiğini varsayıyoruz fakat cihazı yan kullandığını farzediyoruz bu değer ile */
+        /* ayrıca and dedikten sorna max witdh diyerek kapsam belirtebiliyoruz */
+        @media (min-width: 576px) and (max-width: 767px) {
+            #landscape h1 {
+                display: block;
+            }
+
+            body {
+                background-color: green;
+            }
+        }
+
+        /* başka bir media querie yapısı yapalım 768 ve üstü ise genişlik arka plan rengi kırmızı olacaktır */
+        /* tablet ile girdiğini farzediyoruz bu değer ile*/
+        @media (min-width: 768px) and (max-width: 991px) {
+            #tablets h1 {
+                display: block;
+            }
+            body {
+                background-color: red;
+            }
+        }
+
+        /* masaüstü cihazlar desktop */
+        @media (min-width: 992px) and (max-width: 1199px) {
+            #desktop h1 {
+                display: block;
+            }
+            body {
+                background-color: yellow;
+            }
+        }
+
+        /* large desktop yani geniş ekranlı masaüstü cihazlar */
+        @media (min-width: 1200px) and (max-width: 1399px) {
+            #large h1 {
+                display: block;
+            }
+            body {
+                background-color: orange;
+            }
+        }
+
+        /* tv ekranları xlarge desktop  */
+        @media (min-width: 1400px) {
+            #xlarge h1 {
+                display: block;
+            }
+            body {
+                background-color: pink;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <div id="phone"><h1>phone</h1></div>
+    <div id="landscape"><h1>landscape</h1></div>
+    <div id="tablets"><h1>tablets</h1></div>
+    <div id="desktop"><h1>desktop</h1></div>
+    <div id="large"><h1>large</h1></div>
+    <div id="xlarge"><h1>xlarge</h1></div>
+
+    
+</body>
+</html>

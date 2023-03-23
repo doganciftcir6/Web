@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #kutu-1{
+            font-size: 20px;
+        }
+/* bunu yaptığımızda kapsayıcı olan elemanın yani kutu-1 için 1 buçuk katını alır 30px yani o büyüklükte bir içerik gelir eğer burada kutu-1 kapsayıcı elemanına biz font size vermemiş olsaydık direkt kapsayıcı eleman olarak html yi alacakatı ve 16x1,5 şeklinde bir hesaplama yapılırdı tabi html etiketine fontsize vererek bu varsayılan kapsayıcı değer değiştirilebilir*/
+/* paddinge 1em verdiğimizde o anda içinde bulunduğu etiketin fontsize ını baz alacaktır yani 1.5 em 30px olduğu için paddingte 30px olacaktır biz kapsayıcı elemanı baz almasını istiyoruz o yüzden em değilde rem kullansak daha iyi olacak */
+        #kutu-1 p{
+            font-size: 1.5em;
+            padding: 1em;
+        }
+
+        /*BU YAPTIĞIM ŞEY YUKARIDAKİLERDEN AYRI BAŞKA BİR ŞEY  */
+    html{
+        font-size: 10px;
+    }
+    /*1.8 rem kapsayıcı elemanın font sizeı ile çarpılır 10x1.8 diye hesaplanır  */
+    /* bu şekikde bütün elemanlaratek tek orantısal değer vermek yerine body etiketine 1.6 rem verirsem html etiketindeki 10px ile 1.6rem çarpılır ve 16px olarak kendini ayarlar */
+    body{
+        font-size: 1.6rem;
+    }
+    @media (min-width: 576px) and (max-width: 767px) {
+            html{font-size: 11px;}
+            #kutu-1 h2{font-size: 1.8rem;}
+            }
+    
+    @media (min-width: 768px) and (max-width: 991px) {
+            html{font-size: 12px;}
+        }        
+
+    </style>
+</head>
+<body>
+    <div id="kutu1">
+        <h2>Lorem, ipsum dolor.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id enim velit perspiciatis harum quod. Optio similique omnis, nesciunt labore est dolores consectetur. Excepturi libero, architecto labore molestiae magni sunt provident.</p>
+    </div>
+
+    <div id="kutu2">
+        <h3>Lorem, ipsum dolor.</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id enim velit perspiciatis harum quod. Optio similique omnis, nesciunt labore est dolores consectetur. Excepturi libero, architecto labore molestiae magni sunt provident.</p>
+    </div>
+    
+</body>
+</html>

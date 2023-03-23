@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <!-- LİGHT BOX İÇİN CSS LİNKİNİ EKLİCEZ -->
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    
+     <!-- HEADER BÖLÜMÜ -->
+<!-- bir header ekleyelim -->
+    <header id="header__inner">
+        <!-- container ekleyelim -->
+        <div class="container">
+            <!-- nav ekleyelim -->
+            <nav class="main-nav">
+                <!-- içeirinsde başlıktaki logo resim olacak -->
+                <img src="img/logo.png" alt="" class="main-nav__logo">
+                <!-- başlıktaki liste menü kısmımız için ul etiketi -->
+                <ul class="main-nav__items">
+                    <!-- bu menü itemlerinin birinde selected özelliği olacak yani hangi sayfadaysak o işaretli oalcak ondan birine class koyalım-->
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="about.html" >About</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+<!-- projects kısmı için seciton ve RESİMLERE LİGHTBOX EKLEYELİM a etiketlerine data-lightbox koyucaz ve resmin link yolunu link kısmına eklemek gerekiyor-->
+    <section id="projects" class="text-center py-2">
+        <!-- içerikler sağdan soldan ortalansın diye container -->
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <!-- altında güzel bir çizgi olması için border-bottom divi -->
+            <div class="border-bottom"></div>
+            <div class="lead">
+                Lorem ipsum dolor sit amet.
+            </div>
+<!-- lead classının altında itemslerin olduğu bir div -->
+            <div class="items">
+                <!-- tek bir resim için item elemanı tanımlıcam -->
+            <!-- elemanı olulturucam -->
+                <div class="item">
+                    <!-- resmin bir containerı olmuş olsun burası -->
+                    <div class="item__image">
+                        <a href="img/work-1.jpeg" data-lightbox="roadtrip">
+                            <img src="img/work-1.jpeg" alt="">
+                        </a>
+                    </div>
+                    <!-- burdada resmin text kısmı olmuş olsun -->
+                    <div class="item__text">
+                        <div class="item__text__wrap">
+                            <p class="item__text__category">Web Development</p>
+                            <h2 class="item__text__title">Lorem, ipsum dolor.</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- elemanı olulturucam -->
+                <div class="item">
+                    <!-- resmin bir containerı olmuş olsun burası -->
+                    <div class="item__image">
+                        <a href="img/work-2.jpeg" data-lightbox="roadtrip">
+                            <img src="img/work-2.jpeg" alt="">
+                        </a>
+                    </div>
+                    <!-- burdada resmin text kısmı olmuş olsun -->
+                    <div class="item__text">
+                        <div class="item__text__wrap">
+                            <p class="item__text__category">Web Development</p>
+                            <h2 class="item__text__title">Lorem, ipsum dolor.</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- elemanı olulturucam -->
+                <div class="item">
+                    <!-- resmin bir containerı olmuş olsun burası -->
+                    <div class="item__image">
+                        <a href="img/work-3.jpeg" data-lightbox="roadtrip">
+                            <img src="img/work-3.jpeg" alt="">
+                        </a>
+                    </div>
+                    <!-- burdada resmin text kısmı olmuş olsun -->
+                    <div class="item__text">
+                        <div class="item__text__wrap">
+                            <p class="item__text__category">Web Development</p>
+                            <h2 class="item__text__title">Lorem, ipsum dolor.</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- elemanı olulturucam -->
+                <div class="item">
+                    <!-- resmin bir containerı olmuş olsun burası -->
+                    <div class="item__image">
+                        <a href="#">
+                            <img src="img/work-4.jpeg" alt="">
+                        </a>
+                    </div>
+                    <!-- burdada resmin text kısmı olmuş olsun -->
+                    <div class="item__text">
+                        <div class="item__text__wrap">
+                            <p class="item__text__category">Web Development</p>
+                            <h2 class="item__text__title">Lorem, ipsum dolor.</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- elemanı olulturucam -->
+                <div class="item">
+                    <!-- resmin bir containerı olmuş olsun burası -->
+                    <div class="item__image">
+                        <a href="#">
+                            <img src="img/work-5.jpeg" alt="">
+                        </a>
+                    </div>
+                    <!-- burdada resmin text kısmı olmuş olsun -->
+                    <div class="item__text">
+                        <div class="item__text__wrap">
+                            <p class="item__text__category">Web Development</p>
+                            <h2 class="item__text__title">Lorem, ipsum dolor.</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- elemanı olulturucam -->
+                <div class="item">
+                    <!-- resmin bir containerı olmuş olsun burası -->
+                    <div class="item__image">
+                        <a href="#">
+                            <img src="img/work-4.jpeg" alt="">
+                        </a>
+                    </div>
+                    <!-- burdada resmin text kısmı olmuş olsun -->
+                    <div class="item__text">
+                        <div class="item__text__wrap">
+                            <p class="item__text__category">Web Development</p>
+                            <h2 class="item__text__title">Lorem, ipsum dolor.</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- elemanı olulturucam -->
+                <div class="item">
+                    <!-- resmin bir containerı olmuş olsun burası -->
+                    <div class="item__image">
+                        <a href="#">
+                            <img src="img/work-2.jpeg" alt="">
+                        </a>
+                    </div>
+                    <!-- burdada resmin text kısmı olmuş olsun -->
+                    <div class="item__text">
+                        <div class="item__text__wrap">
+                            <p class="item__text__category">Web Development</p>
+                            <h2 class="item__text__title">Lorem, ipsum dolor.</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- elemanı olulturucam -->
+                <div class="item">
+                    <!-- resmin bir containerı olmuş olsun burası -->
+                    <div class="item__image">
+                        <a href="#">
+                            <img src="img/work-1.jpeg" alt="">
+                        </a>
+                    </div>
+                    <!-- burdada resmin text kısmı olmuş olsun -->
+                    <div class="item__text">
+                        <div class="item__text__wrap">
+                            <p class="item__text__category">Web Development</p>
+                            <h2 class="item__text__title">Lorem, ipsum dolor.</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- elemanı olulturucam -->
+                <div class="item">
+                    <!-- resmin bir containerı olmuş olsun burası -->
+                    <div class="item__image">
+                        <a href="#">
+                            <img src="img/work-1.jpeg" alt="">
+                        </a>
+                    </div>
+                    <!-- burdada resmin text kısmı olmuş olsun -->
+                    <div class="item__text">
+                        <div class="item__text__wrap">
+                            <p class="item__text__category">Web Development</p>
+                            <h2 class="item__text__title">Lorem, ipsum dolor.</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+<!-- FOOTER BÖLÜMÜ -->
+    <footer id="main-footer">
+         <!-- bir div -->
+        <div class="footer-content container">
+            <p>Copyright &copy; 2025. All Rights Reserved.</p>
+<!-- daha sonra sosyal medya iconları için bir div -->
+            <div class="social">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+    </footer>
+
+    <!-- light box için bir jqueery scprit kütüphanesi kullanıcaz -->
+    <script src="js/jquery.min.js"></script>
+    <!-- light box kütüphenemizi ekleyelim -->
+    <script src="js/lightbox.min.js"></script>
+
+</body>
+</html>

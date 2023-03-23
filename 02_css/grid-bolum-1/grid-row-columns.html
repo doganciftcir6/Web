@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* bodydeki margin bilgisini almış olalım */
+        body{
+            margin: 0;
+
+        }
+        /* önce containera bir kapsam verelim */
+        /* container kapsayıcı elamanımız buna display verelim ve grid container haline çevirelim */
+        .container{
+             display: grid; 
+             /* gird container içine bir kolon oluşturmak için yapmamız gerekenler grid-template-columns dedikten sonra kolonların genişliklerini belirtmemiz gerekiyor 150px diyelim ve ayrıca kaç tane kolon olacaksa o kadar genişlik belirtiyor olmamız gerekiyor burada 4 tane kolon genişliği tanımladık mesela ve her zaman bu kolon genişlikleri sabit olur */
+
+             /* grid-template-columns: 150px 250px 400px 150px; */
+
+             /* bu alanlar sabit değer oldukları için tarayıcı daraldığında scrollbar çıkacaktır dolayısıyla biz bu değerleri sabit olmaları yerine orantısal bir değer vermek isteyebiliriz */
+             /* 300px verilir ve geriye kalan alanlar 2. ve 4. kolon için ortak paylaştırılır oto şekilde */
+             /* grid-template-columns: 150px auto 200px auto; */
+
+             /* şöyle yapsak */
+             /* grid-template-columns: auto auto auto; */
+             /* bu duruma 3 kolonoda eşit miktarda oto boyutlandırma yapılacaktır */
+
+             /* veya şöyle yapabiliriz */
+             /* grid-template-columns: auto auto 20%; */
+             /* o anda tarayıcı genişliğinin yüzde 20 sini üçüncü kolona ver geri kalan alanları arasında paylaştır diyebiliriz */
+
+             /* bunların yerine ekstra bir kullanımımız var repat içine kaç tane kolona 3 tane kolona auto bilgisini tanımla diyebiliriz*/
+             /* grid-template-columns: repeat(3, auto); */
+             /* repat ile böyle de diyebiliriz 4 tane kolona 200px alan ver diyebiliriz sabit bir şekilde */
+             /* grid-template-columns: repeat(4,200px); */
+            
+             /* böyle bir kullanımda var burada fr bir bölüm oluşturmak anlamına geliyor 150 ve 200px verildikten sonra kalan alan 1fr ile 3 e verilecek auto mantığı var tabi burda fark olarak bide 2fr dersek auto eşit olarak dağıtıyordu fr sayesinde istediğimiz oranda dağılım yapabiliyoruz 1 ve 2 oranında dağılım yap demiş oluyoruz */
+             grid-template-columns: 150px 200px 1fr 2fr;
+
+             /* ayrıca satırda oluşturabiliyoruz örneğin birinci satıra kaç piksel yükseklik vermek istiyoruz 200px ikinci satır 200px yükseklik tabi yine buralara fr uygulanabilir ve her satır için yükseklik belirtmek zorunda değiliz*/
+             grid-template-rows: 200px 300px;
+
+    
+            
+            
+            background-color: #034f84;
+            padding: 20px;
+        }
+        /* her bir itema ulaşalım ve bunlarada bir kapsam için renk vermiş olalım */
+        .item{
+            background-color: #f7786b;
+            padding: 20px;
+            margin: 20px;
+            color: #fff;
+            font-size: 25px;
+
+        }
+    </style>
+</head>
+<body>
+<!-- kapsayıcı bir container eleman oluşturuyoruz aynıflexboxta olduğu gibi gird container yapıypruz  -->
+    <div class="container">
+        <!-- alında eleman oluşturalım -->
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+        <div class="item">item 4</div>
+        <div class="item">item 4</div>
+        <div class="item">item 4</div>
+        <div class="item">item 4</div>
+        <div class="item">item 4</div>
+
+    </div>
+    
+</body>
+</html>

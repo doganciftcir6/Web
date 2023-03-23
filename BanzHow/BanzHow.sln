@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32901.82
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanzHow", "BanzHow\BanzHow.csproj", "{A3163597-A622-43C1-92C2-095FC2D6F812}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3163597-A622-43C1-92C2-095FC2D6F812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3163597-A622-43C1-92C2-095FC2D6F812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3163597-A622-43C1-92C2-095FC2D6F812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3163597-A622-43C1-92C2-095FC2D6F812}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4367AB1-0AAF-4F2D-B118-36B7E7632FA8}
+	EndGlobalSection
+EndGlobal

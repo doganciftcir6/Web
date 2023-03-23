@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // array destructuring
+        let user = ["sadık","turan","kocaeli","izmit","41000"];
+        // let firstName = name[0];
+        // let lastName = name[1];
+        // buna alternatif olarak işimiz daha kolay olsun istersek
+        // otomatik olarak dizinin 0ıncı indeksteki elemanı firstname birinci indeksteki elemanı ise lastname kısmına gelecektir
+        let [firstName,lastName] = user;
+        // yada ad bilgisin string olarak yazabiliriz ve .split ile boşluklardan bölerek bunu bir diziye çevirebirilirz
+        let [firstName,lastName] = "Sadık Turan".split(" ");
+        // yada bir bilgiyi almak istemzsek onun yerini boş bırakabiliriz bozulma olmayacaktır bu sayede
+        let [firstName, lastName, , town] = user;
+        console.log(firstName,lastName,town);
+        // yada son 3 bilgiyi tek bir adress bilgisi için almak istersem ilk 2 parametre hariç geri kalan tüm parametlereler adress içerisine atılır
+        let [firstName, lastName, ...adress] = user;
+        console.log(firstName,lastName,adress);
+
+
+        // onject destructuring
+        let urun = {
+            marka: "Apple",
+            model: "iphone13"
+        }
+        // bu bilgileri değişkenler içeirisne almak istediğimde eğer bilgi yoksa ona default olarak bir değer verebiliriz
+        let {marka, model, fiyat=0, satisDurumu=false} = urun;
+        console.log(marka,model,fiyat,satisDurumu);
+        // *****************************************************************************************************************************
+        // burada öğrendiklerimizi bir fonksiyon içeirsinde kullanalım
+        // bu durumda fiyat 0 ve satidruumu false yazdırılır default bir atama yapılır
+        function urunGoster(marka, model, fiyat=0, satisDurumu=false){
+            console.log(marka,model,fiyat,satisDurumu);
+        }
+        urunGoster("apple","iphone 12");
+        // veya
+        function urunGoster(obj){
+            let {marka, model, fiyat=0, satisDurumu=false} = obj;
+        }
+        urunGoster(urun);
+
+
+    </script>
+</body>
+</html>

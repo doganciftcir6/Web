@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- bir html sayfası içerisinde başka bir html sayfasını yerleştirmek istediğimizde iframe yani bir frame bir çerçeve kullanabiliyoruz <iframe> etiketi ile -->
+    <!--frameborder çerçeveye bir kenarlık verir 1 yazdığımızda,  src içine istediğimiz html dosyasını yazabiliriz yada internet üzeriden bir sayfada yazılabilir -->
+    <!-- bunu kullanınca bir çerçeve oluşur ve çerçeve içeriğinde src içine verdiğimiz gözükür -->
+    <!-- oluşturulan çerçevenin genişlik ve yüksekliğini ayarlayabiliriz width height -->
+    <!-- birden fazla iframe olabilir o yüzden bunlara title özelliği verebiliriz -->
+    <!-- iframeye name ile isim verebiliirz ve bu verdiğimiz ismi daha sonra link oluşturarak target içine yazabiliriz -->
+    <!-- bu sayede linke git dediğimide frame içerisinde linkini yazdığımız sayfa açılacaktır -->
+        <iframe src="forms.html" name="myframe" frameborder="0" width="400" height="400" title="üyelikformu"></iframe>
+
+        <p>
+            <a href="https://sadikturan.com" target="myframe">Linke git</a>
+        </p>
+    <!-- en önemlisi bir videoyu frame içerisinde sayfamızda oynatabiliriz  -->
+    <div>
+        <iframe src="https://www.youtube.com/embed/_UGcwmafuR0" frameborder="0" width="560" height="315" title="Youtube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+//buranın içerisinde sitenin header ile alakalı kısmını yapıcaz
+
+//main-nav
+.main-nav{
+    display: flex;
+    justify-content: space-between;
+    // elemanları yan yana almış olalım ve aralarına boşluk vererek solda sağda olmalarını sağlayalım
+    padding-top: 1rem;
+
+    //daha sonra logoya ulaşalım
+    &__logo{
+        width: 70px;
+        height: 70px;
+    }
+    //itemslara ulaşalım
+    &__items{
+        display: flex;
+        //display flex ile itemslar yan yana gelir
+        
+        // altındaki her bir li elemanına ulaşlım
+        li{
+            // padding vererek li elemanlarını birbirinden ayıralım
+            padding: 1rem 1.5rem;
+
+            // li etiketinin altındaki a etiketlerine ulaşalım
+            a{
+                text-decoration: none;
+                color: #fff;
+                text-transform: uppercase;
+                border-bottom: 3px transparent solid;
+                padding-bottom: .5rem;
+                transition: border-color .5s;
+
+                // hover efekti eklemiş olalım a etiketlerine
+                &:hover{
+                    border-color: $medium-color;
+                }
+                //bide active olayını yapalım
+                &.active{
+                    border-color: $primary-color;
+                }
+            }
+        }
+    }
+
+}
+
+#header {
+    // burada header altındaki header__home idsine ulaşmış oluyoruz
+    &__home{
+        background: $bg-image no-repeat center right/cover;
+        //height 100vh ile resim olduğu gibi gösterilsin 
+        height: 100vh;
+        color: #fff;
+
+        //header altındaki header_content e ulaşalım
+        .header-content{
+            text-align: center;
+            padding-top: 30%;
+        }
+        //altındaki h1 etiketine ulaşalım
+        h1{
+            font-size: 4rem;
+            line-height: 1.2;
+        }
+        //typewrite sınfına ulaşalım
+        .typewrite{
+            display: block;
+        }
+
+    }
+    //main-about bölümünün
+    &__inner{
+        background: $bg-image no-repeat 40% 20% /cover;
+        //height 100vh ile resim olduğu gibi gösterilsin 
+        height: 5.5rem;
+        border-bottom: 3px solid $primary-color;
+    }
+}

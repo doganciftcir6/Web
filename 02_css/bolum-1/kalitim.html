@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- internal olarak bir style oluşturalım -->
+    <style>
+        /* body etiketi için verdiğimiz 15px tüm bodyi kapsayan etiketleri etkiler */
+        body{font-size: 15px;}
+        /* buarada verdiğimiz color em etiketinide etkiliyor kalıtım oluyor em etiketi kalıtım yoluyla bu kırmızıyı alıyor */
+        p{color: red;}
+        /* kalıtım yapılamayan bir özellik tanımlamış olalım burada p etiketine bir border geldi fakat em etiketine bir border gelmez */
+        p{border: 1px solid green;}
+        /* ama ben yinede kalıtım olsun istiyorum border özelliği em etiketinde de olsun istiyorum inherit ile bu özelliği direkt olarak p etiketinden alıyor */
+        em{border:inherit;}
+        /* ben em etiketine p etiketindeki border uygulansın ama color özelliği farklı renk olsun istiyorsam yani burada inital ile p deki özelliği iptal et dedik bir bakıma*/
+        em{color:initial}
+
+
+    
+    </style>
+</head>
+<body>
+
+    <main>
+    <!--elemanlara etiketlere id yani isimler vererek bir id selectoru oluşturmuş olalım  -->
+    <section>
+        <h1 id="page-title" class="text-yellow">Welcome To MovieApp</h1>
+        <!-- p etiketine em etiketi eklicem -->
+        <p>Lorem ipsum dolor sit amet consectetur <em> adipisicing elit. Tempora,</em> accusantium?</p>
+    </section>
+
+    <section>
+        <h2 id="page-subtitle" class="text-white">How it works?</h2>
+    </section>
+
+    </main>
+    
+</body>
+</html>

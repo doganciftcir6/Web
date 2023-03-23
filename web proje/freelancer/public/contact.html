@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fontu ekleyelim -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <!-- font awesome kütüphanesini ekleyelim -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- animasyon kütüphanesini ekleyelim -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <!-- OWLCRAOUSEL CSS LİNKİNİ EKLİCEZ -->
+<link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
+<!-- LİGHT BOX İÇİN CSS LİNKİNİ EKLİCEZ -->
+<link rel="stylesheet" href="../node_modules/lightbox2/dist/css/lightbox.min.css">
+    <!-- main css dosyamızı bağlaylaım -->
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- HEADER BÖLÜMÜ -->
+<!-- bir header ekleyelim -->
+<header id="header__inner">
+    <!-- container ekleyelim -->
+    <div class="container">
+        <!-- nav ekleyelim -->
+        <nav class="main-nav">
+            <!-- içeirinsde başlıktaki logo resim olacak -->
+            <img src="img/logo.png" alt="" class="main-nav__logo">
+            <!-- başlıktaki liste menü kısmımız için ul etiketi -->
+            <ul class="main-nav__items">
+                <!-- bu menü itemlerinin birinde selected özelliği olacak yani hangi sayfadaysak o işaretli oalcak ondan birine class koyalım -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html"  class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<!-- contact bölümünün içeriği için section -->
+<section id="contact-a" class="text-center py-3">
+    <!-- içerikler ortalansın bir container -->
+    <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="border-bottom"></div>
+        <p class="lead">Lorem ipsum dolor sit amet.</p>
+        <!-- KULLANICILARIN GİRDİĞİ BİLGİLER BİZİM MAİLİMİZE OTOMATİK OLARAK GELMESİ İÇİN form etiketinin action kısmına siteden aldığımız form linkini ekleriz-->
+        <form action= "https://formspree.io/f/xyyvkkgd" method="POST">
+            <div class="form-fields">
+            <input type="text" name="fullname" class="name input" id="fullname" placeholder="Name">
+            <input type="text" name="subject" class="subject input" id="subject" placeholder="Subject">
+            <input type="email" name="email" class="email input" id="email" placeholder="Email">
+            <input type="tel" name="phone" class="phone input" id="phone" placeholder="Phone">
+            <textarea name="message" class="message input" id="message" placeholder="Enter Message"></textarea>
+            <button type="submit" class="btn-dark input">Submit</button>
+        </div>
+            
+        </form>
+    </div>
+</section>
+
+<!-- contact bölümünün alt tarafındaki iletişim kısmını tanımlayalım yeni section -->
+<section id="contact-b" class="bg-primary py-4">
+    <!-- içerikler sağdan soldan ortalansın container -->
+    <div class="container">
+        <div class="contact-info">
+            <!-- elemanları ekleyelim -->
+            <div><i class="fas fa-envelope fa-2x"></i>
+            <h3>Email</h3>
+            <p>mail@mail.com</p>
+            </div>
+            <!-- elemanları ekleyelim -->
+            <div><i class="fas fa-phone fa-2x"></i>
+                <h3>Phone</h3>
+                <p>(555) 555 55 55</p>
+            </div>
+            <!-- elemanları ekleyelim -->
+            <div><i class="fas fa-address-card fa-2x"></i>
+                <h3>Address</h3>
+                <p>İstanbul, Türkiye</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!-- FOOTER BÖLÜMÜ -->
+<footer id="main-footer">
+    <!-- bir div -->
+    <div class="footer-content container">
+        <p>Copyright &copy;2025. All Rights Reserved.</p>
+        <!-- daha sonra sosyal medya iconları için bir div -->
+        <div class="social">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>

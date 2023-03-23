@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- listeler sırasız ve sıralı şekilde olabiliyor -->
+    <!-- sırasızlar <ul> etiketi ile olur başlarında bir işaret olur listenin -->
+    <!-- <ul> etkiketi içerisine mutlaka bir <li> yani list etiketi eklememiz gerekiyor-->
+    <!-- eğer listede elemanların başında bir işaret olmasın istersek css kodu kullanabiliriz -->
+    <!-- liste elemanlarının başında içi boş bir daire olsun istiyorsak none yazan yere circle yazabiliriz -->
+        <ul style="list-style-type: none">
+            <li> eleman1 </li>
+            <li> eleman2 </li>
+            <li> eleman3 </li>
+         </ul>
+   <!-- sıralı listeti <ol> etiketi ile yapabiliriz order anlamı var verileri 123 diye sıralar  -->
+   <!-- istediğimiz şekle göre sıralama yapmak istersek type ile yapmak mümkün -->
+   <!-- I ile roma rakamları ile sıralama yapabiliriz mesela -->
+   <!-- start ile liste sıralamasının hangi sayıdan başlayacağını belirtebiliriz 10-11-12 diye sıralasın dedik  -->
+    <ol type="1" start="10">
+        <li> eleman1 </li>
+        <li> eleman2 </li>
+        <li> eleman3 </li>
+    </ol>
+
+    <!--iç içe listeler tanımlamak mümkün  -->
+    <!-- mesela eleman4 ün alt elemanları olsun -->
+    <!-- istediğimiz elemanın li etiketlerinin içine sıfırdan liste oluşturuyornuş gibi <ul> etiketlerini açarız <li> etiketiyle alt başlıkları yazarız ve alt liste oluşmuş olur -->
+     <!-- bu şekilde işlem devam edebilir alt listenin içinede bir <ul> etiketi ekleyerek onnuda alt listesini yapmak mümkün -->
+    <ul style="list-style-type: none;">
+        <li> eleman1 </li>
+        <li> eleman2 </li>
+        <li> eleman3 </li>
+        <li> eleamn4
+             <ul> 
+            <li> eleman4.1 </li>
+            <li> eleman4.2 </li> 
+            <li> eleman4.3 </li> 
+             </ul>
+                            </li>
+     </ul>
+     <!-- description liste tipi <dl> şeklinde etiketi var -->
+    <!--<dl> etiketlerinin içine ise <dt> etiketi uygulanıyor aslında elemanın ismine denk geliyor yani burada verinin tipinin ne olduğunu yazarız sonrasında <dd> etiketi içerisinde de açıklama kısmını yazarız  -->
+    <!--<dd> etiketi yani açıklamayı birden fazla kez yazabiliriz  -->
+     <dl>
+     
+     <dt> Html </dt>
+     <dd> 5 Saat </dd>
+     <dt> Css konusu </dt>
+     <dd> 15 Saat </dd>
+     <dd> Türkçe Dilinde </dd>
+        
+     </dl>   
+    
+</body>
+</html>

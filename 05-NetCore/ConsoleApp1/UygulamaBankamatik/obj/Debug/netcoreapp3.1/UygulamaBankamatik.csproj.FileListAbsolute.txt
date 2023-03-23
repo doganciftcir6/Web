@@ -1,0 +1,13 @@
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\UygulamaBankamatik\bin\Debug\netcoreapp3.1\UygulamaBankamatik.exe
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\UygulamaBankamatik\bin\Debug\netcoreapp3.1\UygulamaBankamatik.deps.json
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\UygulamaBankamatik\bin\Debug\netcoreapp3.1\UygulamaBankamatik.runtimeconfig.json
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\UygulamaBankamatik\bin\Debug\netcoreapp3.1\UygulamaBankamatik.runtimeconfig.dev.json
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\UygulamaBankamatik\bin\Debug\netcoreapp3.1\UygulamaBankamatik.dll
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\UygulamaBankamatik\bin\Debug\netcoreapp3.1\UygulamaBankamatik.pdb
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\UygulamaBankamatik\obj\Debug\netcoreapp3.1\UygulamaBankamatik.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\UygulamaBankamatik\obj\Debug\netcoreapp3.1\UygulamaBankamatik.AssemblyInfoInputs.cache
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\UygulamaBankamatik\obj\Debug\netcoreapp3.1\UygulamaBankamatik.AssemblyInfo.cs
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\UygulamaBankamatik\obj\Debug\netcoreapp3.1\UygulamaBankamatik.csproj.CoreCompileInputs.cache
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\UygulamaBankamatik\obj\Debug\netcoreapp3.1\UygulamaBankamatik.dll
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\UygulamaBankamatik\obj\Debug\netcoreapp3.1\UygulamaBankamatik.pdb
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\UygulamaBankamatik\obj\Debug\netcoreapp3.1\UygulamaBankamatik.genruntimeconfig.cache

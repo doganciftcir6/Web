@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* tüm elemanlar için padding ve margin bilgisini 0ladık */
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        /* flexbox aracılıyğla bu nav etiketinideki elemanları yan yana konumlandırabiliriz */
+        nav{
+            display: flex;
+             justify-content: space-between; 
+             background-color: goldenrod;
+             padding: 0 20px;
+        }
+        /* veya buna alternatif olarak marginler kullanabilir sağdaki elemanı sol tarafa it diyebiliriz */
+        nav a{
+            /* margin-right:auto ; */
+            color: #fff;
+            font-size: 20px;
+            text-decoration: none;
+            /* bunu dediğimizde dikey olarak elemanı tek başına konumlandırır center ile ortaladık*/ 
+            align-self: center;
+            /* eklediğimiz bar iconu tam çizgilere otursun diye burda padding verdik */
+            padding: 10px;
+        }
+        /* linkleri yan yana almış olalım */
+        .navigation{
+            list-style: none;
+            display: flex;
+
+        }
+        /* a elemanlarına boşluk verelim */
+        .navigation a{
+            display: block;
+            padding: 16px;
+        }
+        /* hover olduğumuzda zemin değişsin */
+        .navigation a:hover{
+            background-color: rgb(233, 184, 61);
+        }
+        /* en sona eklediğimiz bar işereti başlangıçta gözükmesin istiyorum ancak ben bunu mobilde göstermek istiyorum ondan media içine gidelim */
+        .navigation li:last-child{
+            display: none;
+        }
+
+        /* belli bir boyuttan sonra menüdeki seçenekler alt alta sıralansın responsive özelliği katalım */
+        @media(max-width: 600px){
+            nav{
+                position: relative;
+                flex-direction: column;
+            }
+            .navigation{
+                flex-direction: column;
+            }
+            .navigation a{
+                text-align: center;
+                padding: 10px;
+                border-top: 1px solid rgba(255, 255, 255, 0.3);
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+            .navigation li:last-child{
+            /*bar sembolünü görünür yaptık ve konumunu ayarladık tabi absolute olduğu için relaitve bir kapsayıcı eleman belirtmek lazım onuda nav etiketi içeirisnde ypaıcaz  */
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 10px;
+        }
+        /* mobilde menüler direkt gözükmesin menü bar butonuna tıklandığında gözüksün istiyorum */
+        .responsive .navigation li:not(:last-child){
+            display: none;
+        }
+        /* bunu dediğimizde artık son çocuk yani menü bar hariç diğer menü elemanları gözükmeyecek */
+        /* elemanlar gözükmediğinde logo yazısıda solda konumlansın ortada olsuni istemiyorum */
+        nav a{
+            align-self: flex-start;
+        }
+        /* ve menü bar simgesine border bottom bilgisini vermemiş olalım yani altındaki çizgiyi almış olalım*/
+        .navigation li:last-child a{
+                border-bottom: none;
+            }
+    /* TABİ ŞUAN BAR İKONUNA TIKLANINCA MENÜLER GELMİYOR JV KODLARINI EKLEYEREK BUNUDA SAĞLAYABİLİRİZ YAPMAK İSTERSEN YAP NAV BAR TASIRIMI BU ŞEKİLDE */
+        
+        }
+    </style>
+</head>
+<body>
+    <!-- menü bar iconuna tıkladığımda seçeneklerin gelmesini istiyorum full gözüksün istemiyorum ondan nave class ekledik -->
+    <nav class="responsive">
+        <a href="">Logo</a>
+        <ul class="navigation">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">Contact</a></li>
+            <!-- en alta bir bar sembolu ekleyelim -->
+            <li><a href="">
+                <i class="fa fa-bars"></i>
+
+            </a></li>
+        </ul>
+    </nav>
+    
+</body>
+</html>

@@ -1,0 +1,185 @@
+/* butonun kapsayıcı divine ulaşalım ve butonu ortaya alalım*/
+/* cardı sayfanın tam ortasına getirmek istiyoruz quiz_box */
+.btn_start,
+.quiz_box,
+.score_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* daha sonra qıiz_box active classına sahipse biz bu card elemanını gösterelim bunu javascriptteki buton için eklediğimiz if kısmı içerisinde ile yapıcaz */
+.quiz_box.active{
+    opacity: 1;
+    pointer-events: auto;
+    /* active classında bu küçülttüğümüz cardı büyütücez bu sayede butona basıldığında küçükten büyüğe doğru büyüyen bir animasyonla gelmiş olur card yani sorular kısmımız */
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* daha sonra carda direkt ulaşalım */
+.quiz_box{
+    width: 550px;
+    /* butona tıkladığımızda bir animasyon ile gelmesini sağlayalım bu cardın */
+    /* başta bu cardı yüzde 50 oranında bunu küçültücez sonra active classında büyütücez*/
+    transform: translate(-50%, -50%) scale(0.7);
+    transition: all 0.3s ease;
+    /* opacity 0 yaparak başta bu cardın gözükmesini engelleyelim sadece butonumuz gözüksün */
+    opacity: 0;
+    /* butona tıklayabilmek için pointer eventleri kapatmamız lazım yoksa buton işlev gerçekleştirmez */
+    pointer-events: none;
+}
+/* quix_box yani cardın altındaki headerın altındaki .title classına sahip olan etiket */
+.quiz_box header .title{
+    font-size: 20px;
+    font-weight: 600;
+}
+/* daha sonra  text kısmı yani sorunun yazdığı yer*/
+.quiz_box .question_text{
+    font-size: 22px;
+    font-weight: 600;
+}
+/* daha sonra seçeneklerin olduğu listeye gelelim */
+.quiz_box .option_list{
+    padding: 18px 0;
+}
+/* daha sonra her bir optiona ulaşalım */
+.quiz_box .option_list .option{
+    border: 1px solid #151d3b;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    /* optionlarımızın içersiinde 2 eleman var cevap ve icon olmak üzere bunların bulunduğu divi flex container yaparak elemanların birini sola birini sağa atabiliriz */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* daha sonra optionların hover bilgisini düzenleyelim*/
+.quiz_box .option_list .option:hover{
+    color: #112b2c;
+    background-color: #ffd33d;
+}
+/* daha sonra correct classına sahip olan optiona gelelim burada birleşik yazıyoruz önemli kısım yani doğru olan optionu düzenlicez */
+.quiz_box .option_list .option.correct{
+    color: #155724;
+    background-color: #d4edda;
+}
+/* daha sonra incorrect claasına syip olan optiona gelelin */
+.quiz_box .option_list .option.incorrect{
+    color: #721c24;
+    background-color: #f8d7da;
+}
+/* disabled classını düzenleyelim ve bunu yaptığımızda artık tek bir cevaba tıklanılabilir*/
+.quiz_box .option_list .option.disabled{
+    pointer-events: none;
+}
+
+/* next butonunu ilk başta kaptalım cevap verilince diğer soruya geçebilelim o buton anca o zaman çıksın */
+.quiz_box .next_btn{
+    opacity: 0;
+    pointer-events: none;
+    /* animasyon ekleyekim  küçükten büyüğe şeklinde*/
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+}
+/* gösterileceği zaman kullanılacak olan show classını hazırlayalım */
+.quiz_box .next_btn.show{
+    opacity: 1;
+    pointer-events: auto;
+    /* animasyon ekleyekim küçükten büyüğe şeklinde */
+    transform: scale(1);
+}
+
+/* soru sayısının gösterilme kısmı */
+.quiz_box footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* SÜRE KISMI İÇİN */
+/* header içerisinde 2 elemean var bunların biri solda biri sağda olsun */
+.quiz_box header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+/* time divi içerisindekileri kalan süre ve süre kısmını yan yana alalım */
+.quiz_box header .timer{
+    display: flex;
+    align-items: center;
+    background-color: #143f68;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 15px;
+}
+/*  kalan süre ve süre kısmını yani time_text ve time_second kısmına tek tek ulaşalım */
+.quiz_box header .timer .time_text{
+    font-size: 14px;
+}
+.quiz_box header .timer .time_second{
+    background-color: #f0a500;
+    border-radius: 3px;
+    padding: 3px;
+    margin-left: 3px;
+    width: 25px;
+    text-align: center;
+}
+/* sürenin animasyon kısmı için */
+.quiz_box header .time_line{
+    /* headerın içindeki 2 elemanım flex şeklinde çalışıyor yan yana geliyorlar o yüüzden bu üçüncü animasyon elemanını onlardan ayırmak için akış dışına çıkıo flex özelliğini buna vermiyorum absolute ile */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    /* width: 200px;  0-500 js ile dinamik yapmalıyız */
+    background: #f0a500;
+
+}
+
+
+
+
+/* skor bilgisi kısmı için */
+/* daha sonra qıiz_box active classına sahipse biz bu card elemanını gösterelim bunu javascriptteki buton için eklediğimiz if kısmı içerisinde ile yapıcaz */
+.score_box.active{
+    opacity: 1;
+    pointer-events: auto;
+    /* active classında bu küçülttüğümüz cardı büyütücez bu sayede butona basıldığında küçükten büyüğe doğru büyüyen bir animasyonla gelmiş olur card yani sorular kısmımız */
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* daha sonra carda direkt ulaşalım */
+.score_box{
+    width: 550px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    /* butona tıkladığımızda bir animasyon ile gelmesini sağlayalım bu cardın */
+    /* başta bu cardı yüzde 50 oranında bunu küçültücez sonra active classında büyütücez*/
+    transform: translate(-50%, -50%) scale(0.7);
+    transition: all 0.3s ease;
+    /* opacity 0 yaparak başta bu cardın gözükmesini engelleyelim sadece butonumuz gözüksün */
+    opacity: 0;
+    /* butona tıklayabilmek için pointer eventleri kapatmamız lazım yoksa buton işlev gerçekleştirmez */
+    pointer-events: none;
+}
+/* ikona gelelim */
+.score_box .icon{
+    font-size: 90px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+/* score text bilgisine gelelim */
+.score_box .score_text{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ben bu rengi bir çok yerde kullanabilirim dolayısıyla bunu bir değişken içerisine alabilirim root diyerek bir kapsam belirtiyoruz aynı rengi farklı farklı yerlerde kullanacağımız zaman global bir kapsam tanımlarız burda -- dedikten sonra değişken ismini kendimiz belirleriz */
+        /* yarın öbür gün ben bu rengi değiştirmek istediğimde root içinde yaptığım tanımlamada rengi değiştirerek bu rootu kullandığım her yerde otomatik rengi değiştirmiş olurum böyle bir kolaylığı var */
+        :root{
+            --gray: #878f99;
+            --beyaz: #fff;
+
+        }
+        /* artık ben var fonksiyonu aracılığıyla gray bilgisini bu şekilde yazdrıabiliyorum */
+        /* ben bu tanımladığım değişkeni bir yerde farklı şekildek kullanabilirim farklı bir renkle mesela */
+        /* burada h2 etiketi içeirisnde msela --gray değişkenine blue atadık ve o sadece orada blue olmuş olur */
+        body{background-color: var(--gray);}
+
+        h2{
+            --gray:blue;
+            border-bottom: 2px solid var(--gray);}
+
+        .container{background-color: var(--beyaz); color: var(--gray); padding: 20px;}
+
+        button{background-color: var(--beyaz); color: var(--gray); border: 1px solid var(--gray); padding: 5px;}
+    </style>
+</head>
+<body>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+
+    <div class="container">
+        <h2>Lorem, ipsum dolor.</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus a minima non aliquam blanditiis consequuntur incidunt qui sunt iste ipsum corrupti vel laboriosam similique, illum dolor eveniet voluptatem accusantium neque.</p>
+        <div>
+            <button>Ok</button>
+            <button>Cancel</button>
+        </div>
+    </div>
+    
+</body>
+</html>

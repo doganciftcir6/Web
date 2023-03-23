@@ -1,0 +1,16 @@
+// Değişkenlerimizi buraya ekleyecez ve bunları main.scss de kullanıcaz
+// sonradan değiştirmek istediğimiz şeyler olabilir renkler vs o yüzden bunları buraya eklemek mantıklı
+
+//uygulamanın maksimum genişliğini ayarlaylım
+$max-width: 1200px;
+//uygulamanın temel birinci rengini ayarlayalım
+$primary-color: #EF6D6D;
+//yumuşak bir rengimiz olsun
+$light-color: #f4f4f4;
+//ara bir rengimiz olsun
+$medium-color: #ccc;
+//koyu zeminler için bir renk
+$dark-color: #333;
+// bg resmi için bir değişken
+$bg-image: url('../img/bg.jpeg');
+ 

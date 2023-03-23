@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* descendat selector <div> etiketi altında tün <p> etiketlerini seç demiş oluyoruz burada descendat kullandığımız için <section> etiketide etkilenir*/
+        div p{background-color: violet;}
+        /* child selector > işareti eklediğimizde child eklemiş oluyoruz yani <div> etiketi altındaki tüm <p> etiketleri değil sadece alt elemanlar etkilenir yani burada <section> etkilenmez   */
+        div > p{background-color: violet;}
+        /*Adjacent selector + işareti ile olur bu durumda div etiketi kapandıktan sonra gelen ilk p etiketinden bahsederiz yani burada sadece 5. paragraf etkilenecektir  */
+        div + p{background-color: violet;}
+        /* General Selector ~ işareti ile olur bu durumda div etiketi kapandıktan sonra gleen tüm p etiketleri etkilenir burada hem 5. hem 6. paragraf etkilenecektir */
+        div ~ p{background-color: violet;}
+    </style>
+</head>
+<body>
+    <!-- COMBİNATORS -->
+    <!-- 1- Descendat Selector ( )-->
+    <p>1.Paragraf</p>
+    <div>
+        <p>2.Paragraf</p>
+        <p>3.Paragraf</p>
+        <section>
+            <p>4.Paragraf</p>
+        </section>
+    </div>
+    <p>5.Paragraf</p>
+    <p>6.Paragraf</p>
+
+    <!-- Child Selector (>)-->
+    <!-- Adjacent Sibling Selector (+)-->
+    <!-- General Sibling Selector (~)  -->
+</body>
+</html>

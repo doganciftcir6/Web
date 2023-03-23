@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            /* kolonları tanımlıcaz */
+            /* minimum kutunun alacağı kolonun alacağı genişliği burada vermiş oluyoruz ve geri kalan alan ise dağıtılsın yani 200px üstüne çıktığımız anda diğer kolonlarla eşit bir şekilde alan dağıtılsın 200px de sabit kalacak daha küçülmeyecek ve scrollbar çıkmayacak burada 1fr yerine 500px yazarsak maksimum 500px e kadar büyüme yapabilir*/
+            /* repeat ve baştaki 3 ile 3kolon tanımlayacğımızı sölyedik */
+            /* grid-template-columns: repeat(3, minmax(200px, 1fr)); */
+
+            /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+            /* bunu yaptığımızda 200px in altına inildiğinde yer yoksa kutular bir alt satıra inerler ancak burada yeterli büyütme yapılırsa olmayan bir kutu içinde yer ayrılmış olur bunun yerine mevcut kutular yer varsa kendini büyütsün sayfayı kaplasın istiyorum olmayan bir kutu için yer ayrılsın istemiyorum */
+
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+
+
+            /* gap eklemiş olalım */
+            gap: 10px;
+
+        }
+        .item{
+            background-color: #f7786b;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- container divi oluşturalım -->
+    <div class="container">
+        <!-- içine eleman ekleyelim -->
+        <div class="item">box1</div>
+        <div class="item">box2</div>
+        <div class="item">box3</div>
+    </div>
+    
+</body>
+</html>

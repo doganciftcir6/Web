@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* comtainer a flex özelliği kazandıralım yani flex containera burda tanımlamış oluyoruz ve containerın altındaki elemanlarda flex item olmuş oluyor bunu yapınca her bir eleman inline eleman gibi gibi davranır */
+        /* flex-direction ile flex elemanlarının hangi konumda sıralandığı varsayılan olarak row yani satırda olur eğer column dersek satırda değil dikey şekilde alt alta sıralanacak block eleman gibi olur*/
+        /* row-reverse dersek baştan sona değilde sondan başa yani tam tersi şekilde inline elememan gibi satırda sıralanır */
+        /* column reverse ile yine block eleman gibi sıralanır fakat bu sefer birinci elemen item5 olur sondaki iste item1 yani tam tersi bir sıralama olur */
+        /* flex wrap ile  tarayıcının genişliği azaldıkça içerikler scroll bar çıkar ve alt alta gitmeye başlarlar tarayıcı küçüldükçe elemanlar sığmadıkça bunu nowrap dersek bu durumda hiç bir eleman aşağıya doğru gitmez varsayılan özellik aynen kalmış olur eğer ben oraya wrap dersem bu özelliği açmış olurum elemanlar ekrana sığmadığı sürece alta doğru kendilerini atmaya devam eder bunu responsive tasarımda kullanabiliriz */
+        /* eğer oraya wrap-reverse dersek bu sefer tam dersi çalışır alta inecek olan elemanlar yukarıda kalıyor diğer elemanlar aşağıya inmeye başlıyor yani sıralama alta doğru değilde üste doğru şekilde oluyor*/
+        /* flex-flow özelliği aslında flex-direction ve flex-wrap özelliğinin aynı anda kullanılan bir özellğidir yani mesela ben bu elemanları satırda sıralamak istiyorum ve wrap özelliğini açmak istiyorum bu şekilde yazabilirim  */
+        .container{
+            display: flex;
+            /* flex-direction: row; */
+            /* flex-direction: column ; */
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column-reverse; */
+            /* flex-wrap: nowrap ; */
+            /* flex-wrap: wrap; */
+            /* flex-wrap: wrap-reverse; */
+            flex-flow:row wrap ;
+
+
+
+            background-color:#034f84;
+            padding: 15px;
+        }
+        .item{
+            background-color: #f7786b;
+            padding: 30px;
+            margin:20px;
+            color:#fff ;
+            font-size: 25px;
+        }
+
+    </style>
+</head>
+<body>
+<!-- div ile bir container oluşturalım ve içine item classına sahip olan 5 adet div ekleyelim -->
+    <div class="container">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+        <div class="item">item5</div>
+
+    </div>
+    
+</body>
+</html>

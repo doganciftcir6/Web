@@ -1,0 +1,50 @@
+﻿@* buraya her sayfada ortak olarak kullanacğımız değişitirmeyeceğimiz html içeriklerini tanımlarız *@
+@* mesela artık her html sayfasına bootstrap linki ve html iskileti eklemek zorunda değilim *@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    @* bootstrapı dosya olarak bağlayalım node_modules oluşturarak ve node_modulesi startup ta dışarıya açalım *@
+    <link rel="stylesheet" href="/modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css" integrity="sha512-gMjQeDaELJ0ryCI+FtItusU9MkAifCZcGq789FrzkiM49D8lbDhoaUaIX4ASU187wofMNlgBJ4ckbrXM9sE6Pg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    @* statik dosya olan wwwroot altındaki css dosyamızı üm html sayfaları için bağlamış olalım *@
+    <link href="~/css/Style.css" rel="stylesheet" />
+    <title>ShopApp</title>
+</head>
+<body>
+
+
+    @* navbarı alalım bunlar ortak değişmeyecek *@
+    @await Html.PartialAsync("_navbar"),
+
+
+    @* main kısmını alalım ve buraya @RenderBody() ekleyerek burasının sabit olmayıp değişebileceğini söylemiş oluyoruz *@
+
+    <main class="my-3">
+        <div class="container">
+            @if (TempData["message"] != null)
+            {
+               <partial name="_ResultMessage" model="@(TempData.Get<AlertMessage>("message"))"/>
+
+                
+            }
+            @RenderBody()
+        </div>
+    </main>
+
+    <footer class="py-5 bg-dark text-white text-center">
+        Shop App | 2020
+    </footer>
+
+
+    @* jquary scriptini her sayfada kullanmak istiyorsam *@
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    @* html editör eklicem *@
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.2.0/classic/ckeditor.js"></script>
+    @* bu validation scriptleri sayesinde bütün kontroller kullanıcı tarafından yapılır tüm kontroller anında yapılır yazı yazılır yazılmaz hatalar gider gelir ve kontrol yapılırken sayfa yenilenmek zorunda kalmaz *@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js" integrity="sha512-0QDLUJ0ILnknsQdYYjG7v2j8wERkKufvjBNmng/EdR/s/SE7X8cQ9y0+wMzuQT0lfXQ/NhG+zhmHNOWTUS3kMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js" integrity="sha512-EanukVTZc4W9tUCLnDl069Izidg49PcNRKO1upLzKt9ajq66i+bXOtlzXcIbRhb6vVEGF6BCc8wQi5T1ztCpTQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    @* bir section daha oluşturalım false diyelim ki bu içeriği sadece istediğim sayfalarda kullanırım tüm sayfalarda kullanmak zorunda olmasın *@
+    @RenderSection("Scripts", false)
+</body>
+</html>

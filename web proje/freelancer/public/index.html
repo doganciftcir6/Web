@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fontu ekleyelim -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <!-- font awesome kütüphanesini ekleyelim -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- animasyon kütüphanesini ekleyelim -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <!-- main css dosyamızı bağlaylaım -->
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- HEADER BÖLÜMÜ -->
+<!-- bir header ekleyelim -->
+<header id="header__home">
+    <!-- container ekleyelim -->
+    <div class="container">
+        <!-- nav ekleyelim -->
+        <nav class="main-nav">
+            <!-- içeirinsde başlıktaki logo resim olacak -->
+            <img src="img/logo.png" alt="" class="main-nav__logo">
+            <!-- başlıktaki liste menü kısmımız için ul etiketi -->
+            <ul class="main-nav__items">
+                <!-- bu menü itemlerinin birinde selected özelliği olacak yani hangi sayfadaysak o işaretli oalcak ondan birine class koyalım -->
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- daha sonra bir div eklicez buradada başlığın içerik kısmı olacak content kısmı bu kısmı animasyonlu şekilde yapıcaz yazma animastonu olacak ından typewrite adında bir span tanımladık ve script kütüphanesi tanımlıcaz-->
+        <div class="header-content">
+            <h1>I'm Jhon Anderson
+                <!-- bu daktiolo yazma animastonunu data-period ile 1 saniyede olsun dedik ve neleri bu efektle yazmak istiyorsak data-type içine ekledik -->
+                <span class="typewrite" data-period="1000" data-type='["Developer","Designer","Freelancer"]'></span>
+            </h1>
+            <!-- alta bir buton tanımlıcaz fakat buda animasyonlu bir buton olsun istiyorum classa animasyon bilgisini eklicem direkt ve my-2 claasını vererekte butona üstten alttan bir boşluk verelim-->
+            <a href="" class="btn-light animate__animated animate__swing my-2">View My Profile</a>
+        </div>
+
+    </div>
+</header>
+
+<!-- İNTRO VE PROFİLE BÖLÜMÜNÜ YAPICAZ -->
+<!-- SECTİON 1 INTRO-->
+<section id="home__a" class="text-center py-2">
+    <!-- bir container ekleylim -->
+    <div class="container">
+        <h2 class="section-title">Introduction</h2>
+        <!-- bir div eklidcez bu ıntroduction yazsının altında güzel bir çizgi olmasını sağlayacak -->
+        <div class="border-bottom"></div>
+        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem natus, ipsam odio fuga in harum et! Repudiandae, tempora tenetur ab maxime, ex repellat nisi, libero cumque eveniet recusandae nulla praesentium.</p>
+        <!-- daha sonra alta yetenekler şeklinde bir içerik olacak div ekleyelim -->
+        <div class="skills my-3">
+            <!-- bir div oluşturucam içine ve div altınada icon kısımlarını oluşturuyor olucam her bir div bir elemana karşılık gelecek bunu grid ile yapabilriz -->
+            <!-- bir eleman -->
+            <div>
+                <i class="fa-brands fa-js fa-3x"></i>
+                <h3>Javascprit</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, iure?</p>
+            </div>
+             <!-- bir eleman -->
+             <div>
+                <i class="fa-solid fa-laptop-code fa-3x"></i>
+                <h3>Asp.Net</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, iure?</p>
+            </div>
+             <!-- bir eleman -->
+             <div>
+                <i class="fa-brands fa-python fa-3x"></i>
+                <h3>Python</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, iure?</p>
+            </div>
+             <!-- bir eleman -->
+             <div>
+                <i class="fa-solid fa-database fa-3x"></i>
+                <h3>Databases</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, iure?</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- SECTİON2 PROFİLE -->
+<section id="home__b" class="text-center py-2">
+    <!-- bir container -->
+    <div class="container">
+        <h2 class="section-title">Profile</h2>
+        <!-- h2 altına çizgi için border-bottom divi -->
+        <div class="border-bottom"></div>
+        <p class="lead">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam architecto omnis, nemo corrupti nisi laudantium!
+        </p>
+    </div>
+    <!-- CONTERİNERIN ALTINDA BULUNAN YANİ DIŞINDA BİR BÖLÜM VAR 4 bölmeli -->
+    <!-- onun için ayrı bir div -->
+    <div class="profile">
+        <!-- her bir div bir eleman -->
+        <div>
+        <ul>
+            <li><i class="fas fa-users fa-3x"></i></li>
+            <li class="title">Customers</li>
+            <li class="number">50</li>
+        </ul>
+        </div>
+        <!-- her bir div bir eleman -->
+        <div>
+            <ul>
+                <li><i class="fas fa-award fa-3x"></i></li>
+                <li class="title">Projects</li>
+                <li class="number">50</li>
+            </ul>
+            </div>
+            <!-- her bir div bir eleman -->
+        <div>
+            <ul>
+                <li><i class="fas fa-hourglass-start fa-3x"></i></li>
+                <li class="title">Hours</li>
+                <li class="number">7200</li>
+            </ul>
+            </div>
+            <!-- her bir div bir eleman -->
+        <div>
+            <ul>
+                <li><i class="fas fa-code-branch fa-3x"></i></li>
+                <li class="title">Projects Completed</li>
+                <li class="number">36</li>
+            </ul>
+            </div>
+
+    </div>
+</section>
+<!-- PROCESS VE FOOTER BÖLÜMÜNÜ YAPICAZ -->
+<!-- SECTİON 3 PROCESS  -->
+<seciton id="home__c" class="text-center py-2">
+    <!-- içerikler container ile hizalanıcak -->
+    <div class="container">
+        <h2 class="section-title">Working Processs</h2>
+        <!-- h2 yazımızın altına güzel bir çizgi için border-bottem divi -->
+        <div class="border-bottom"></div>
+        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit enim aliquam facere, doloribus sed maiores quia omnis molestiae quae dignissimos?</p>
+        <!-- şimdi alttaki iconlar olan kısım için bir div -->
+        <div class="process">
+            <!-- her bir eleman bir div olacak BİR ELEMAN   -->
+            <div>
+                <i class="fa-solid fa-layer-group fa-4x process__icon my-2">
+                    <!-- bir div ile stepleri oluşturucaz -->
+                <div class="process__step">1</div>
+                </i>
+                <h3>Step 1</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias sed praesentium totam odit iure doloremque.</p>
+            </div>
+            <!-- her bir eleman bir div olacak BİR ELEMAN   -->
+            <div>
+                <i class="fa-solid fa-eye fa-4x process__icon my-2">
+                    <!-- bir div ile stepleri oluşturucaz -->
+                <div class="process__step">2</div>
+                </i>
+                <h3>Step 2</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias sed praesentium totam odit iure doloremque.</p>
+            </div>
+            <!-- her bir eleman bir div olacak BİR ELEMAN   -->
+            <div>
+                <i class="fas fa-object-ungroup fa-4x process__icon my-2">
+                    <!-- bir div ile stepleri oluşturucaz -->
+                <div class="process__step">3</div>
+                </i>
+                <h3>Step 3</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias sed praesentium totam odit iure doloremque.</p>
+            </div>
+            <!-- her bir eleman bir div olacak BİR ELEMAN   -->
+            <div>
+                <i class="fas fa-file-alt fa-4x process__icon my-2">
+                    <!-- bir div ile stepleri oluşturucaz -->
+                <div class="process__step">4</div>
+                </i>
+                <h3>Step 4</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias sed praesentium totam odit iure doloremque.</p>
+            </div>
+        </div>
+    </div>
+</seciton>
+<!-- FOOTER BÖLÜMÜ -->
+<footer id="main-footer">
+    <!-- bir div -->
+    <div class="footer-content container">
+        <p>Copyright &copy;2025. All Rights Reserved.</p>
+        <!-- daha sonra sosyal medya iconları için bir div -->
+        <div class="social">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+        </div>
+    </div>
+</footer>
+
+    <!-- Header bölümü için başlıktaki content bölümü için yazma animasyonu için script kütüphanesi ekleyelim-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/type-writer.js"></script>
+</body>
+</html>

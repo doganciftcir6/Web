@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* flex container yaptık */
+        .container{
+            display: flex;
+          
+
+
+            background-color:#034f84;
+            height:500px ;
+        }
+        .item{
+            background-color: #f7786b;
+            padding: 30px;
+            margin:20px;
+            color:#fff ;
+            font-size: 25px;
+
+            /* flex-grow elemanların hangi oranda büyütüleceğiyle alakalıdır bunun varsayılan özelliği 0 dır biz buna 1 dersek elemanlar container ın bulunduğu genişliği olduğu gibi kaplarlar sadece 1 değil tabi 2 3 4 5 yapsakta sonuç etkilenmez aynı şekilde yer kaplar bunu sadece bir tanesine verebiliriz .item-1 classına vererek mesela    */
+            /* flex-grow: 1; */
+
+            /* bu aşağıda be yukarıda öğrenmiş olduğumzu 3 özelliği tek bir özellik altında kullanabilirz en başta 0 dediğimizde grow özelliğini kapatmış oluruz sonra verdiğimiz 1 shrink özelliğine denk gelir elemanlar ekran boyutu küçüldükçe botularıda küçülecektir sonra 200px dersek ise basis özelliğine 200px tanımlamış oluyoruz */
+            flex: 0 1 200px
+        }
+        /* tüm elemanlarımız aşağıda konumlanmıştı ancak sadece tek bir elemanı hareket ettimek için ayrı classlar verip o elemana ulaşmamız lazım */
+
+        /* ben iki elemanada flex grow özelliği verdim fakat birine 2 birine 1 dersem bu 2 eleman alanın 2 de 1 i kadar yer kapalr yani item 1 daha fazla yer kaplayacak item2 daha az item1 alanı 2 birim olarak alır bu şeklilde grow özelliğini orantısal olarak kullanabiliyoruz */
+
+        /* ben flex özelliğni item1 için satırın yüzde 25ini kapla diyebiliriz buda kullanılan bir özelliktir  */
+
+        /* ben bunların sarılarıyla oynayabilirim orderın varsayılanı 0 dır ancak ben buna 1 dersem diğerlerinede order 2 ve 3 dersem 1 2 3 şeklinde sıralanacaktır 3 2 1 diye versem tam tersi sıralama olacaktır sayısal büyüklüğe göre bunları sıralayabiliyoruz */
+        .item-1{
+            order: 1;
+            flex: 25%
+            /* flex-grow: 2; */
+
+        }
+/* item 2 ye ulaşalım*/
+        .item-2{
+            order: 2;
+            flex-grow: 1;
+        
+
+        }
+/* flex-basis özelliği ile başlangıç genişliği verebiliyoruz burada mesela item3 başlangıçta 200px lik bir yer kaplar eğer grow özelliği varsa projede önce item3 e 200px alan verilir sonra geri kalan alanlar grow özellikleri kadar diğer elemanlara paylaştırılır */
+/* flex-shirnk özelliği ile ekran ne kadar daralırsa daralsın verilen boyutlar sabit kalır asla küçülmez eğer bu özellik verilmezse ekran küçüldükçe boyulandırmalarda dğeişiklikler olacaktır bu varsayılan olarak 1 değerini taşır ekran daraldıkça içerik kadar yer kaplanır eğer ben buna 0 verirsem hiç bir zaman 200px in altına inmeyecektir bu eleman*/
+        .item-3{
+            order: 3;
+            flex-basis: 200px;
+            flex-shrink: 0;
+        
+
+        }
+
+        
+
+    </style>
+</head>
+<body>
+<!-- div ile bir container oluşturalım ve içine item classına sahip olan 4 adet div ekleyelim -->
+    <div class="container">
+        <div class="item item-1">item1</div>
+        <div class="item item-2">item2</div>
+        <div class="item item-3">item3</div>
+        <div class="item item-4">item4</div>
+
+    </div>
+    
+</body>
+</html>

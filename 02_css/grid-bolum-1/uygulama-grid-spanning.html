@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            /* öncelikle containera grid container haline getirelim */
+            /* sayfayı 3 e bölelim */
+            /* burada auto dediğimizde kolonlar içerik kadar yer kaplar ama 1fr dersek orantısal olarak eşit dağıtmış oluruz boyutları içerik kadar yer kaplamaz auto ile fr farkı bu  */
+            grid-template-columns: repeat(3, auto);
+            /* 3 eböldüğü için her kolon içeriği yan yana gelmiş oldu */
+            /* bir gap oluşturmuş olalım yapışık olmasın elemanlarımız */
+            gap: 5px;
+        }
+        /* page headerın birinci satırın tamamını kaplamasını istiyoruz */
+        .header{
+            grid-column: 1 / span 3;
+            /* header içeriği artık sayfanın en üst kısmının 3 kolonun tamamını kaplıyor ve bunu ortalayalım */
+            text-align: center;
+            background-color: red;
+        }
+        /* birinci satır oluştu gelelim ikinci satıra */
+        .content{
+            /* content classını 2. satır ve 1. kolondan başlatmış olalım */
+            grid-column: 1 / span 2;
+        }
+        /* 2 tane kapladığı için 3. kolona kadar geldi ve otomatikmen sidebar zaten sağ tarafa gelmiş oldu */
+        /* footer 3. satırda dolayısıyla bir kolon genişliği belirtebiliriz */
+        .footer{
+            grid-column: 1 /span 3;
+            /* birinci kolondan başla 3 kolonu kapla diyebiliriz */
+            background-color: red;
+        }
+        /* kutu 1 in yerini düzenleyebiliriz birinci kolondan başlasın 3. kolona kadar yani tüm kolonları kaplasın */
+        .box-1{
+            grid-column: 1 / span 3;
+
+        }
+        /*2. kolondan başla 2 kolon kadar yer kapla diyebiliriz  */
+        .box-3{
+            grid-column: 2 / span 2;
+
+        }
+        .header, .content, .sidebar, .box-1, .box-2, .box-3{
+            /*bunların her birine border vermiş olalım */
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <!-- bir containerımız olsun containerin içinde başlık kısmı bulunsun -->
+    <div class="container">
+        <header class="header">
+            <h2>Page Header</h2>
+        </header>
+        <!-- seciton ekleyelim belli bölümlerden oluşmuş olsun -->
+        <section class="content">
+            <h3>Lorem, ipsum dolor.</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, dignissimos, porro magnam nam beatae architecto itaque quis reiciendis accusamus quaerat expedita optio quisquam officiis quidem minima mollitia! Sapiente, magni! Est.</p>
+        </section>
+        <!-- content kısmının yanında sidebar kısmı olsun -->
+        <section class="sidebar">
+            <h2>Lorem, ipsum.</h2>
+            <ul>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+            </ul>
+        </section>
+        <!-- rastgele kutular eklicem içeriğe -->
+        <div class="box-1">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In fuga amet earum neque eligendi deserunt, dolorum nisi! Dolor odio exercitationem quas, placeat quos laudantium culpa itaque quasi voluptate reiciendis aperiam?
+        </div>
+        <div class="box-2">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In fuga amet earum neque eligendi deserunt, dolorum nisi! Dolor odio exercitationem quas, placeat quos laudantium culpa itaque quasi voluptate reiciendis aperiam?
+        </div>
+        <div class="box-3">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In fuga amet earum neque eligendi deserunt, dolorum nisi! Dolor odio exercitationem quas, placeat quos laudantium culpa itaque quasi voluptate reiciendis aperiam?
+        </div>
+        <!-- daha sonra uygulamanın footer kısmı olmuş olsun -->
+        <footer class="footer">
+            <p>Lorem ipsum dolor sit amet.</p>
+        </footer>
+    </div>
+    
+</body>
+</html>

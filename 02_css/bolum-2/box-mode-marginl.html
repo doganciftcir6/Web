@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     /*önce margin */
+        *{margin:0 ;}
+        #showcase{background-color: #2E4C6D; margin-top: 20px; margin-right: -20px; margin-bottom: 20px; margin-top: 20px;}
+        /* marbin 20px dediğimizde 4 köşeden bir boşluk bırakmış oluruz */
+        /* 2 adet alt alta margin kullanırsak birinin altı diğerinin üstüne denk gelir ve margini büyük olan kadar boşluk olur arada atıyorum 20+20 boşluk olmaz 20 olur sadece buna margin collapsing denir*/
+        /* bunalra -20 gibi negatif değerler de verebiliyoruz tam tersi şekilde çalışır*/
+        /* margini margin:20px 10px 30px 50px; şeklinde yazarak üst sağ alt sol şeklinde sırayla kısa şekilde tanımlamak mümkün */
+        /* margin: 50px 30px; şeklinde bir tanımlama yaparsak top50 right30 bottom50 left30 şeklinde çalışır yani üst alt 50 sağ sol 30 piksel diyebiliyoruz */
+        /* margin: 50px 30px 20px; diye bir 3lü tanımlama yaparsak üst50 sağ sol30 alt kısım iste 20px olacak şekilde çalışır  */
+        /* margin:auto; kullanırsak tarayıcı küçülttükçe büyüttükçe ona göre otomatik olarak margin değerlerini sistem ayarlamış olur  */
+        /* margib:0 auto; şeklinde bir tanımlama yaparsak üstten alttan 0px versin sağdan soldan auto yapsın diyebiliriz*/
+        #how-it-works{background-color: #FC997C; margin: 20px}
+    </style>
+</head>
+<body>
+    <!-- margin -->
+    <!-- padding -->
+    <!-- border -->
+    <!-- bu 3 özellik kutu modelini oluşturur -->
+
+    
+    <main>
+        <section id="showcase">
+
+            <h1>Welcome to MovieApp</h1>
+
+        </section>
+
+
+
+        <section id="how-it-works">
+
+            <h2>How it works?</h2>
+
+        </section>
+
+    </main>
+    
+</body>
+</html>

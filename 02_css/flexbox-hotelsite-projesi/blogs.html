@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awsome kütüphanesi eklensin -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha512-L7MWcK7FNPcwNqnLdZq86lTHYLdQqZaz5YcAgE+5cnGmlw8JT03QB2+oxL100UeB6RlzZLUxCGSS4/++mNZdxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <link rel="stylesheet" href="utils.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- öncelikle uygulamanın header kısmı oluşucak  ve bunun içinde navbarımızı oluşturucaz-->
+<!-- blog kısmı için main-header a ekstra bir blog classı ekledim -->
+<header id="home" class="main-header blog">
+    <!-- navbarımızın sol tarafta başındaki iconu ve deluxe hotel yazısını burda eklicez burada deluxe hoteli yan yana yazmama sebebi deluxe yazısına ayrı bir renk vericez daha önce tanımladığımız  -->
+    <div class="navbar">
+        <h1 class="brand">
+        <i class="fas fa-hotel"></i>
+        <span>Deluxe</span> Hotel
+    </h1>
+    <!-- navbarımızın sağ en sonunda bulunan tıklanabilir menülerimizide burada eklicez ve üstüne tıklandığında bu kısımlara geçiş olacak -->
+    <nav>
+        <!-- BLOG KISMI İÇİN BURALARI DÜZENLEMİŞ OLDUK LİNKLERİ -->
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#rooms">Rooms</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+    </div>
+    <!-- resim üzerinde bulunacak olan yazıları ve butonları tanımayalım ayrıca butonun hemen soluna da icon ekleyelin yani content kısmını yapalım-->
+    <div class="content">
+        <h1>Deluxe Hotel Blog</h1>
+    </div>
+</header>
+<!-- header kısmını tamamladık şimdi main kısmına geçicez -->
+<main>
+    <!-- articles -->
+    <section class="articles">
+
+<!-- article kısmına bir article bölümü eklemiş olalım birinci article -->
+<article class="article flex-columns">
+    <div class="row">
+        <!-- kolonlardan bir tanesi sol bir tanesi sağ tarafta olacak -->
+        <div class="column">
+            <!-- sol taraftaki kolon içeriğine farklı css uygulucam farklı isimlendirme yaptım div ekleyip -->
+            <div class="column-1">
+                <!-- ve burda da bir resim olmuş olsun -->
+                <img src="blog-1.jpeg" alt="">
+
+            </div>
+        </div>
+        <div class="column">
+            <!-- sağ taraftaki kolon içeriğine farklı css uygulucam farklı isimlendirme yaptım div ekleyip -->
+            <div class="column-2 bg-secondary">
+                <!-- burayada bir h2 ve bir p ve bir buton ekleyelim -->
+                <h2>Blog Title One</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, dolorum.</p>
+                <button class="btn btn-outline">Read More</button>
+            </div>
+        </div>
+    </div>
+</article>
+<!-- article kısmına bir article bölümü eklemiş olalım ikinci article -->
+<article class="article flex-columns">
+    <div class="row">
+        <!-- kolonlardan bir tanesi sol bir tanesi sağ tarafta olacak -->
+        <div class="column">
+            <!-- sol taraftaki kolon içeriğine farklı css uygulucam farklı isimlendirme yaptım div ekleyip -->
+            <div class="column-1">
+                <!-- ve burda da bir resim olmuş olsun -->
+                <img src="blog-2.jpeg" alt="">
+
+            </div>
+        </div>
+        <div class="column">
+            <!-- sağ taraftaki kolon içeriğine farklı css uygulucam farklı isimlendirme yaptım div ekleyip -->
+            <div class="column-2 bg-secondary">
+                <!-- burayada bir h2 ve bir p ve bir buton ekleyelim -->
+                <h2>Blog Title Two</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, dolorum.</p>
+                <button class="btn btn-outline">Read More</button>
+            </div>
+        </div>
+    </div>
+</article>
+<!-- article kısmına bir article bölümü eklemiş olalım üçüncü article -->
+<article class="article flex-columns">
+    <div class="row">
+        <!-- kolonlardan bir tanesi sol bir tanesi sağ tarafta olacak -->
+        <div class="column">
+            <!-- sol taraftaki kolon içeriğine farklı css uygulucam farklı isimlendirme yaptım div ekleyip -->
+            <div class="column-1">
+                <!-- ve burda da bir resim olmuş olsun -->
+                <img src="blog-3.jpeg" alt="">
+
+            </div>
+        </div>
+        <div class="column">
+            <!-- sağ taraftaki kolon içeriğine farklı css uygulucam farklı isimlendirme yaptım div ekleyip -->
+            <div class="column-2 bg-secondary">
+                <!-- burayada bir h2 ve bir p ve bir buton ekleyelim -->
+                <h2>Blog Title Three</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, dolorum.</p>
+                <button class="btn btn-outline">Read More</button>
+            </div>
+        </div>
+    </div>
+</article>
+
+    </section>
+ 
+  
+
+
+</main>
+
+<!-- artık sayfanın en altında olan footer kısmını yapalım -->
+<footer class="footer bg-light">
+    <div class="social">
+        <!-- ikonlarımızı barındıracak olan bir div -->
+        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+        <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+    </div>
+    <p>Copyright &copy 2025 - Hotel Site</p>
+</footer>
+
+    
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- bunu bir mediaquaery aracılığıyla gösterebiliyoruz resposnive tasarımı burada gösterebiliyoruz yani 768px in altında bu css dosyası çalışacak -->
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="mobile.css">
+    <title>News Site</title>
+</head>
+<body>
+    <!-- önce navbar kısmını yapıcaz body içine nav etiketi tanımlayalım -->
+    <nav id="main-nav" class="nav">
+        <!-- daha sonra nav etiketi içerisine container ekleyelim -->
+        <div class="container">
+        <!-- container altına logo ekleyelim -->
+            <img src="logo.png" alt="" class="logo">
+        <!-- daha sonra container altında da bizim grid elemanlarımız olacak -->
+            <ul>
+                <li><a class="active" href="indexx.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <!-- sosyal medya iconlarının olacağı bir kısım ekleyelim container içerisine -->
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- sayfanın orta article kısmın -->
+    <section id="articles">
+        <!-- içerikleri bir container içerisine alalım ve içerikler sağdan soldan orantılansın -->
+        <div class="container">
+            <!-- ve burdada page-container oluşturalım içte bir div oluşturalım-->
+            <div class="page-container">
+                <!-- içerisine de bir tane article oluşturucaz card sınıfa sahip içerikler burada olacak ve bu kısım sol tarafta olacak-->
+                <article class="card" id="article">
+                    <img src="img-1.webp" alt="">
+                    <h1>Lorem ipsum dolor sit amet.</h1>
+                    <!-- makaleyi hangi tarihte kim yazmış diye ilgili bir içerik için div bölümü oluşturulur içeriğin altına -->
+                    <div class="meta">
+                        <!-- sayfanın font değerine göre biraz daha azaltılmış bir font değeri almak için small etiketi -->
+                        <small>
+                            <!-- bir kişi ikonu eklemiş olalım -->
+                            <i class="fas fa-user"></i> Written by Doğan Çiftçi 21 Ocak 2024
+                        </small>
+                        <!-- kategori bilgisi içeren veren bir div -->
+                        <div class="category bg-primary">Sport</div>
+                    </div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate impedit deserunt dolores error, veniam soluta, aperiam, saepe sed ipsa aliquid placeat? Illum consectetur soluta incidunt nulla dolores sequi veritatis sunt.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam fugit amet laudantium distinctio beatae quasi maiores vero eum tempore assumenda nobis numquam animi nihil alias sequi possimus in, consectetur asperiores ab accusamus consequatur. Eius dicta eos optio error repellat similique reiciendis ipsum consequuntur veritatis dolore, soluta laudantium ut esse aperiam ducimus assumenda nesciunt facere eum. Iusto fugit recusandae tenetur possimus similique reprehenderit quas ipsum quam, adipisci sit, a fugiat earum animi quasi beatae consequuntur mollitia repudiandae alias quod at soluta eveniet magnam quae nostrum. Minima hic blanditiis aspernatur! Dolorem repudiandae, molestiae, laboriosam fugiat saepe hic reiciendis quibusdam, aperiam exercitationem libero ducimus ipsa unde veritatis vel laborum earum officia aliquid eaque sint impedit tenetur similique deleniti tempore obcaecati! Explicabo obcaecati consequatur reprehenderit at sequi recusandae molestiae praesentium ullam ex tempore. Alias deleniti similique, optio, laudantium laboriosam commodi repellendus iusto blanditiis ex quod officiis fugiat cumque tempora, ab suscipit voluptates impedit porro magnam reprehenderit dignissimos. Aliquam omnis ducimus a consectetur dolores explicabo ipsa magnam nam dignissimos aperiam? Accusamus eaque, omnis consequatur non rem ab autem doloremque repellendus, quibusdam minima perspiciatis iste, ratione sunt rerum pariatur consectetur dolores quasi cum? Itaque repudiandae dolorem illum fugit tempore. Quas esse quae suscipit possimus accusantium incidunt!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores ab aliquid velit fuga assumenda. Illo ducimus officiis excepturi tempore error ea quae quam corporis, facilis, ex sapiente itaque perspiciatis aliquam consequatur fuga fugit a tempora accusamus sed ipsa earum! Fuga nulla vitae quos fugit aliquam cumque reprehenderit officiis! Tempore quod, neque, blanditiis hic asperiores fuga odio laudantium error natus corporis vel et doloribus vitae eveniet, repellat optio. Corrupti perferendis unde molestiae explicabo ex soluta autem, id, ipsa temporibus impedit praesentium animi labore dolor dicta, aliquam voluptates odit quam dolorem ea nostrum facere? Temporibus error laboriosam tempore cumque nemo, quos dolor!</p>
+                </article>
+                <!-- bir içerik tamam diğer içeriği oluşturucaz aside ile ve bu kısım sağ tarafta bulunacak içerikle ilgili olmayacak bir reklam alanı veya bir menü alanı olabilir bu alan bunu aside etiketiyle yaparız her zaman-->
+                <aside class="card bg-secondary">
+                    <h2>Join Us</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi ducimus dolorem numquam, odit consequuntur nisi?</p>
+                    <a href="#" class="btn btn-dark btn-block">Join Now</a>
+                </aside>
+                <!-- bide kategorileri ekleyelim tabiki bunuda aside oluşturacak katagoriler kısmı olacak -->
+                <aside id="categories" class="card">
+                    <h2>Categories</h2>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Sport</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i>Tech</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i>Healt</a></li>
+                    </ul>
+                    
+                </aside>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- projenin footer kısmını yapalım -->
+    <!-- footer kısmı oluştu fakat articles kısmına yakın oldu o yüzden footerı biraz daha aşağı almamız üstten boşluk bırakmamız lazım bunun için daha önce oluşturudğumuz py claaslarını kullanabiliriz -->
+    <footer id="main-footer" class="py-2">
+        <!-- bu içeriği container içerisnde saklayalım -->
+        <div class="container footer-container">
+            <!-- ve altındaki elemanları koyalım ilk eleman -->
+            <div>
+                <img src="logo.png" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit accusamus voluptatem id, accusantium neque laudantium exercitationem officiis amet magni itaque!</p>
+            </div>
+            <!-- şimdi ikinci eleman -->
+            <div>
+                <h3>Join Us</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate, perferendis!</p>
+                <form action="">
+                    <input type="email" name="" id="" placeholder="Enter email">
+                    <input type="submit" value="Subscribe" class="btn btn-primary">
+                </form>
+            </div>
+            <!-- şimdi üçüncü eleman -->
+            <div>
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="">Help & Support</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <!-- son olarak şimdi dördüncü eleman -->
+            <div>
+                <h3>Follow Us</h3>
+                <div>
+                    <a href=""><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href=""><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href=""><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href=""><i class="fab fa-youtube fa-2x"></i></a>
+                </div>
+            </div>
+            <!-- en alta bir copyright bölümü ekleyelim 2. satırda 4 kolonuda kaplayan bir içerik  -->
+            <div>
+                <p>Copyright &copy; 2024, All Rights Reserved </p>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\Uygulama1Operatorler\bin\Debug\netcoreapp3.1\Uygulama1Operatorler.exe
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\Uygulama1Operatorler\bin\Debug\netcoreapp3.1\Uygulama1Operatorler.deps.json
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\Uygulama1Operatorler\bin\Debug\netcoreapp3.1\Uygulama1Operatorler.runtimeconfig.json
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\Uygulama1Operatorler\bin\Debug\netcoreapp3.1\Uygulama1Operatorler.runtimeconfig.dev.json
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\Uygulama1Operatorler\bin\Debug\netcoreapp3.1\Uygulama1Operatorler.dll
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\Uygulama1Operatorler\bin\Debug\netcoreapp3.1\Uygulama1Operatorler.pdb
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\Uygulama1Operatorler\obj\Debug\netcoreapp3.1\Uygulama1Operatorler.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\Uygulama1Operatorler\obj\Debug\netcoreapp3.1\Uygulama1Operatorler.AssemblyInfoInputs.cache
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\Uygulama1Operatorler\obj\Debug\netcoreapp3.1\Uygulama1Operatorler.AssemblyInfo.cs
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\Uygulama1Operatorler\obj\Debug\netcoreapp3.1\Uygulama1Operatorler.csproj.CoreCompileInputs.cache
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\Uygulama1Operatorler\obj\Debug\netcoreapp3.1\Uygulama1Operatorler.dll
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\Uygulama1Operatorler\obj\Debug\netcoreapp3.1\Uygulama1Operatorler.pdb
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\Uygulama1Operatorler\obj\Debug\netcoreapp3.1\Uygulama1Operatorler.genruntimeconfig.cache

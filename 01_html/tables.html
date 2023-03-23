@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- tablolar <table> etiketi ile oluşurlar -->
+    <!-- <tr> ile satırlar oluşur 3 satır olsun-->
+    <!-- kolonlar için satırın içerisine gelerek <td> oluşturulur 4 tane oluşturalım ilk satırda 2. satırdada 4 kolon olsun 3.satırdada 4 kolon -->
+    <!-- her satıra aynı kolon adetini veriyor olmamız gerekiyor -->
+    <!-- 3 satır 4 kolonlu bir tablo oluşturmuş olduk -->
+    <!-- border ile kenarlarına 1 dicem ve tablonun kenarlarında bir border oluşur ama bu özellik eskide kaldı yenisi csste  -->
+    <!-- width yüzde yüz dersek satırlar tüm sayfayı kaplar satır genişliği bu yüzdeye değer vererek ayarlanır -->
+    <!-- <thead> etiketi ile tablonun başlığı ayarlanır başlık kısmında yine <tr> tanımlanır ve içine <th> etiketi ile tablo kolon başlıkları yazılır-->
+    <!-- <tbody> etiketinin içerisine tr etiketleri eklenmeli  -->
+    <!-- <colspan> etiketi ile kolonları birleştirebiliz 2 dersek 2 tane kolonun yaptığı işi yap demiş oluruz  <rowspan> ile satırları birleştirebiliriz yukarıdan aşağıya birleşim 2 dediğimizde 2 satırın yaptığı işi yap deriz-->
+    <!-- cellpeding özelliği ile bilgilerle bilgilerin köşeleri arasındaki mesafeyi arttırmış oluyoruz bu eskide kaldı css ile yenisi kullanılıyor fakat tarayıcılar bu eski özellikleri hala destekliyor ama işte eskiler  -->
+    <!-- cellspecing ile hücreler arasındaki mesafeyi arttırmış oluruz buda eski özellik -->
+        <table border="1" width="100%" cellpadding="10" cellspecing="10">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>ürünün ismi</th>
+                    <th>fiyat</th>
+                    <th>resim</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td>1</td>
+                <td>iphone 11</td>
+                <td>7000</td>
+                <td>1.jpeg</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td rowspan="2">iphone 12 - iphone 13</td>
+                <td>8000</td>
+                <td>2.jpeg</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td colspan="2"> 8000 - 3.jpeg </td>
+               
+            </tr>
+        </tbody>
+
+        </table>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- bunu bir mediaquaery aracılığıyla gösterebiliyoruz resposnive tasarımı burada gösterebiliyoruz yani 768px in altında bu css dosyası çalışacak -->
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="mobile.css">
+    <title>News Site</title>
+</head>
+<body>
+    <!-- önce navbar kısmını yapıcaz body içine nav etiketi tanımlayalım -->
+    <nav id="main-nav" class="nav">
+        <!-- daha sonra nav etiketi içerisine container ekleyelim -->
+        <div class="container">
+        <!-- container altına logo ekleyelim -->
+            <img src="logo.png" alt="" class="logo">
+        <!-- daha sonra container altında da bizim grid elemanlarımız olacak -->
+            <ul>
+                <li><a class="active" href="indexx.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <!-- sosyal medya iconlarının olacağı bir kısım ekleyelim container içerisine -->
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- projenin header kısmını yapalım -->
+    <header id="header">
+        <!-- header altına bir container eklemiş olalım içerikler sağdan soldan içeriye getirilsin aynen navbarda olduğu gibi-->
+        <div class="container">
+        <!-- containirın içerisine bir header-container eklemiş olalım -->
+            <div class="header-container">
+        <!-- header-c0ntainerın altında da bir content kısmı olacak -->
+                <div class="header-content">
+        <!-- content kısmında da bir içerik olacak -->
+                    <div class="category bg-secondary">Sports</div>
+                    <h1>World Rowing Race</h1>
+                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, optio iusto est natus ratione corporis quos dolorem magnam, voluptate enim totam ipsa! Cum sed eius quas incidunt tempora doloremque aut!</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- projenin articles kısmını yapıcaz 6 karta sahip olacak articles kısmı-->
+     <!-- article kısmı oluştu fakat header kısmına yakın oldu o yüzden footerı biraz daha aşağı almamız üstten boşluk bırakmamız lazım bunun için daha önce oluşturudğumuz py claaslarını kullanabiliriz -->
+    <section id="main-articles" class="py-2">
+        <!-- içine bir container -->
+        <div class="container">
+            <h2>Latest News</h2>
+            <!-- içine bir container -->
+            <div class="articles-container">
+                <!-- içine elemanlar eklicez aritcle card sınıfına sahip -->
+                <article class="card">
+                    <!-- her bir kart içerisinde bir tane kategori bilgisi olsun -->
+                    <!-- yeni bir kart -->
+                    <img src="img-1.webp" alt="">
+                    <div>
+                        <div class="category bg-secondary">Sport</div>
+                        <h3><a href="article.html">Lorem ipsum dolor sit amet.</a></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ipsa ad quidem officiis odit incidunt.</p>
+                    </div>                   
+                </article>
+                <article class="card">
+                <!-- her bir kart içerisinde bir tane kategori bilgisi olsun -->
+                <!-- yeni bir kart -->
+                    <img src="img-2.webp" alt="">
+                    <div>
+                        <div class="category bg-secondary">Economy</div>
+                        <h3><a href="article.html">Lorem ipsum dolor sit amet.</a></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ipsa ad quidem officiis odit incidunt.</p>
+                    </div>                   
+                </article>
+                <article class="card">
+                <!-- her bir kart içerisinde bir tane kategori bilgisi olsun -->
+                <!-- yeni bir kart -->
+                    <img src="img-3.webp" alt="">
+                    <div>
+                        <div class="category bg-primary">Healt</div>
+                        <h3><a href="article.html">Lorem ipsum dolor sit amet.</a></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ipsa ad quidem officiis odit incidunt.</p>
+                    </div>                   
+                </article>
+                <article class="card">
+                <!-- her bir kart içerisinde bir tane kategori bilgisi olsun -->
+                <!-- yeni bir kart -->
+                    <img src="img-1.webp" alt="">
+                    <div>
+                        <div class="category bg-secondary">Sport</div>
+                        <h3><a href="article.html">Lorem ipsum dolor sit amet.</a></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ipsa ad quidem officiis odit incidunt.</p>
+                    </div>                   
+                </article>
+                <article class="card">
+                <!-- her bir kart içerisinde bir tane kategori bilgisi olsun -->
+                <!-- yeni bir kart -->
+                    <img src="img-3.webp" alt="">
+                    <div>
+                        <div class="category bg-primary">Healt</div>
+                        <h3><a href="article.html">Lorem ipsum dolor sit amet.</a></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ipsa ad quidem officiis odit incidunt.</p>
+                    </div>                   
+                </article>
+                <article class="card">
+                <!-- her bir kart içerisinde bir tane kategori bilgisi olsun -->
+                <!-- yeni bir kart -->
+                    <img src="img-2.webp" alt="">
+                    <div>
+                        <div class="category bg-secondary">Sport</div>
+                        <h3><a href="article.html">Lorem ipsum dolor sit amet.</a></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ipsa ad quidem officiis odit incidunt.</p>
+                    </div>                   
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- projenin footer kısmını yapalım -->
+    <!-- footer kısmı oluştu fakat articles kısmına yakın oldu o yüzden footerı biraz daha aşağı almamız üstten boşluk bırakmamız lazım bunun için daha önce oluşturudğumuz py claaslarını kullanabiliriz -->
+    <footer id="main-footer" class="py-2">
+        <!-- bu içeriği container içerisnde saklayalım -->
+        <div class="container footer-container">
+            <!-- ve altındaki elemanları koyalım ilk eleman -->
+            <div>
+                <img src="logo.png" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit accusamus voluptatem id, accusantium neque laudantium exercitationem officiis amet magni itaque!</p>
+            </div>
+            <!-- şimdi ikinci eleman -->
+            <div>
+                <h3>Join Us</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate, perferendis!</p>
+                <form action="">
+                    <input type="email" name="" id="" placeholder="Enter email">
+                    <input type="submit" value="Subscribe" class="btn btn-primary">
+                </form>
+            </div>
+            <!-- şimdi üçüncü eleman -->
+            <div>
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="">Help & Support</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <!-- son olarak şimdi dördüncü eleman -->
+            <div>
+                <h3>Follow Us</h3>
+                <div>
+                    <a href=""><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href=""><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href=""><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href=""><i class="fab fa-youtube fa-2x"></i></a>
+                </div>
+            </div>
+            <!-- en alta bir copyright bölümü ekleyelim 2. satırda 4 kolonuda kaplayan bir içerik  -->
+            <div>
+                <p>Copyright &copy; 2024, All Rights Reserved </p>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+/* ilk başta navbar ksımını mobile cihaza uygun hale getirelim */
+/* sosyal medya ikonlarını başta kaybedelim */
+#main-nav .social-icons{
+    display: none;
+}
+/* ikonlar kaybedildi ancak diğer elemanlarıda düzgün bir şekilde gösteriyor olmamız lazım */
+#main-nav .container{
+    grid-template-columns: 1fr;
+    /* bu sayede tek bir kolon vererek tek bir satırda geri kalan elemanlarda satırı olduğu gibi kaplarlar */
+    /* bunların arasında bir boşluk olsun */
+    gap: 1.2rem;
+}
+/* daha sonra ul ve img etiketlerini düzenliyor olalım */
+#main-nav ul,
+#main-nav img{
+    /* her bir elemanı justif-self diyerek kendini ortala diyelim center*/
+    justify-self: center;
+
+}
+/* aritcles bölümünü responsive tasarım yapalım */
+/* ana sayfamızdaki articles kısmını yani resimli kısmı 2 kolon ve her biri eşit şekilde satırı kaplasın diyelim */
+#main-articles .articles-container{
+    grid-template-columns: repeat(2, 1fr);
+}
+/* heade bölümünü mobil cihazlar dışında da bir boyutlandırma yapalım */
+@media(max-width: 600px){
+    #header .header-container,
+    /* aritcles bölümünü responsive tasarım yapalım */
+    /* ana sayfamızdaki articles kısmını yani resimli kısmı 1 kolon ve her biri eşit şekilde satırı kaplasın diyelim yani bu çözünürlükte aşağıya doğru 1 article gözükecek */
+    #main-articles .articles-container,
+    /* tek bir kolon tanımlayarak tek bir satır olmasını sağlayalım ve 1fr ile bu içeriğin satır boyunca bu içeriği doldurmasını sağlayalım */
+    /* bu sayede boyult küçülsede header kısmı bozulmayacak düzgün görüntüde gelecek */
+    #main-footer .footer-container{
+    /*Sayfanın footer kısmı içinde aynı işlemi yapalım bu sayede footer kısmı sayfa küçülünce bozulmasın   */
+        grid-template-columns: 1fr;
+    }
+
+    #main-footer .footer-container > *:last-child{
+        /*fakat footerın sonuna ayrı bir bölüm gibi bir şey oluşturmuştuk onuda ayrı ayarlamak gerekiyor */
+            grid-column: 1;
+            /* birinci kolondan başlamış olalım bu sayede her satırda 1 eleman olacak ve footer kısmımız alt alta güzel gözükecek */
+    }
+    /* ve bu footer kısmındaki elemanların altına bir çizgi eklemiş olalım */
+    #main-footer .footer-container > *{
+        border-bottom: 1px dotted #444;
+        /* her bir bölüm kolon arasında da bir boşluk oluşturalım */
+        padding-bottom: 1rem;
+    }
+     /* ANASAYFA TAMAM ŞİMDİ ARTİCLE SAYFAMIZ İÇİN RESPONSİVE TASARIM EKLEYELİM 600PX ALTINDA */
+     .page-container{
+        grid-template-columns: 1fr;
+        /* her bir eleman alt alta gelecektir */
+     }
+
+    }
+
+   

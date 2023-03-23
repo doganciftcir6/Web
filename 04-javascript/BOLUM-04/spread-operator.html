@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        // bir dizimiz olsun bunu ekrana yazdırmak için döngü kullanırız
+        const msj = ["benim", "adım", "sadık", "turan"];
+        // ben bu diziyi bir liste içerisinde tutmak istiyorusam
+        let sonuc = "";
+        for(let x of msj){
+            sonuc += x + " ";
+        }
+        console.log(sonuc);
+        // tüm bunlar yerine yapabileceğim bir ...sepread oparetör var
+        console.log(...msj);
+// ***********************************************************************************************
+        // diziler tanımlayalım
+        const dizi1 = ["bir", "iki"];
+        const dizi2 = ["üç", "dört"];
+        // ben bu 2 diziyi birleştirmek istiyorum
+        const dizi3 =[...dizi1, ...dizi2,"beş","altı"]; 
+// ***************************************************************************************************
+        // dizi tanımlayalım
+        const sayilar1 = [1,2,3];
+        const sayilar2 = sayilar1; //bu kopyalama işlemi referans olarak yapılıyor yani eğer ben sayilar1 için bir indeks numarası yazıp değerini değiştirirsem her iki dizinin de o indeksi aynı değerle değiştirilir REFERANS KOPYALAMA
+        // BUNUN YERİNE REFERANS DEĞİL SADECE DEĞERLERİ KOPYALAYABİLİRİZ SPREAD ARACILIĞIYLA YANİ VALUE KOPYALAMA
+        const sayilar3 = [...sayilar1]; //artık sayilar3 dizisinde bir değişiklik yapınca bu sayilar1 i etkilemeyecektir
+//*******************************************************************************************************
+// YUKARIDA DİZİ İÇİN YAPTIKLARIMIZI OBJE İÇİNDE YAPABİLİRİZ
+const user = {
+    username: "sadikturan",
+    email: "info@gmail.com"
+} 
+const adress = {
+    username: "abc",
+    city: "kocaeli"
+}
+// bu iki bilgiyi ekranda yazdırmak istiyorum
+console.log({...user, ...adress});
+// *****************************************************************************************************************
+// SPREAD OPERATORLERİ FONKSYİON İÇERİSİNDEK KULLANABİLİRİZ BUNLARA REST PARAMETRELERİ DENİYOR
+// değişken sayıda parametre göndermek istersek ...
+function toplam(...args){
+    let sonuc = 0;
+    for(let sayi of args){
+        sonuc += sayi;
+    }
+    return sonuc;
+}
+toplam(1,3,5);
+toplam(1,3,5,10)
+
+// başka fonksiyon
+// adress bilgisi farklı şeyler içericek şehir vs ondan ... ekleyebiliriz
+function bilgileriGoster(isim, soyad, ...adress){
+    console.log(isim,soyad,adress)
+}
+bilgileriGoster("ali","turan","istanbul","kadıköy")
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* bir p etiketi ekleyelim ve ona border verelim yazılar ile p etiketi arasında bir mesafe vermek için padding uygulayalım fakat burda verdiğimiz border img float eleman olduğu için bozuldu resmin arkasına kadar gitti p etiketlerinin borderı bunu düzeltmek için clearfloat uygulamamız gerekiyor*/
+        p{border: 2px solid red; padding: 5px;}
+        /* 2. p etiketinde uyguladığımız resimi küçültelim ve çevrelediğimiz yazının resmin yanına gelmesini sağlayalım resim sol ve yazı da sağda gelecektir ve ikiside inline elemandır float left ile resmi sol tarafa alalım bu sayede yazılar direkt resmin sağında sıralanır bozuk şekilde gözükmez resim ve yazı arasında bir mesafe olsun istiyorum margin ile*/
+        img{width: 300px; float: left; margin-right: 10px}
+
+        /* clearfloat bunu direkt kapsayıcı eleman olan p etiketini vermek daha mantıklıdır bunu yaptıktan sonra artık resimde borderın içine girecek ve bozuk bir görüntü olmayacak resmin çerçevesini düzgün bir şekilde ayarlamış olduk*/
+        .clearfix::after{content: ""; display: block; clear: both;}
+
+
+    </style>
+</head>
+<body>
+    <!-- 2 adet p etiketi ekleyelim 2. p etiketine resim ekleyelim ve resmin etrafına bir yazı çevrelemiş olalım -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quam nulla consequuntur, amet necessitatibus, repellendus quae eaque dolorum maxime id qui maiores odit cum quasi voluptas iure! Quia, magni temporibus.</p>
+
+    <p class="clearfix"><img src="features.jpeg" alt="">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae voluptatum beatae molestias maiores fuga omnis consequuntur fugiat, magnam neque repudiandae quos ratione laborum enim excepturi nemo cum minus. Sit, perferendis?
+    </p>
+    
+</body>
+</html>

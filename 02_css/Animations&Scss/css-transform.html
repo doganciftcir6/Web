@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* NESNELERİN HARAKETLİLİK KAZANDIRAN BİR ÖĞENİN DÖNDÜRÜLMESİ YADA YANA YATIRILMASI YA DA KONUMUNUN DEĞİŞTİRİLMESİ GİBİ ÖZELLİKLER TAMAMEN TRANSFORM İLE YAPILIR */
+        body{
+            background-color: #333;
+            /* body içerisine gelen bütün elamanları sayfanın ortasına alıcam o yüzden displayflex diyebilirz */
+            display: flex;
+            /* bütün elemanları alignitem ile dikeyde ortalarız */
+            align-items: center;
+            /* bütün elemanları justfiy-content ile de yatayda ortalarız */
+            justify-content: center;
+            /* yükseklik olarakta sayfanın kendisini kaplamış olsun */
+            height: 100vh;
+        }
+        /* box divi içinde bir düzenleme yapalım */
+        .box{
+            background-color: yellow;
+            border-top:5px solid #fff;
+            /* bir yer kazandıralım*/
+            width: 150px;
+            height: 150px;
+            /* hoverda yaptığımız özellikler hemen anında olmasın belli bir süre ve efekt içinde olsun transition özelliği sayesinde */
+            transition: all 1s ease-in-out;
+            
+        }
+        .box:hover{
+            /* değiştirmek istediğimiz özellikleri burada yazarız */
+            /* transform diyelim rotate diyerek belli bir derece veriyoruz kutunun 180 derece döndürülmesini sağlayabiliriz buna negatif bir değer verirsek tam tersi yönde bir döndürme işlemi olacaktır*/
+            /* normalde border bilgisi kutunun yukarısında olurdur bu transfrom tanımını yaptıktan sonra border bilgisi top olmasına rağmen kutunun aşağısında olacaktır */
+            /* transform: rotate(180deg); */
+
+            /* skew özelliğinin içine derece veriyoruz ve şeklimiz sol tarafa doğru 30 derece kadar eğilmiş olur buna -30 verirsek eğer yani negatid bir değer verirsek bu sefer şekil sağ tarafa doğru 30 derece eğilmiş olur*/
+            /* transform: skew(30deg); */
+
+            /*scale ile 2 yazdık mesela resmin 2 kat oranında büyütüleceğini söylemiş oluyoruz  */
+            /* transform: scale(2); */
+            
+            /* translateX özelliğimiz ile belli bir konum bilgisi veriyoruz 100px diyelim nesnenin konumu x ekseninde yani yatayda değiştirilmiş olacak ve sağ tarafa doğru kaydırılacak veya sol tarafa doğru kaydırılmasını istiyorsak negatif değer vermeliyiz -100 demeliyiz */
+            /* transform:translateX(100px); */
+            /* translateY özelliğimiz ile belli bir konum veriyoruz 100px diyelim nesnenin konumu y ekseninde yani dikeyde değiştirilmiş olacak veaşağı tarafa doğru kaydırılacak veya yukarı doğru kaydırılmasını istiyorsak negatif değer vermeliyiz -100 demeliyiz */
+            /* transform: translateY(100px); */
+            /* transform translate diyerek x ve y ekseninde değer verebiliriz önce parantez içine x eksenindeki değeri veririz sonra y eksenindeki değeri veririz */
+            /* burda sağ alt köşeye doğru 100px bir hareketlenme olacaktır */
+            /* transform: translate(100px,100px); */
+            
+            /* rotateX dediğimizde ve bir derece verdiğimizde bu durudma yatay x ekseninde biz bunu 180 derece döndürebiliriz  */
+            /* transform: rotateX(180deg); */
+            /* rotateY DEDİĞİMİZDE ve bir derece verdiğimizde bu durumda dikey y ekseninde biz bunu 180 derece döndürürüz*/
+            transform: rotateY(180deg);
+
+
+
+
+        }
+    </style>
+</head>
+<body>
+    <!-- sayfanın tam ortasına gelecek olan içeriği oluşturalım -->
+    <div class="box"></div>
+    
+    
+</body>
+</html>

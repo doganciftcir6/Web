@@ -1,0 +1,47 @@
+﻿@*index.cshtml 'ninde kendisine gönderilen bilgiden haberi olması gerekiyor yani cshtml sayfasının bir modeli olması gerekiyor*@
+@*@model string[]*@
+
+@*model sınıfı oluşturduktan sonra*@
+@*@model List<HelloWorld.Models.Product>*@
+
+@* UrunKategoriModel modeli oluşturulduktan sonra *@
+@model HelloWorld.Models.UrunKategoriModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @foreach (var kurs in Model.Urunler)
+        {
+            @kurs.UrunAdi
+            @kurs.UrunId
+            @kurs.Aciklama
+            @kurs.fiyat
+            @kurs.Satistami
+        }
+
+      @* partial view'i kullanmak *@
+        @*@Html.Partial("KategoriMenu",Model.Kategoriler)*@
+
+        @* otomaik partial view'i kullanmak birinci parametrede action ismi ikinci parametrede controller ismi *@
+        @*@Html.Action("KategoriMenu", "Kategori");*@
+
+    </div>
+    @* ViewBag kullanmak *@,
+    @*@ViewBag.UrunSayisi
+    @foreach (var kategori in (List<HelloWorld.Models.Kategori>)ViewBag.Kategoriler)
+    {
+        @kategori.Id
+        @kategori.KategoriAdı
+    }*@
+</body>
+</html>

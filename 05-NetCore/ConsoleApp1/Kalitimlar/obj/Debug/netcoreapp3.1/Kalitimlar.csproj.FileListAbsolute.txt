@@ -1,0 +1,14 @@
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\Kalitimlar\bin\Debug\netcoreapp3.1\Kalitimlar.exe
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\Kalitimlar\bin\Debug\netcoreapp3.1\Kalitimlar.deps.json
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\Kalitimlar\bin\Debug\netcoreapp3.1\Kalitimlar.runtimeconfig.json
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\Kalitimlar\bin\Debug\netcoreapp3.1\Kalitimlar.runtimeconfig.dev.json
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\Kalitimlar\bin\Debug\netcoreapp3.1\Kalitimlar.dll
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\Kalitimlar\bin\Debug\netcoreapp3.1\Kalitimlar.pdb
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\Kalitimlar\obj\Debug\netcoreapp3.1\Kalitimlar.csproj.AssemblyReference.cache
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\Kalitimlar\obj\Debug\netcoreapp3.1\Kalitimlar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\Kalitimlar\obj\Debug\netcoreapp3.1\Kalitimlar.AssemblyInfoInputs.cache
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\Kalitimlar\obj\Debug\netcoreapp3.1\Kalitimlar.AssemblyInfo.cs
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\Kalitimlar\obj\Debug\netcoreapp3.1\Kalitimlar.csproj.CoreCompileInputs.cache
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\Kalitimlar\obj\Debug\netcoreapp3.1\Kalitimlar.dll
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\Kalitimlar\obj\Debug\netcoreapp3.1\Kalitimlar.pdb
+C:\Users\dogan\OneDrive\Masaüstü\05-NetCore\ConsoleApp1\Kalitimlar\obj\Debug\netcoreapp3.1\Kalitimlar.genruntimeconfig.cache

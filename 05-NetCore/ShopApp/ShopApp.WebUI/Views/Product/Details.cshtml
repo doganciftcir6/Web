@@ -1,0 +1,25 @@
+﻿@* modeli burda tanımlıyoruz *@
+@model ShopApp.WebUI.Models.Product
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Product</title>
+</head>
+<body>
+    @* _navbar.cshtml'deki navbarı burada kullanmak için *@
+    @* PartialAsync metotu asecron bir metot olduğu için @await kullandık *@
+    @await Html.PartialAsync("_navbar")
+    @* prdocutcontroller içerisindeki ilgili Details action metotunun içine tanımladığımız viewbagleri burda kullanabiliriz *@
+    @*<p>ürün adı: @ViewBag.Name</p>
+        <p>ürün fiyat: @ViewBag.Price</p>
+        <p>ürün açıklaması: @ViewBag.Description</p>*@
+
+    @* modeli oluşturduktan sonra artık viewbag yerine model yazıyoruz *@
+    <p>ürün adı: @Model.Name</p>
+    <p>ürün fiyat: @Model.Price</p>
+    <p>ürün açıklaması: @Model.Description</p>
+
+</body>
+</html>

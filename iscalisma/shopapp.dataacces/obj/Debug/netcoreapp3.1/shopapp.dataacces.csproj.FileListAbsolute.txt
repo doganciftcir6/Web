@@ -1,0 +1,45 @@
+C:\Users\Rabia İslamyan\Desktop\iscalisma\shopapp.dataacces\bin\Debug\netcoreapp3.1\shopapp.dataacces.deps.json
+C:\Users\Rabia İslamyan\Desktop\iscalisma\shopapp.dataacces\bin\Debug\netcoreapp3.1\shopapp.dataacces.runtimeconfig.json
+C:\Users\Rabia İslamyan\Desktop\iscalisma\shopapp.dataacces\bin\Debug\netcoreapp3.1\shopapp.dataacces.runtimeconfig.dev.json
+C:\Users\Rabia İslamyan\Desktop\iscalisma\shopapp.dataacces\bin\Debug\netcoreapp3.1\shopapp.dataacces.dll
+C:\Users\Rabia İslamyan\Desktop\iscalisma\shopapp.dataacces\bin\Debug\netcoreapp3.1\shopapp.dataacces.pdb
+C:\Users\Rabia İslamyan\Desktop\iscalisma\shopapp.dataacces\bin\Debug\netcoreapp3.1\shopapp.entity.dll
+C:\Users\Rabia İslamyan\Desktop\iscalisma\shopapp.dataacces\bin\Debug\netcoreapp3.1\shopapp.entity.pdb
+C:\Users\Rabia İslamyan\Desktop\iscalisma\shopapp.dataacces\obj\Debug\netcoreapp3.1\shopapp.dataacces.csproj.AssemblyReference.cache
+C:\Users\Rabia İslamyan\Desktop\iscalisma\shopapp.dataacces\obj\Debug\netcoreapp3.1\shopapp.dataacces.AssemblyInfoInputs.cache
+C:\Users\Rabia İslamyan\Desktop\iscalisma\shopapp.dataacces\obj\Debug\netcoreapp3.1\shopapp.dataacces.AssemblyInfo.cs
+C:\Users\Rabia İslamyan\Desktop\iscalisma\shopapp.dataacces\obj\Debug\netcoreapp3.1\shopapp.dataacces.csproj.CoreCompileInputs.cache
+C:\Users\Rabia İslamyan\Desktop\iscalisma\shopapp.dataacces\obj\Debug\netcoreapp3.1\shopapp.dataacces.csproj.CopyComplete
+C:\Users\Rabia İslamyan\Desktop\iscalisma\shopapp.dataacces\obj\Debug\netcoreapp3.1\shopapp.dataacces.dll
+C:\Users\Rabia İslamyan\Desktop\iscalisma\shopapp.dataacces\obj\Debug\netcoreapp3.1\shopapp.dataacces.pdb
+C:\Users\Rabia İslamyan\Desktop\iscalisma\shopapp.dataacces\obj\Debug\netcoreapp3.1\shopapp.dataacces.genruntimeconfig.cache
+C:\Users\dogan\OneDrive\Masaüstü\iscalisma\shopapp.dataacces\bin\Debug\netcoreapp3.1\shopapp.dataacces.deps.json
+C:\Users\dogan\OneDrive\Masaüstü\iscalisma\shopapp.dataacces\bin\Debug\netcoreapp3.1\shopapp.dataacces.runtimeconfig.json
+C:\Users\dogan\OneDrive\Masaüstü\iscalisma\shopapp.dataacces\bin\Debug\netcoreapp3.1\shopapp.dataacces.runtimeconfig.dev.json
+C:\Users\dogan\OneDrive\Masaüstü\iscalisma\shopapp.dataacces\bin\Debug\netcoreapp3.1\shopapp.dataacces.dll
+C:\Users\dogan\OneDrive\Masaüstü\iscalisma\shopapp.dataacces\bin\Debug\netcoreapp3.1\shopapp.dataacces.pdb
+C:\Users\dogan\OneDrive\Masaüstü\iscalisma\shopapp.dataacces\bin\Debug\netcoreapp3.1\shopapp.entity.dll
+C:\Users\dogan\OneDrive\Masaüstü\iscalisma\shopapp.dataacces\bin\Debug\netcoreapp3.1\shopapp.entity.pdb
+C:\Users\dogan\OneDrive\Masaüstü\iscalisma\shopapp.dataacces\obj\Debug\netcoreapp3.1\shopapp.dataacces.csproj.AssemblyReference.cache
+C:\Users\dogan\OneDrive\Masaüstü\iscalisma\shopapp.dataacces\obj\Debug\netcoreapp3.1\shopapp.dataacces.AssemblyInfoInputs.cache
+C:\Users\dogan\OneDrive\Masaüstü\iscalisma\shopapp.dataacces\obj\Debug\netcoreapp3.1\shopapp.dataacces.AssemblyInfo.cs
+C:\Users\dogan\OneDrive\Masaüstü\iscalisma\shopapp.dataacces\obj\Debug\netcoreapp3.1\shopapp.dataacces.csproj.CoreCompileInputs.cache
+C:\Users\dogan\OneDrive\Masaüstü\iscalisma\shopapp.dataacces\obj\Debug\netcoreapp3.1\shopapp.dataacces.csproj.CopyComplete
+C:\Users\dogan\OneDrive\Masaüstü\iscalisma\shopapp.dataacces\obj\Debug\netcoreapp3.1\shopapp.dataacces.dll
+C:\Users\dogan\OneDrive\Masaüstü\iscalisma\shopapp.dataacces\obj\Debug\netcoreapp3.1\shopapp.dataacces.pdb
+C:\Users\dogan\OneDrive\Masaüstü\iscalisma\shopapp.dataacces\obj\Debug\netcoreapp3.1\shopapp.dataacces.genruntimeconfig.cache
+C:\Users\dogan\OneDrive\Masaüstü\sadık\iscalisma\shopapp.dataacces\bin\Debug\netcoreapp3.1\shopapp.dataacces.deps.json
+C:\Users\dogan\OneDrive\Masaüstü\sadık\iscalisma\shopapp.dataacces\bin\Debug\netcoreapp3.1\shopapp.dataacces.runtimeconfig.json
+C:\Users\dogan\OneDrive\Masaüstü\sadık\iscalisma\shopapp.dataacces\bin\Debug\netcoreapp3.1\shopapp.dataacces.runtimeconfig.dev.json
+C:\Users\dogan\OneDrive\Masaüstü\sadık\iscalisma\shopapp.dataacces\bin\Debug\netcoreapp3.1\shopapp.dataacces.dll
+C:\Users\dogan\OneDrive\Masaüstü\sadık\iscalisma\shopapp.dataacces\bin\Debug\netcoreapp3.1\shopapp.dataacces.pdb
+C:\Users\dogan\OneDrive\Masaüstü\sadık\iscalisma\shopapp.dataacces\bin\Debug\netcoreapp3.1\shopapp.entity.dll
+C:\Users\dogan\OneDrive\Masaüstü\sadık\iscalisma\shopapp.dataacces\bin\Debug\netcoreapp3.1\shopapp.entity.pdb
+C:\Users\dogan\OneDrive\Masaüstü\sadık\iscalisma\shopapp.dataacces\obj\Debug\netcoreapp3.1\shopapp.dataacces.csproj.AssemblyReference.cache
+C:\Users\dogan\OneDrive\Masaüstü\sadık\iscalisma\shopapp.dataacces\obj\Debug\netcoreapp3.1\shopapp.dataacces.AssemblyInfoInputs.cache
+C:\Users\dogan\OneDrive\Masaüstü\sadık\iscalisma\shopapp.dataacces\obj\Debug\netcoreapp3.1\shopapp.dataacces.AssemblyInfo.cs
+C:\Users\dogan\OneDrive\Masaüstü\sadık\iscalisma\shopapp.dataacces\obj\Debug\netcoreapp3.1\shopapp.dataacces.csproj.CoreCompileInputs.cache
+C:\Users\dogan\OneDrive\Masaüstü\sadık\iscalisma\shopapp.dataacces\obj\Debug\netcoreapp3.1\shopapp.dataacces.csproj.CopyComplete
+C:\Users\dogan\OneDrive\Masaüstü\sadık\iscalisma\shopapp.dataacces\obj\Debug\netcoreapp3.1\shopapp.dataacces.dll
+C:\Users\dogan\OneDrive\Masaüstü\sadık\iscalisma\shopapp.dataacces\obj\Debug\netcoreapp3.1\shopapp.dataacces.pdb
+C:\Users\dogan\OneDrive\Masaüstü\sadık\iscalisma\shopapp.dataacces\obj\Debug\netcoreapp3.1\shopapp.dataacces.genruntimeconfig.cache

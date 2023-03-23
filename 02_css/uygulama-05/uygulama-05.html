@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;}
+
+        
+        #header-container{background-color:blueviolet;  height: 100px;}
+        .div-header{color: orange; padding: 15px;}
+
+        #footer-container{background-color: blueviolet;  height: 100px;}
+        .div-footer{color: orange; padding: 15px;}
+
+        .menu{width: 25%; height: 300px;}
+
+        .menu ul{list-style-type: none; margin: 0; padding: 0;}
+        .menu li{padding: 8px; margin-bottom: 8px; background-color:purple ; color: white;}
+        /* cursor pointer el işareti çıkartıyor */
+        .menu li:hover{cursor: pointer; background-color: #8267BE;}
+
+        .content{width: 75%; height: 300px;}
+
+        .col{float: left;padding: 15px 15px 15px 0;}
+        /*üstten alttan bir boşluk olsun istemiyorum  */
+        h1{margin: 0;}
+
+
+
+        .clearfix::after{content: "";display: block;clear: both;}
+
+
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <div id="header-container">
+            <div class="div-header">
+                <h2>Header</h2>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+
+    <main class="clearfix">
+
+    <div class="menu col">
+        <ul>
+            <li>Html</li>
+            <li>Css</li>
+            <li>JavaScript</li>
+        </ul>
+    </div>
+    <div class="content col">
+        <h1>Komple Uygulamalı Web Geliştirme Eğitimi</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis enim voluptates nostrum, ut sapiente quisquam illo eos. Temporibus, iusto. Fuga accusamus, cum aliquam maiores repudiandae eum consequuntur perferendis molestias laboriosam.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam magni reprehenderit voluptatum cum ab. Rem quos aut labore modi porro velit nobis dicta quo placeat similique. Suscipit dolorum quo voluptatem!</p>
+    </div>
+
+    </main>
+
+
+
+    <footer>
+        <div id="footer-container">
+            <div class="div-footer">
+                <h2>Footer</h2>
+
+            </div>
+
+        </div>
+
+    </footer>
+    
+</body>
+</html>

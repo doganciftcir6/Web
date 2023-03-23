@@ -1,0 +1,339 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap');
+@import url("buttons.css");
+@import url("base.css");
+
+
+
+
+
+
+
+/* html etiketine bunu vererek sağ alttaki yukarı gitme iconuna tıkladığımızda yavaş bir halde yukarı gidecektir bir anda değilde */
+html {
+    scroll-behavior: smooth;
+}
+
+
+#showcase { 
+    /* uygulama 7 için arka plan resmini değişicez background size eklicez ve bu resmi fixed yapıcaz ve yükseklik  bilgisini artık sabit bir değer vermicez 80vh diyerek yüzde 80ini almış olucaz ve  resme biraz filtre atarak linear-gradient ile resmi biraz arka plana alıcaz göze batmasın ve to bottom ile alt tarafa doğru gitmiş olsun diyelim daha sonra onun için rgba ile hem renkleri verelim hemde saydamlık eklemiş olalım yani ilk rgba ile bu renkten başla diğer seçeceğimiz rgba ya doğru git deriz */
+    background: linear-gradient(to bottom, rgba(252,153,124,0.2),rgba(250,81,30,0.2)),
+    url('yeni-bg.jpeg');
+    background-position: center;
+    background-size: cover;
+    
+    height: 40vh;
+    width: 100%;
+    position: relative;
+}
+/* uygulama 7 için yeni contenti düzenleyelim */
+#showcase .content {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    
+    background: rgba(46, 76, 109, 0.3);
+    padding: 2rem;
+    width: 60%;
+    border-radius: 10px;
+}
+
+#showcase h1 {
+    position: absolute;
+    top: 50%;
+    margin: 0;
+    color: #fff;
+    
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+@media (min-width: 576px) { 
+    #showcase{
+        height: 50vh;
+       }
+}
+
+
+@media (min-width: 768px) {
+   #showcase{
+    height: 60vh;
+   }
+}
+
+@media (min-width: 992px) { 
+    #showcase{
+        height: 70vh;
+       }
+ }
+
+/* headerı sabitlemek istiyoruz fixed ile ama bu arkaya gider kaybolur yani bunu öne çıkartmak için z-index:1 deriz bunu diyince görünür olur ama içerik kadar yer kaplar satırı olduğu gibi kaplasın istiyoruz o yüzden width 100% yapıcaz ve artık en üstteki menü barımız sabit kalacak scroll ile aşağı insek bile top 0 ile de yukarı sabitlemiş olurum*/
+.main-header {
+    background-color: #FC997C;
+    padding: 8rem 1.6rem;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+}
+/* mainin üzerine geldiğimizde artık satırı olduğu gibi kaplıyor dolayısıyla biz burdan maini margin top diyerek biraz aşağıya alıcaz ve bu sayede main kısmı ile yukarıdaki bar main header kısmı iç içe binmeyecek main kısmı aşağıda main-header kısmımız üst barımız yukarıda olacak */
+main {
+    margin-top: 4rem;
+}
+
+.main-nav {
+    display: inline-block;
+    width: calc(100% - 10rem);
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
+}
+.main-nav__items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav__item {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+
+.main-header__logo {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.main-nav__item a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.main-nav__item a:hover, .main-nav__item:hover::before {
+    color: #2E4C6D;
+}      
+
+.main-nav__item:active::before, .main-nav__item a:active {
+    color: #fff;
+}
+
+.main-nav__item::before {
+    content: '\2022';
+    color: #fff;
+}
+
+.main-nav__item--login::before {
+    content:none;
+}
+
+#how-it-works { 
+    padding: 1rem;
+    text-align: center;
+}
+
+
+.icon-box h3 {
+    color: #3e4555;
+    font-size: 2.6rem;
+}
+
+.icon-box i {
+    color: #FC997C;
+}
+
+.features__left {
+    /* uygulama 7 için bu background değişiyor yani resim aynı kalıyor ama bir filtre ve saydamlık veriyoruz resim arka planda kalsın diye biraz göze batmasın diye*/
+    background: linear-gradient(to bottom, rgba(252,153,124,0.2),rgba(250,81,30,0.2)),
+    url('features.jpeg');
+    background-size: cover;
+    background-position: top center;
+}
+
+.features__right {
+    background-color: #edf5f7;
+    padding: 3rem;
+    vertical-align: top;
+}
+
+.features__left,
+.features__right{
+    height: 35rem;
+}
+
+.features__right h3 {
+    font-size: 3rem;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 4rem;
+    color: #3e4555;
+    font-size: 3rem;
+}
+/* burda uygulama 7 içnin artık widthe ve floata gerek yok */
+.plan {           
+    text-align: center;
+    padding: 5px;
+}
+
+.plan__badge {
+    background: #fff;
+    color: #FC997C;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.recommended_plan {
+    color: #fff;
+    background: #396EB0!important;
+}
+
+.inner-plan {
+    background: #edf5f7;
+    padding: 25px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2);
+    transition: box-shadow .6s;
+}
+
+.inner-plan:hover {
+    box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.5);
+}
+
+.plan__features {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.plan--featured {
+    position: relative;
+    top: -20px;
+}
+
+.plan__features li {
+    margin: 6px 0;
+}
+
+/* sağ alt icon olayı için ayrıca transtition ile anında değilde belli bir sürede efektin olmasını sağlayabilirirz ama tıkladığımız anda anında yukarı gider bunuda yavaşlatalım html etiketine gidicez bunun için */
+#backtotop {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+#backtotop i {
+    color: #2E4C6D;
+    font-size: 45px;
+    transition: color .6s;
+}
+
+#backtotop i:hover {
+    color:#2E4C6D;
+}
+
+.counter {
+    background: linear-gradient(to bottom,#fc997c 0%,#fc8b96 100%);
+    text-align: center;
+    padding: 50px;
+
+    }
+.counter__item{
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+
+}    
+
+.counter h4 {
+    margin: 0;
+    color: #fff;
+}
+ /*film kartlarımızı düzenleyelim  */
+.card-container{
+    padding: 10px;
+}
+
+ .card{
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 10px 10px 40px rgba(52, 58, 64, 0.1);
+    /* position: relative; */
+    /* top: 0; */
+    transition: all .3s;
+ }
+ .card:hover{
+    /* top: -10px; */
+    transform: translateY(-10px);
+ }
+
+ .card-image{
+    max-height: 350px;
+
+ }
+
+ .card-body{
+    padding: 30px;
+ }
+
+/* footer bölümü */
+footer{
+    background-color: #2E4C6D;
+    padding: 30px;
+    margin-top: 30px;
+
+    position: relative;
+    bottom: -200px;
+}
+
+footer a{
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+footer ul{
+    margin: 0;
+    padding: 0;
+}
+
+footer ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+#social-links{
+    text-align: right;
+}
+
+.fab{
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 50%;
+}
+
+.fab:hover{
+    opacity: 0.7;
+}
+
+.fa-facebook{
+    background-color: #3b5998;
+    color: #fff;
+}
+
+.fa-twitter{
+    background-color: #5aceee;
+    color: #fff;
+}
+
+.fa-instagram{
+    background-color: #125688;
+    color: #fff;
+}

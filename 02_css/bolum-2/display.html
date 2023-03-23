@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* kutuları yan yana almak istersek display inline ile özelliği verebiliriz */
+        /* hem genişlik ve yükseklik hemde bu kutuları yan yana almak istiyorsam inline block özelliği kullanılır  */
+        .box{height: 60px; width: 60px; display: inline-block;}
+        #first{background-color: red;}
+        #second{background-color: green;}
+        #third{background-color: blue;}
+        /* a etiketlerinin genişlik yükseklikleriyle oynayalım ve ayrıca bunlar alt alta gelsin istiyorum */
+        /* bu şekilde inline elemanları blockmuş gibi gösterebiliyoruz */
+        a{width: 100px;height: 100px; display: block;}
+    </style>
+</head>
+<body>
+ <!-- inline elemanlara yükseklik veya genişlik veremeyiz ama block elemanlara margin padding veya yükseklik genişlik uygulayabiliyoruz bunun dışına çıkmak mesela link etiketlerini alt alta almak için display etiketini kullanıyoruz -->
+    <!-- display : none | inline | inline-block | block    dispalay için bu özellikler bulunur -->
+    <!-- div block elemandır ve satırları olduğu gibi kaplar  -->
+    <div id="container">
+    <div class="box" id="first">first</div>
+    <div class="box" id="second">second</div>
+    <div class="box" id="third">third</div>
+    </div>
+
+    <div>
+        <!-- a etiketi displayi inline olan bir elemandır ondan yan yana gelirler  -->
+        <a href="">Home</a>
+        <a href="">Movies</a>
+        <a href="">Contact</a>
+    </div>
+
+    
+</body>
+</html>

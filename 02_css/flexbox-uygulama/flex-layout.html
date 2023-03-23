@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* önce * diyerek sayfadaki margin ve padding bilgilerini alıcam  */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* daha sonra başlık yani header kısmını düzenlicez */
+        .header{
+            padding: 30px;
+            text-align: center;
+            background-color: goldenrod;
+            color: #fff;
+        }
+        /* sonra navbar kısmını düzenlicez display:flex diyerek elemanları yan yana alabiliriz */
+        .navbar{
+            display: flex;
+            background-color: #333;
+        }
+        /* navbar altında bulunan her bir a etiketini düzenlememiz gerekiyor sonrasında */
+        .navbar a{
+            color: #fff;
+            padding: 16px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        /* daha sonra etiketlerin üzerine geldiğimizde hover olayını düzenleyelim */
+        .navbar a:hover{
+            background-color: #ddd;
+            color: #000;
+        }
+        /* daha sonra ph arkasını doldurmuş olalım */
+        .ph{
+            background-color:#aaa ;
+            width: 100%;
+            padding: 20px;
+            margin-top: 10px;
+        }
+        /* kapsayıcı eleman main olduğu için önce main etiketine ulaşarak flex diyerek elemanların yan yana gelmesini sağlayalın main kısmının sol tarafta sidebar sağ tarafta content kısmı olur bunların yerini değiştiriyor olmamız gerekiyor order ile  */
+        #main{
+            display: flex;
+        }
+        /* bunu yağtığımızda artık sidebar sağ tarafa gelir content kısmı ise sol tarafa gitmiş oldu */
+        /* yüzde 25ini sidebara verdim */
+        /* padding vererek elemanlar arasındaki boşluklar 20px artmış olsun  */
+        #sidebar{
+            background-color:  #f1f1f1;
+            flex: 25%;
+            order: 1;
+            padding: 20px;
+        }
+        /* yüzde 75 inide content kısmına verdim main içeriğinin */
+        /* contente padding verelim içerik biraz daha içeri gelsin */
+        #content{
+            flex: 75½;
+            padding: 20px;
+
+        }
+        /* ayrıca her bir box arasında da bir boşluk bırakmış olalım */
+        .box{
+            margin-bottom: 20px;
+        }
+        p{
+            margin: 10px 0;
+        }
+        /* daha sonra footera ulaşmış olalım */
+        #footer{
+            background-color: goldenrod;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+        /* daha sonra bu içeriklerin responsive olması gerekiyor sayfamızın */
+        /* flex direction column dediğimizde 700 px altında elemanlar alt alta gelecektir */
+        @media(max-width: 700px){
+            #main, .navbar{
+                flex-direction: column;
+            }
+            /* tamam elemanlar alt alta geldi fakat üst tarafta content kısmı kaldı ben sidebar kalsın istiyorum order -1 dediğimizde bu eleman artık en başa alınmış oluyor*/
+            #sidebar{
+                order: -1;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- ilk önce üst kısmı tanımlayım yani bir heade -->
+    <div class="header">
+        <h1>Lorem, ipsum.</h1>
+        <p>Lorem ipsum dolor sit.</p>
+    </div>
+
+    <!-- daha sonra aşağıdaki nav kısmını oluşturalım -->
+    <div class="navbar">
+        <a href="">Link1</a>
+        <a href="">Link2</a>
+        <a href="">Link3</a>
+        <a href="">Link4</a>
+    </div>
+
+    <!-- daha sonra main kısımlarını tanımlamış olalım -->
+    <div id="main">
+        <div id="sidebar">
+            <div class="box">
+            <h2>Lorem, ipsum.</h2>
+            <!-- yer tutucu gerekiyor -->
+            <div class="ph" style="height: 200px;"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi hic fuga perspiciatis, harum mollitia ad ab voluptas reiciendis esse exercitationem, nulla repellendus, molestiae quae necessitatibus perferendis quo odit tempora?</p>
+        </div>
+        <div class="ph" style="height: 50px;"></div>
+        <div class="ph" style="height: 50px;"></div>
+        <div class="ph" style="height: 50px;"></div>
+        </div>
+        <div id="content">
+            <!-- contente bir kaç içerik ekleyelim sonra flex aracılığıyla bu elemanları bölmüş olalım -->
+            <div class="box">
+                <h2>Lorem, ipsum.</h2>
+                <!-- yer tutucu gerekiyor -->
+                <div class="ph" style="height: 200px;"></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi hic fuga perspiciatis, harum mollitia ad ab voluptas reiciendis esse exercitationem, nulla repellendus, molestiae quae necessitatibus perferendis quo odit tempora?</p>
+            </div>
+            <div class="box">
+                <h2>Lorem, ipsum.</h2>
+                <!-- yer tutucu gerekiyor -->
+                <div class="ph" style="height: 200px;"></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi hic fuga perspiciatis, harum mollitia ad ab voluptas reiciendis esse exercitationem, nulla repellendus, molestiae quae necessitatibus perferendis quo odit tempora?</p>
+            </div>
+            <div class="box">
+                <h2>Lorem, ipsum.</h2>
+                <!-- yer tutucu gerekiyor -->
+                <div class="ph" style="height: 200px;"></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi hic fuga perspiciatis, harum mollitia ad ab voluptas reiciendis esse exercitationem, nulla repellendus, molestiae quae necessitatibus perferendis quo odit tempora?</p>
+            </div>
+            <div class="box">
+                <h2>Lorem, ipsum.</h2>
+                <!-- yer tutucu gerekiyor -->
+                <div class="ph" style="height: 200px;"></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi hic fuga perspiciatis, harum mollitia ad ab voluptas reiciendis esse exercitationem, nulla repellendus, molestiae quae necessitatibus perferendis quo odit tempora?</p>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- footer bilgisi eklemiş olalım -->
+    <div id="footer">
+        Lorem, ipsum dolor.
+    </div>
+
+
+
+
+    
+</body>
+</html>

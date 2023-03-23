@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        // önce bir dizi tanımlayalım
+        const sayilar = [1,5,7,3,2,67];
+        const urunler = [
+            {urunAdi: "iphone 11", fiyat: 12000},
+            {urunAdi: "iphone 12", fiyat: 15000},
+            {urunAdi: "iphone 13", fiyat: 18000},
+            {urunAdi: "iphone 13 Pro", fiyat: 22000},
+        ];
+
+
+        const tekSayilar = [];
+        // dizide dolaşalım ve tek sayilar boş dizi değişkeninin için kontrol yaparak tek sayıları atalım
+        for(let sayi of sayilar){
+            if(sayi % 2 == 1){
+                tekSayilar.push(sayi)
+            }
+        }
+
+        // bunun yerine bir fonksiyon oluşturalım 
+        const tekSayiKontrol = (sayi) => sayi % 2 == 1;
+        // sayi yı geri döndürücez ancak bunu bir liste üzerinde yapıyor olmam gerekiyor sayilar üzerinden bir filtreleme yapıcaz sadece tek sayıları filtre etsin bana getirsin 
+        const tekSayilar2 = sayilar.filter(tekSayiKontrol); 
+        // bu şeilde sadece tek olan sayıyı getirtebiliriz yada daha kısa bir yol kullanarak ve .map kullanarak tek olan sayı false diğer sayıları true yazdırabiliriz
+        const tekSayilar3 = sayilar.map((sayi) => sayi % 2 == 1);
+
+        // ürünler dizimi vardı ben bu dizi üzerinde map aracılığıyla gezmek istersem 
+        const sonuc = urunler.map(urun => urun.urunAdi);
+        // map ve filtre farkı belli kritere göre ürün filtreleriz
+        // mapte ise urun dizisinin belli bir bilgisini alırız sadece mesela burada urunadini aldık sadece fiyatla ilgilenmedik
+        // fiyatı 15 binden büyük olan ürünlerin sadece adını almış oldum hem filtre hem map kullanarak
+        const sonuc2 = urunler.filter(urun => urun.fiyat > 15000).map(urun => urun.urunAdi);
+        // tamam istediğimiz oldu ama birden çok değer geldi ben bulduğu ilk değeri alsın tek bir değer gelsin istiyorum
+        // find ile bu durumda fiyatı 12000 den büyük olan sadece ilk değer gelecektir
+        const sonuc3 = urunler.find(urun => urun.fiyat > 12000);
+        // ben değer ile değil sadece değerin indeksini almak istiyorsam bu durumda
+        const sonuc4 = urunler.findIndex(urun => urun.fiyat > 12000);
+        
+        console.log(sonuc);
+        console.log(sonuc2);
+        console.log(sonuc3);
+        console.log(sonuc4);
+
+        console.log(tekSayilar2);
+        console.log(tekSayilar3);
+    </script>
+</body>
+</html>

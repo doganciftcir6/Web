@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">save</button>
+
+
+    <script>
+        // sync
+        // console.log(1);
+        // console.log(2);
+        // console.log(3);
+
+        // async
+        console.log(1);
+        // 2 parametre alıyor birinici fonksiyon ikincisi ne kadar sürede biteceği 2 saniye dedik
+        // bunu yaptığımız anda ekranda 1 3 değeri direkt yazılacaktır sonrasında 2 saniye bloklanmış olan 2 en sona yazılacaktır
+        // yani blokluyoruz bu şekilde 2 saniye kadar kod 2 saniye sonra çalışıyor
+        setTimeout(() => {console.log(2);},2000);
+        console.log(3);
+
+        // butona tıklandığım anda ekrana saved yazdırılır
+        document.getElementById("btn").addEventListener("click", () =>{
+            console.log("saved")
+        });
+
+        // yada server üzerinden herhangi bir bilgi almak istediğimiz zaman asycnhron bir işlem başlatıyor olmamız gerekiyor api üzerinden bir bilgi alıcaz yani
+
+        //callback, promise, asyc-await
+
+
+
+    </script>
+    
+</body>
+</html>

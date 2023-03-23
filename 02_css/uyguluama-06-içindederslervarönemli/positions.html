@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* conteiner elemanını kapsayıcı yapmak istiyorsam position relative yapmam gerekiyor bu yapıldığı anda absoulte bodye göre değil containere göre konum alacaktır */
+       #container{
+            margin-top: 100px;
+            position: relative;
+            
+        }
+        /* köşelere tamamen yanaşmış olsun istiyorum ondan margin0 yaptık margini kaldırırsak alta çektiğimiz div en alta yapışır boşluk kalmaz*/
+        body{
+            margin: 0;
+        }
+        .box{
+            padding: 10px;
+            border: 5px solid #6d5b95;
+            margin-bottom: 10px;
+        }
+        .navbar{
+            background-color: #feb236;
+        }
+        /* bu sefer position özelliği olarak absolute verelim bu eleman normal akışın dışarısına çıkar fakat diğer elemanları görmezden gelmesine neden olmaz fakat diğer elemanlar bu elemanı görezden gelir ve absolute yaptığımız eleman içerik kadar yer kaplar aynı inline eleman gibi haraket eder ama önemli olan fark biz buna genişlik verebiliyoruz inline elemanlara veremiyorduk ama buna verebiliriz ancak inlineblock elemanlar kabul eder yani inline block eleman gibi davrandı diyebiliriz 100% dersek genişliğine satırı olduğu gibi kaplar fakat border işin içine katılmaz sağ tarafında border çizgisi olmaz border özelliği 100 de 100 ölçeğini geçeceği için sitenin dışına taşar bu durumu ortadan kaldırmak için box-sizing borderbox özelliğini kullanabiliriz absolute özelliği kapsayıcı elemana göre yapılır mesela burada kapsayıcı eleman body yani content divimiz top diyip hareket ettirmeye çalıştığımızda verdiğimiz pikseli bodyi baz alarak yapacaktır biz bunu değiştirelim conteiner diye kapsayıcı eleman yapalım */
+        /* bottom 0 right 0 diyerek bunu sağ alt köşeye yapıştırabilirim */
+
+        .content{
+            background-color: #d64161;
+            position: absolute;
+            width: 100%;
+            box-sizing: border-box;
+            bottom: 0;
+            right: 0;
+        }
+        /* positon static normal akış içerisinde olmaya devam eder ve default değeri budur static olduğunda bunları 4 köşeden hareket ettiremezsiniz ancak bunu relative olarak değiştirirsek bu durumda akış içerisinde olmaya devam eder yani ben bunu olduğu konumdan itibaren hareket ettirebilirim - değer verirsek tam tersi pozisyon alır top 20px dedim mesela aşağıya doğru gitti -20px verseydim yukarıya doğru giderdi soldan sağa doğru haraket ettirmek istediğimde left diyebilirim left 20px diyerek soldan sağa doğru götürdüm ama -20px deseydim bu durumda tam tersi yönde hareket ettirebilirim*/
+        .footer{
+            background-color: #ff7b25;
+            position: relative;
+            top: 20px;
+            left: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- bazı divler ekleyelim -->
+    <div id="container">
+    <div class="box navbar">Navbar</div>
+    <div class="box content">Content</div>
+    <div class="box footer">Footer</div>
+    </div>
+    
+</body>
+</html>

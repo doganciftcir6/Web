@@ -1,0 +1,4 @@
+li{background-color: #EBE645; text-decoration:line-through;}
+/* line throuh yazının kendisini çizer underline altını çizer  */
+/* life style type none ile liste sıralamasının başında kullanılan işaret silinir */
+ul{list-style-type: none;}

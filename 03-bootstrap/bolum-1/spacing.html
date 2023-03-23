@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap kütüphanesini kurmak için link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        /* içerikleri biraz köşelerden uzaklaştıralım */
+        body{
+            padding: 100px;
+        }
+    </style>
+</head>
+<body>
+
+ <!-- Margin - Padding -->
+ <!-- margin için m padding için p kısaltması kullanılır -->
+ <!-- {property}{sides}-{size}  -->
+
+ <!-- {property} = m:margin p:padding -->
+
+ <!-- {sides} = t:top  margin-top= mt -->
+ <!-- b: bottom margin-bottom = mb -->
+ <!-- s: start = left margin-start = ms-->
+ <!-- e: end = right margin-end = me-->
+ <!-- ANLAMLARI BÖYLE-->
+ <!-- padding-top = pt -->
+ <!-- padding-bottom = pb -->
+ <!-- padding-start = ps -->
+ <!-- padding-end = pe -->
+ <!-- x: right, left = mx-margin-right-left -->
+ <!-- y: top, bottom = py paddin-top-bottom -->
+
+ <!-- {size} 0-5 arasında değerler verilir-->
+ <!-- 0: mt-0 = margin-top:0 -->
+ <!-- 1: mt-1 = $spacer * 0.25 -->
+ <!-- 2: mt-2 = $spacer * 0.5 -->
+ <!-- 3: mt-3 = $spacer -->
+ <!-- 4: mt-4 = $spacer * 1.5 -->
+ <!-- 5: mt-5 = $spacer * 3 -->
+ <!-- auto: mt-auto = margin-top:auto -->
+ <!-- auto: mx-auto = margin-left,right:auto -->
+ 
+<!-- p-3 dediğimde 4 köşeden padding vermiş olurum size özelliğini kullanmamış oluyoruz 3: mt-3 = $spacer oluyor--> 
+ <div class="bg-primary p-3">Lorem, ipsum.</div>
+ <!-- p-4 ile paddingi arttırılmış bir değer elde ederiz 1.5 ile çarpımı gelir mt-3 ile de üst kısımdan margin top ile kutular arasında bir boşluk uygulamış olduk boşluğu azaltmak istersek mt-2 diyebiliriz mesela-->
+ <div class="bg-primary p-4 mt-3">Lorem, ipsum.</div>
+ <!-- pd-4 ile 4 köşeden bir paddinge sahip olur mt-3 ile de kutu üstten biraz aşağıya inecektir ve mx-auto ile satırda yani sağdan soldan bir boşluk bırak ve kendini ortala diyebiliyoruz margin right ve lefti aynı anda vermiş oluyoruz aslında-->
+ <div class="bg-success p-4 mt-3 mx-auto" style="width: 200px;">Lorem, ipsum.</div>
+
+
+
+
+<!-- BAZI ÖZELLİKLER BOOTSRAPTE JAVASCRİPT KÜTÜPHANESİNE İHTİYAÇ DURUYOR ONDAN BUNUDA EKLEMEK LAZIM -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

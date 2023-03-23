@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- animasyon kütüphanesini bu şekilde projeye ekleyebiliyoruz -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <title>Document</title>
+    <style>
+        div{
+            width: 150px;
+            height: 200px;
+            background-color: blueviolet;
+        }
+        /* ŞU ŞEKİLDE BİR ANİMASYON TANIMALAMASI DAHA VAR */
+        .element{
+            background-color: yellow;
+            /* buraya bir animasyon ismi vermemiz gerekiyor */
+            animation: bounceIn;
+            /* animasyon tamamlanma süresini bu şekilde belirtmek gerekiyor */
+            animation-duration: 2s;
+        }
+        /* HAZIR ANİMASYONLARI KENDİMİZE GÖRE DÜZENLEYEBİLİRİZ */
+        .animate__animated.animate__bounce{
+            --animate-duration: 2s;
+        }
+    </style>
+</head>
+<body>
+    <!-- H1 ETİKETİNE BİR ANİMASYON EKLEYELİM -->
+    <h1 class="animate__animated animate__bounce">An animated element</h1>
+    <!--div etiketien animasyon vermek ayrıca class olarak direkt animasyona bir gecikme verebiliyoruz animate__delay ile -->
+    <div class="animate__animated animate__wobble animate__delay-5s"></div>
+    <!-- bir div daha olsun -->
+    <div class="element"></div>
+
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- internal olarak bir style oluşturalım -->
+    <style>
+    /* * dediğimide bütün sayfadaki her şeyi kastetmiş oluruz fakat yıldızın etkisi az yıldızdan sonra bodye özellik verirsem body özelliği yıldızı ezecektir  */
+    *{margin: 0;}
+    body{font-size: 15px; margin: top;}
+    /* direkt etiket ismi vererek section etiketinde düzenleme yapalım */
+    section{background-color: aqua;}
+    /* id vermiş olduğumuz etiketlere css ile ulaşalım id lere # işareti ile ulaşılır*/
+    /* border bottom ile altına bir çizgi ekleyebiliriz sadece border ise 4 köşeden çizgi yapar */
+    #page-title{font-size: 20px; border-bottom: 1px solid red;}
+    #page-subtitle{font-size: 18px;}
+    /* eğer iki etiketide aynı anda değiştirmek istiyorsam etiketlere aynı class ismini verip daha sonra style css kısmında . işareti ile bu etiketlere ulaşmakm mümkün bu şekile h1 ve h2 etiketlerinde aynı anda işlem yapabildik*/
+    .text-white{color: white;}
+    /* belli özellikleri bir çok yerde kullanabiliriz bu sebeple class olarak özellik tanımlayabiliriz örneğin fontu 20px yapan bir class yapalım ve bu classı 20px olmasını istediğimiz etiketin içine body kısmında class olarak tanımlayalım h3 e mesela ayrıca 2 classı yan yana tanımyalabiliriz mesela gidicem h2 içinde page-subtitle classı var ama yanıan bide font20 classını koyucam*/
+    .font20{font-size: 20px;}
+    
+
+
+    </style>
+</head>
+<body>
+
+    <main>
+    <!--elemanlara etiketlere id yani isimler vererek bir id selectoru oluşturmuş olalım  -->
+    <section>
+        <h1 id="page-title" class="text-white">Welcome To MovieApp</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, accusantium?</p>
+    </section>
+
+    <section>
+        <h2 id="page-subtitle font20" class="text-white">How it works?</h2>
+    </section>
+
+    <section>
+        <h3 class="font20">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas, repellendus!</h3>
+    </section>
+    </main>
+    
+</body>
+</html>

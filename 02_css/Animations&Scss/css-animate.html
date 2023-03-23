@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: #333;
+        }
+        /* oluşturduğumuz boxa ulaşalım */
+        .box{
+            background-color: yellow;
+            width: 150px;
+            height: 150px;
+            /* bu sayede gri zemin üzerinde sarı kutumuz oluşmuş oldu */
+            /* şimdi animasyon oluşturucaz */
+
+            animation-name: a1;
+            /* henüz animasyon sürecimiz yok bunu animation-duration ile yani animasyonu ne kadar sürede işleyecek onu sölyemiş oluyoruz*/
+            animation-duration: 2s;
+            /* a1 i ben box diviyle ilişkilendirilmiş oldum*/
+            animation-iteration-count: infinite;
+            /* iteration-count ile animasyonun kaç kere tekrarlanacağını söylemiş oluyoruz varsayılan olarak 1 dir infinite dersek sonsuz tekrarlama olsun diyoruz*/
+            animation-fill-mode: forwards;
+            /* animasyon olayı tamamlandıktan sonra kutumuz tekrar başa deniyor yani animasyon olmayan heline geliyor forwards dersek animasyon tamamlandıktan sonraki halinde galacak yani kutu uzun halinde kalır animasyon bittikten sonra */
+            animation-delay: 2s;
+            /* delay ile animasyona bir duraklama verebiliriz 2 saniye diyelim animasyon 2 saniye bekler sonra başlar */
+            animation-direction: alternate;
+            /* direction alternate ile varsayılan olarak animasyonun başlangıçtan sona gittiğini görürüz   */
+            animation-direction: alternate-reverse;
+            /* direction alternate-reverse ile animasyon tam tersi çalışacaktır sondan başlangıca doğru hareket edecektir */
+            animation-timing-function: ease-in;
+            /* timing-functipn ease-in ile yavaş bir giriş yap diyebiliriz önce animasyon yavaş başlar sonra bitişe doğru hızlanır   */
+            animation-timing-function: ease-out;
+            /* timing-function ease-out ile animasyon hızlı bir giriş yapar hızlı başlar ama sonra doğru yavaş şekilde ilerler */
+            animation-timing-function: ease-in-out;
+            /* timing-funciton ease-in-out ile animasyon başlangıçta ve bitişte yumuşak yavaş haraket eder ortada hızlı bir şekilde hareket eder */
+
+            /* BU ÖZELLİKLERİN HEPSİNİ AYRI AYRI SATIRLARDA YAPMAK YERİNE DAHA KISA BİR YOLDAN YAPABİLİRİZ */
+            /* birinci keyframe ismin ikincisi kaç saniyede tamamlansın üçüncüsü nereye doğru ileri doğru gitsin ve bittiğinde orada kalsın daha sonra efektimizi yazarız   */
+            animation: a1 5s forwards 2s ease-in;
+
+
+        }
+        /* bir keyframes oluşturucaz ve buna isim vericez animasyon 1 anlamında */
+        @keyframes a1{
+            to{
+                /* başlangıçta 150pxdi bunu 500pxe arttırmak istiyorum  bu sayaede kutu sağ tarafa doğru 500px kadar genişleyecektir*/
+                width: 500px;
+
+            }
+
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <!-- css animate ile bir animasyon oluşturabiliyoruz -->ş
+    <!-- koyu bir zemnimizi var body etiketine verdiğimiz bg ile bunun üzerinde bir boxımız olsun -->
+    <div class="box"></div>
+
+
+
+    
+</body>
+</html>

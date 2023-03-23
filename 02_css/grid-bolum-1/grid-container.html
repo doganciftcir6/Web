@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* bodydeki margin bilgisini almış olalım */
+        body{
+            margin: 0;
+
+        }
+        /* önce containera bir kapsam verelim */
+        /* container kapsayıcı elamanımız buna display verelim ve grid container haline çevirelim */
+        .container{
+             display: grid; 
+            /* bunun alternetifi var bu display grid elemanlar bir block eleman olarak tanımlanıyor */
+            /* display: inline-grid; */
+            /* inline-grid te ise elemanlar bir inline eleman gibi tanımlanıyor içerik kadar yer kaplıyorlar */
+            background-color: #034f84;
+            padding: 20px;
+        }
+        /* her bir itema ulaşalım ve bunlarada bir kapsam için renk vermiş olalım */
+        .item{
+            background-color: #f7786b;
+            padding: 20px;
+            margin: 20px;
+            color: #fff;
+            font-size: 25px;
+
+        }
+    </style>
+</head>
+<body>
+<!-- kapsayıcı bir container eleman oluşturuyoruz aynıflexboxta olduğu gibi gird container yapıypruz  -->
+    <div class="container">
+        <!-- alında eleman oluşturalım -->
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+        <div class="item">item 4</div>
+
+    </div>
+    
+</body>
+</html>

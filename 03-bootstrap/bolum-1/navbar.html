@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap kütüphanesini kurmak için link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+
+<!--bir tane nav etiketi oluşturuyoruz navbar classı ile ve navbar-expand-sm ile responsive olayını hallediyoruz aslında yani sm ile small cihazlar için navbar menüleri alt alta gelecektir sm demek yerine md diyebiliriz yani medium cihazlar   -->
+<!-- ayrıca bg-rimary ile div rengini verdikten sonra bir navbar-renk tanımlamalıyız ki içeriklerin rengi olsun -->
+<nav class="navbar bg-warning navbar-dark navbar-expand-sm my-3">
+    <!-- köşelerden içeriği biraz içeriye alalım yani içerik sağdan soldan bir boşluk alsın-->
+    <!-- genişliği olduğu gibi kullansın diyorsak fluid tanımlamalıyız sağdan soldan verilen boşluklar gider ama yine responsive olmuş olur -->
+    <div class="container-fluid">
+
+    
+    <!-- bu şekilde sol tarafa bir logo koyaniliyoruz navbar-brand ile -->
+    <a href="#" class="navbar-brand">Logo</a>
+    <!--ul etiketi ile link grubu oluşturucaz ve bu ul etikeyine navbar-nav classını vericez -->
+    <!-- ms-auto verdiğimizde 2 link grubumuz menümüdzde yan yana gelir -->
+    <!-- eğer buraya me-auto dersem link grubu menülerin birisi sola birisi sağa gider birbirinden ayrılırlar -->
+    <ul class="navbar-nav ms-auto">
+        <!-- her bir li elemanına ise nav-item classını vericez -->
+        <li class="nav-item">
+            <!-- buraya koyacağımız a etiketine ise nav-link classını veririz -->
+            <a href="" class="nav-link">Link1</a>
+        </li>
+        <li class="nav-item">
+            <!-- buraya koyacağımız a etiketine ise nav-link classını veririz -->
+            <a href="" class="nav-link">Link1</a>
+        </li>
+        <li class="nav-item">
+            <!-- buraya koyacağımız a etiketine ise nav-link classını veririz -->
+            <a href="" class="nav-link">Link1</a>
+        </li>
+    </ul>
+    <!-- bir tane daha navbar-nav alalım -->
+    <ul class="navbar-nav">
+        <!-- her bir li elemanına ise nav-item classını vericez -->
+        <li class="nav-item">
+            <!-- buraya koyacağımız a etiketine ise nav-link classını veririz -->
+            <a href="" class="nav-link">Link1</a>
+        </li>
+        <li class="nav-item">
+            <!-- buraya koyacağımız a etiketine ise nav-link classını veririz -->
+            <a href="" class="nav-link">Link1</a>
+        </li>
+        <li class="nav-item">
+            <!-- buraya koyacağımız a etiketine ise nav-link classını veririz bu durumda 2 menü de yan yana gelecektir -->
+            <a href="" class="nav-link">Link1</a>
+        </li>
+    </ul>
+</div>
+</nav>
+
+
+
+<!-- BAZI ÖZELLİKLER BOOTSRAPTE JAVASCRİPT KÜTÜPHANESİNE İHTİYAÇ DURUYOR ONDAN BUNUDA EKLEMEK LAZIM -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

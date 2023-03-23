@@ -1,0 +1,27 @@
+C:\Users\Rabia İslamyan\Desktop\iscalisma\shopapp.entity\bin\Debug\netcoreapp3.1\shopapp.entity.deps.json
+C:\Users\Rabia İslamyan\Desktop\iscalisma\shopapp.entity\bin\Debug\netcoreapp3.1\shopapp.entity.dll
+C:\Users\Rabia İslamyan\Desktop\iscalisma\shopapp.entity\bin\Debug\netcoreapp3.1\shopapp.entity.pdb
+C:\Users\Rabia İslamyan\Desktop\iscalisma\shopapp.entity\obj\Debug\netcoreapp3.1\shopapp.entity.csproj.AssemblyReference.cache
+C:\Users\Rabia İslamyan\Desktop\iscalisma\shopapp.entity\obj\Debug\netcoreapp3.1\shopapp.entity.AssemblyInfoInputs.cache
+C:\Users\Rabia İslamyan\Desktop\iscalisma\shopapp.entity\obj\Debug\netcoreapp3.1\shopapp.entity.AssemblyInfo.cs
+C:\Users\Rabia İslamyan\Desktop\iscalisma\shopapp.entity\obj\Debug\netcoreapp3.1\shopapp.entity.csproj.CoreCompileInputs.cache
+C:\Users\Rabia İslamyan\Desktop\iscalisma\shopapp.entity\obj\Debug\netcoreapp3.1\shopapp.entity.dll
+C:\Users\Rabia İslamyan\Desktop\iscalisma\shopapp.entity\obj\Debug\netcoreapp3.1\shopapp.entity.pdb
+C:\Users\dogan\OneDrive\Masaüstü\iscalisma\shopapp.entity\bin\Debug\netcoreapp3.1\shopapp.entity.deps.json
+C:\Users\dogan\OneDrive\Masaüstü\iscalisma\shopapp.entity\bin\Debug\netcoreapp3.1\shopapp.entity.dll
+C:\Users\dogan\OneDrive\Masaüstü\iscalisma\shopapp.entity\bin\Debug\netcoreapp3.1\shopapp.entity.pdb
+C:\Users\dogan\OneDrive\Masaüstü\iscalisma\shopapp.entity\obj\Debug\netcoreapp3.1\shopapp.entity.csproj.AssemblyReference.cache
+C:\Users\dogan\OneDrive\Masaüstü\iscalisma\shopapp.entity\obj\Debug\netcoreapp3.1\shopapp.entity.AssemblyInfoInputs.cache
+C:\Users\dogan\OneDrive\Masaüstü\iscalisma\shopapp.entity\obj\Debug\netcoreapp3.1\shopapp.entity.AssemblyInfo.cs
+C:\Users\dogan\OneDrive\Masaüstü\iscalisma\shopapp.entity\obj\Debug\netcoreapp3.1\shopapp.entity.csproj.CoreCompileInputs.cache
+C:\Users\dogan\OneDrive\Masaüstü\iscalisma\shopapp.entity\obj\Debug\netcoreapp3.1\shopapp.entity.dll
+C:\Users\dogan\OneDrive\Masaüstü\iscalisma\shopapp.entity\obj\Debug\netcoreapp3.1\shopapp.entity.pdb
+C:\Users\dogan\OneDrive\Masaüstü\sadık\iscalisma\shopapp.entity\bin\Debug\netcoreapp3.1\shopapp.entity.deps.json
+C:\Users\dogan\OneDrive\Masaüstü\sadık\iscalisma\shopapp.entity\bin\Debug\netcoreapp3.1\shopapp.entity.dll
+C:\Users\dogan\OneDrive\Masaüstü\sadık\iscalisma\shopapp.entity\bin\Debug\netcoreapp3.1\shopapp.entity.pdb
+C:\Users\dogan\OneDrive\Masaüstü\sadık\iscalisma\shopapp.entity\obj\Debug\netcoreapp3.1\shopapp.entity.csproj.AssemblyReference.cache
+C:\Users\dogan\OneDrive\Masaüstü\sadık\iscalisma\shopapp.entity\obj\Debug\netcoreapp3.1\shopapp.entity.AssemblyInfoInputs.cache
+C:\Users\dogan\OneDrive\Masaüstü\sadık\iscalisma\shopapp.entity\obj\Debug\netcoreapp3.1\shopapp.entity.AssemblyInfo.cs
+C:\Users\dogan\OneDrive\Masaüstü\sadık\iscalisma\shopapp.entity\obj\Debug\netcoreapp3.1\shopapp.entity.csproj.CoreCompileInputs.cache
+C:\Users\dogan\OneDrive\Masaüstü\sadık\iscalisma\shopapp.entity\obj\Debug\netcoreapp3.1\shopapp.entity.dll
+C:\Users\dogan\OneDrive\Masaüstü\sadık\iscalisma\shopapp.entity\obj\Debug\netcoreapp3.1\shopapp.entity.pdb

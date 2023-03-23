@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card-header">
+        <h3 class="cart-title h1" id="title">Todo App 2</h3>
+    </div>
+
+    <ul id="task-list">
+        <li>
+            Görev 1
+        </li>
+        <li>
+            Görev 2
+        </li>
+        <li>
+            Görev 3
+        </li>
+    </ul>
+    
+    <!-- script kodlarımız burada olacak -->
+    <script> 
+    let sonuc;
+    // sonuc değişkeni bizim için artık h3 etiketi oluyor
+    sonuc = document.getElementById("title");
+    // burda ise h3 etiketinin id sini almış oluyoruz sonuc değişkenine atıyoruz
+    sonuc = document.getElementById("title").id;
+    // burda ise h3 etiketinin claasını almış oluyoruz sonuc değişkenine atıyoruz
+    sonuc = document.getElementById("title").className;
+    // bu durumda ise ortaya bir dizi çıkar ['cart-title', 'h1', value: 'cart-title h1'] şeklinde h3 etiketinin classları dizi içinde yazılır ayrıca 0:"cart-title" , 1:"h1" şeklinde sırayla classları listelenir
+    sonuc = document.getElementById("title").classList;
+
+    // css özelliklerini bu şekilde id ile ulaşarak değiştirebiliyoruz fontsizeı 30px olarak değiştirdik title id li h3 etiketinin
+    document.getElementById("title").style.fontSize = "30px";
+    // renk değiştirelim
+    document.getElementById("title").style.color = "blue";
+    // ulaşmış olduğumuz bu title id li h3 etiketini sayfa üzerinden kaybedebiliriz
+    // document.getElementById("title").style.display = "none";
+    // yazının içeriğini değiştirebiliyoruz
+    document.getElementById("title").innerText = "To do App";
+    //innerText etiketleri görmez fakat innerHTML nin içine etiket ile tanımlama yapıp yazı içeriğini değiştirebiliyoruz
+    document.getElementById("title").innerHTML = "<p>Todo App</p>";
+
+    // .querySelector ile elemanlara ulaşma şeklimizi değiştirebiliyoruz # yazdığımızda id . yazdığımızda class
+    // bunu yaptığımızda sonuc değişkeni id si title olan h3 etiketini yazdıracaktır
+    sonuc = document.querySelector("#title");
+    // classı card-header olan etikete ulaş
+    sonuc = document.querySelector(".card-header");
+    // yada etiket ismine göre de seçim yapabiliriz sadece etiket ismini yazmamız yeterli birden fazla alt alate aynı etiket varsa sadece bulduğu ilk bulduğu div etiketini yazar sadece onu seçer yani diğerlerini almaz
+    sonuc = document.querySelector("div");
+
+    // bunu yaptığımızda sadece ilk li elemanı gelecektir yani görev 1
+    sonuc = document.querySelector("li");
+    // css selectorlarını kullanabiliyoruz mesela burada son li elemanı gelir yani görev 3
+    sonuc = document.querySelector("li:last-child");
+    // nth-child ile de alt elemanlardan istediğimizi seçebiliyoruz indekst numarasına göre 2 dediğimizde mesela ikinci li etiketi gelir yani görev 2 tek bir seçim yapıyoruz yani
+    sonuc = document.querySelector("li:nth-child(2)");
+
+    // QUERYSELECTOR VEYA GETELEMNTBYID BİZE GERİYE SADECE TEK BİR ELEMENT YANİ ETİKET DÖNDÜRÜR *****************************************
+
+
+
+
+    console.log(sonuc);
+
+    </script>
+</body>
+</html>

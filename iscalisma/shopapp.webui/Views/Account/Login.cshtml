@@ -1,0 +1,41 @@
+﻿@* bu sayfada formumuz olacak form üzerinden girilen bilgiler RegisterModel içerisine gelecek *@
+
+@model LoginModel
+
+<h1 class="h3">Login</h1>
+<hr>
+
+
+<div class="row">
+    <div class="col-md-8">
+        <form asp-controller="Account" asp-action="Login" method="post">
+            <input type="hidden" name="ReturnUrl" value="@Model.ReturnUrl" />
+            @* hata mesajlarını validation-for ile tek tek aldık ama toplu almak için *@
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group row">
+                <label asp-for="Username" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    @* burda asp-for modelin alanlarını alıp mesela name alanını bizim için burda set ediyor *@
+                    <input class="form-control" asp-for="Username">
+                    @* validationlar içinde validation-for kullanırız *@
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Password" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    @* burda asp-for modelin alanlarını alıp mesela name alanını bizim için burda set ediyor *@
+                    <input class="form-control" asp-for="Password">
+                    @* validationlar içinde validation-for kullanırız *@
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10 offset-sm-2">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <a clas="btn btn-link" href="/account/forgotpassword">Forgot Password</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

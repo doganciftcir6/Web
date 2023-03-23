@@ -1,0 +1,11 @@
+﻿@* partial view oluştalım *@
+
+@using HelloWorld.Models;
+@model List<Kategori>
+
+@foreach (var kategori in Model)
+{
+   <a href="#" class="list-group-item">
+       @kategori.KategoriAdı
+   </a> 
+}

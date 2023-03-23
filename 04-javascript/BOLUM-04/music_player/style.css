@@ -1,0 +1,31 @@
+/* bu music card gibi olan kısmı sayfa ortasına alalım */
+/* vh ile kullanıcının sayfa boyutunun gördüğü alan kadar yapmış olduk */
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container{
+    width: 400px;
+}
+
+/* sürelerin biri solda biri sağda olsun */
+#progress .times,
+.card-footer,
+.volume-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.volume-container i{
+    margin-right: 5px;
+}
+/* müzik listesinde müziğe tıklandığında başlaması için kısım */
+li.playing{
+    background-color: #0b5eb7;
+    color: #fff;
+}
+

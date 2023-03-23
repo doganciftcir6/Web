@@ -1,0 +1,53 @@
+/* yazılarda kullanmak için font kütüphanesini burada import edebiliriz */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+/* yıldız ile tüm projenin tmeelinde boxsizing borderbox yapalım ve margin padding bilgilerini sıfırlayalım bunları kendimiz eklicez */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* dahas sonra html etiketine 10px fontsize tanımlayalım ki orantısal olarak font değerlerini kolaaylıkla veriyor olalım */
+html{
+    font-size: 10px;
+}
+
+
+/* body etiketi için bu font büyüklüğünü tanımlamış olalım */
+body{
+    font-family: 'Open Sans', sans-serif;
+    /* html etiketine 10px verdiğimiz için rem kapsayıcı elemandaki değerle kendini çarpar burada 10x1.6 dan direkt düz hesap 16px lik bir büyüklük verilmiş olacak mesela */
+    font-size: 1.6rem;
+    background: #fff;
+    color: #333;
+    /* yazılar arasındaki satır yüksekliğini verelim */
+    line-height: 1.6;
+}
+/* daha sonra ul etiketini düzenleyelim */
+ul{
+    list-style: none;
+}
+/* daha sonra */
+a{
+    color: #333;
+    text-decoration: none;
+}
+/* daha sonra */
+h1,h2{
+    /* font kalınlığın bu şekilde olmuş olsun */
+    font-weight: 300;
+    line-height: 1.2;
+}
+/* daha sonra p etiketine margin verelim bunları kaldırdık çünkü başta 1 rem ile 16px alttan üstten bir margin değeri ve 0 ile sağdan soldan bir margin değeri olmasın  */
+p{
+    margin: 1rem 0;
+}
+/* daha sona img etiketlerine responisve olması için 100% bir widht verelim içinde bulundukları containerı kaplasınlar*/
+img{
+    width: 100%;
+}
+/* daha sonra text-center isminde bir class eklicem bu clastta text align i center olarak ayarlayacak gerektiğinde kullanıcaz*/
+.text-center{
+    text-align: center;
+
+}
+/* BU ZAMANA KADAR YAPILAN ŞEYLER ANLATILANLAR NERDEYSE HER PROJENİN BAŞINDA YAPILAN ÖZELLİKLERDİR */

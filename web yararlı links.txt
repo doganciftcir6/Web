@@ -1,0 +1,41 @@
+-FONT AWESOME İLE İCONLAR
+https://fontawesome.com/icons/js?s=&f=brands 
+---------------------------------------------------------------------
+-BİR YERE BUTONA VS TIKLADIĞINDA SMOOTH GEÇİŞ
+https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+---------------------------------------------------------------------
+-MARGİN PADDİNG
+https://www.tech-worm.com/css-margin-ve-padding-nedir-nasil-kulllanilir/
+---------------------------------------------------------------------
+-NODE JS
+https://nodejs.org/en/
+----------------------------------------------------------------------
+-GİT BASH
+https://git-scm.com/download/win
+----------------------------------------------------------------------
+-GOOLE FONTS
+https://fonts.google.com/specimen/Prompt?query=prom
+----------------------------------------------------------------------
+-CSS ANİMASYONLARI
+https://animate.style/
+----------------------------------------------------------------------
+-FONT AWESOME KÜTÜPHANESİ
+https://cdnjs.com/libraries/font-awesome/6.0.0
+----------------------------------------------------------------------
+-OWL CAROUSEL İLE OTOMATİK GÜZEL ANİMASYONLAR
+https://owlcarousel2.github.io/OwlCarousel2/docs/started-installation.html
+----------------------------------------------------------------------
+-LİGHT BOX EKLEMEK
+https://lokeshdhakar.com/projects/lightbox2/
+-----------------------------------------------------------------------
+-BOOTSTRAP KÜTÜPHANESİ
+https://getbootstrap.com/docs/5.1/getting-started/introduction/
+-----------------------------------------------------------------------
+-BOOTSTRAP HAZIR ÖRNEKLER KOPYALA YAPIŞTIR
+https://getbootstrap.com/docs/5.2/getting-started/introduction/
+-----------------------------------------------------------------------
+-LİGHT BOX SİTESİ
+https://fslightbox.com/
+-----------------------------------------------------------------------
+-KULLANICIDAN KONUM BİLGİSİ ALMA APİSİ
+https://opencagedata.com/api

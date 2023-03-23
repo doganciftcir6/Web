@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // ES5 VERSİYONUNDA BU ŞEKİLDE YAPILIR
+        // yeni bir fonksyion tanımlayalım
+        function selamlamaES5(){
+            console.log("merhaba");
+        }
+        // ES5 VERSİYONU FONKSİYON KISAYOLU yine aynı işi yapar
+        var selamlamaES5 = function(isim){
+            console.log("merhaba" + isim);
+        }
+        // ES5 fonksiyonu çağırmış olalım
+        selamlamaES5("ali");
+
+// *************************************************************************************************************************
+        // ES6 VERSİONU -arrow funciton
+        // BURADA ARTIK LET YADA CONST KULLANABİLİYORUZ
+        // tek satırda tüm işi yapabiliyoruz
+        const selamlamaES6v1 = () => console.log("merhaba");
+        // yada eğerki birden fazla kod satırı yazacaksak
+        const selamlamaES6v2 = (isim) => {
+                console.log("merhaba" + isim);
+            }
+
+
+        // ES6 v2 fonksiyonu çağırmış olalım
+        selamlamaES6v2("ahmet");
+        // **************************************************************************************************
+        // bir hesaplama işlemi yapıyor olalım
+        // klasik versiyonu önce ES5
+        var toplamES5 = function(a,b){
+            return a + b;
+        }
+        var sonuc = toplamES5(10,20);
+        console.log(sonuc);
+        // AYNI İŞLEMİ ES6 VERSİYONU İLE YAPALIM
+        // a + b yazdığımızda direkt olarak return ediliyor ancak önemli olan birden fazla kod yazacaksak süslü parantez kullanacaksak return a + b şeklinde return etmemiz gerekiyor *****************
+        const toplamES6 = (a,b) => a + b;
+        // kullanalım
+        sonuc = toplamES6(20,50);
+        console.log(sonuc);
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+       
+        // class
+        class Kisi {
+            // konstraktır
+            constructor(ad, meslek, dogumYili){
+                this.ad = ad;
+                this.meslek = meslek;
+                this.dogumYili = dogumYili;
+            }
+            // metot
+            yasHesapla(){
+                let tarih = new Date().getFullYear();
+                return tarih - this.dogumYili;
+            }
+            // set yani bir propertye bir değer atamak istediğimde
+            // get yani bir nesne üzerinden bir değer almak içinde 
+            // getter ve setterde proporty başına _ eklenir
+            // GET BİLGİSİ OLMADIĞI SÜRECE BU BİLGİLERE ULAŞILMAZ YANİ DEĞİŞKEN BİLGİLERİMİZİ SAKLAYABİLİRİZ
+            // AYRICA SET İLE BU ATAMA İŞLEMLERİ BİLGİ ALMA İŞLEMLERİ YAPILIRKEN BELLİ KONTROLLER EKLEYEBİLİRİZ
+            get ad(){
+                // .ad dediğimizde ekrana gelecek olan değer
+                return this._ad;
+            }
+            set ad(value){
+                if(value.lenght < 3){
+                    console.log("ad için çok az karakter");
+                    // return dediğimizde aşağıdaki kod işletilmez ve değer ataması gerçekleştirilmez
+                    return;
+                }
+                this._ad = value;
+            }
+            get dogumYili(){
+                // .dogumYili dediğimizde ekrana gelecek olan değer
+                return this._dogumYili;
+            }
+            set dogumYili(value){
+                if(value < 1900 || value > new Date().getFullYear()){
+                    console.log("tarih bilgisi yanlış")
+                    // return dediğimizde aşağıdaki kod işletilmez ve değer ataması gerçekleştirilmez
+                    return;
+                }
+                this._dogumYili = value;
+            }
+
+        }
+
+        // set metotu parametre içindeki kksımda çağırılır
+        let kisi1 = new Kisi("çınar turan", "öğrenci", 2017);
+
+        console.log(kisi1);
+        // get metodunu çağırmış olmak için
+        console.log(kisi1.ad);
+        console.log(kisi1.dogumYili)
+    
+       
+
+    </script>
+</body>
+</html>

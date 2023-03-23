@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /*id bilgisi container olan dive ulaşalım ve containerin içindeki elemanlara textalign üzelliği vermeye çalışalım  */
+    #container{background-color: chocolate;}
+    /*oluşturmuş olduğumuz box sınıfına ulaşalım ve bunlara genişlik ve yükseklik verelim */
+    .box{width: 150px; height:150px;background-color: brown; display: block; float: right;}
+    /* birinci kutuya id vererek ve float left vererek sola gitmesini diğer kutuların ise float right ile sağa gitmesini sağlamış olduk */
+    #box1{float: left;}
+    /* float clearin 2. yöntemi için oluşturudğumuz clearfix sınıfını kullanalım clearfix uyguladığım elemandan sonra bir after dediğimde clearfix uygulanan elemanın sonunda görünmeyen bir element oluşturmuş oluyoruz yani ilgili float işleminden sonra content ile görünmeyen bir içerik ekledik bu içeriği block olarak işaretledik ve daha sonra clear both ile clearfloat uygulamış oluruz */
+    .clearfix::after{
+        content: ""; display: block ;clear: both;}
+        
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- box sınıfına sahip olan üç div ve tüm bunları kapsayan idsi container olan bir div -->
+    <!-- float clear yapmak için ikinici bir yöntem var kapsayıcı eleman olan containera bir class vericem -->
+    <div id="container" class="clearfix">
+    <div class="box" id="box1">kutu1</div>
+    <div class="box">kutu2</div>
+    <div class="box">kutu3</div>
+    </div>
+    <!-- float clear için ekstra div ekleyebiliiriz hem sağdan hem soldan bir float uyguladığımız içni both ile her iksinide kaldırabiliriz -->
+    <div style="clear: both;"></div>
+    <!-- burada bir p etiketi oluşturursak gidip kutuların arasına geliyor o kutuları görmezden geliyor biz bunu kutuların altında olmasını istiyoruz dolayısıyla float uyguladığımız nesnelerden sorna bu floatı temizlemiş olmamız gerekiyor -->
+    <!-- bunu yaptığımız anda ortada oluşan boşlukta containera verdiğimiz brown backround gözükecek ve ayrıca p etiketi kutuların aşağısında konumlanacak arasında değil -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, eligendi! Qui nesciunt quam eum a animi quaerat cumque aut alias quia harum nemo odit minus velit, et deserunt rem voluptate!</p>
+    
+</body>
+</html>

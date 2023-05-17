@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3abyLe+yeVTA+gdgL3vNIejrEoSSTOyzZFHIF5Ah4vmtC7wYtbNrKrnl4TgtogC3Wn83BIsYffUZel3uIg1F+A==",
+  "dgSpecHash": "ORWZO1XTCdVdaDH6Yse9oaT6LaSQsS/x+yaNjPF1ESMc6HJWEGJo8z4LRyPydtFoQmO7FoMvdc4BEnDuRf9mtQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dogan\\OneDrive\\Masaüstü\\sadık\\iscalisma\\shopapp.webui\\shopapp.webui.csproj",
+  "projectFilePath": "C:\\Users\\dogan\\OneDrive\\Belgeler\\GitHub\\Web\\iscalisma\\shopapp.webui\\shopapp.webui.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dogan\\.nuget\\packages\\iyzipay\\2.1.37\\iyzipay.2.1.37.nupkg.sha512",
     "C:\\Users\\dogan\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.3\\microsoft.aspnetcore.cryptography.internal.3.1.3.nupkg.sha512",

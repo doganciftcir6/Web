@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "D/luGEV9ptjqONMkZQleqxSE4aRedi+x9V0A6PwcMKprHrNwgktrhFw3ib9MD428vx0+HqYHhe7XBuDrcL17uw==",
+  "dgSpecHash": "JebmxuM5sG7iUmuYpON+xROWQafbdDpOgasp7kJJ4A9TmSkfctpsse1+P+Fy2npvGm1Vr6Q4IDYG8YBFNkssvg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dogan\\OneDrive\\Masaüstü\\sadık\\iscalisma\\shopapp.dataacces\\shopapp.dataacces.csproj",
+  "projectFilePath": "C:\\Users\\dogan\\OneDrive\\Belgeler\\GitHub\\Web\\iscalisma\\shopapp.dataacces\\shopapp.dataacces.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dogan\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\dogan\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

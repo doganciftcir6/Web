@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uP9oWg9NJF2Mfk3adXlup+nOYqGBrN8UUSfr+wFKi4Hon3dOeFi5CQAt/1RFOEGmhDjMH3N0Ydm5M+tae8oXJA==",
+  "dgSpecHash": "mfPXMLCUxH+T1hN/r+r7QkyLL0EC5q0erkSV2blD7GbOt+78+csUQ9pS3Sh19hCQ33J6Al6BnQPXbcLFQozA4A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dogan\\OneDrive\\Masaüstü\\sadık\\iscalisma\\shopapp.businness\\shopapp.businness.csproj",
+  "projectFilePath": "C:\\Users\\dogan\\OneDrive\\Belgeler\\GitHub\\Web\\iscalisma\\shopapp.businness\\shopapp.businness.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dogan\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\dogan\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
